@@ -1,0 +1,8 @@
+$('[fill="#216e39"]').attr("fill","#60033e")
+$('[fill="#30a14e"]').attr("fill","#b31277")
+$('[fill="#40c463"]').attr("fill","#e55bb2")
+$('[fill="#9be9a8"]').attr("fill","#e591c6")
+$(".legend").children().eq(1).css("background-color","#e591c6")
+$(".legend").children().eq(2).css("background-color","#e55bb2")
+$(".legend").children().eq(3).css("background-color","#b31277")
+$(".legend").children().eq(4).css("background-color","#60033e")
