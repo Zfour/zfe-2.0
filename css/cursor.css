@@ -1,0 +1,8 @@
+ body {
+		cursor:url("/cursor/[Stat] [ML] Normal Select v4.1.cur"),default;
+		
+		cursor:url("/cursor/[Stat] [ML] Normal Select v4.1.cur"),auto;
+ }
+ a:hover {
+	 cursor:url("/cursor/[Stat] [ML] Link Select v4.1.cur"),pointer;
+ }
