@@ -6,7 +6,7 @@
   <link href="http://zfe.space/atom.xml" rel="self"/>
   
   <link href="http://zfe.space/"/>
-  <updated>2020-10-10T18:53:23.400Z</updated>
+  <updated>2020-10-11T19:21:54.724Z</updated>
   <id>http://zfe.space/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue3.0学习 Day5</title>
+    <link href="http://zfe.space/2020/10/11/2020-10-11/"/>
+    <id>http://zfe.space/2020/10/11/2020-10-11/</id>
+    <published>2020-10-10T18:32:00.000Z</published>
+    <updated>2020-10-11T19:21:54.724Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue语法-Vue中的需要掌握的ES6语法？&quot;&gt;&lt;a href=&quot;#Vue语法-Vue中的需要掌握的ES6语法？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://zfe.space/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
+    
+  </entry>
   
   <entry>
     <title>vue3.0学习 Day4</title>
@@ -544,35 +571,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.09.11.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/tags/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    <category term="民生" scheme="http://zfe.space/tags/%E6%B0%91%E7%94%9F/"/>
-    
-    <category term="政治" scheme="http://zfe.space/tags/%E6%94%BF%E6%B2%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NHK おはよう　日本 9月10日</title>
-    <link href="http://zfe.space/2020/09/10/2020-09-10/"/>
-    <id>http://zfe.space/2020/09/10/2020-09-10/</id>
-    <published>2020-09-10T15:32:00.000Z</published>
-    <updated>2020-09-10T19:26:44.417Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.09.10.png&quot;</summary>
         
       
     
