@@ -15,8 +15,38 @@
     <atom:link href="http://zfe.space/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>做个有梦想的人！</description>
-    <pubDate>Mon, 12 Oct 2020 18:00:43 GMT</pubDate>
+    <pubDate>Tue, 13 Oct 2020 14:47:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>butterfly随机背景最简单的写法</title>
+      <link>http://zfe.space/2020/10/13/2020-10-13/</link>
+      <guid>http://zfe.space/2020/10/13/2020-10-13/</guid>
+      <pubDate>Tue, 13 Oct 2020 14:32:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;找到Butterfly主题文件的inject:处。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://zfe.space/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/">Butterfly主题</category>
+      
+      
+      <comments>http://zfe.space/2020/10/13/2020-10-13/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>vue3.0学习 Day6</title>
@@ -44,36 +74,6 @@
       
       
       <comments>http://zfe.space/2020/10/12/2020-10-12/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>butterfly随机背景最简单的写法</title>
-      <link>http://zfe.space/2020/10/12/2020-10-13/</link>
-      <guid>http://zfe.space/2020/10/12/2020-10-13/</guid>
-      <pubDate>Sun, 11 Oct 2020 18:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;找到utterfly主题文件的inject:处。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://zfe.space/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
-      
-      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
-      <category domain="http://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/">Butterfly主题</category>
-      
-      
-      <comments>http://zfe.space/2020/10/12/2020-10-13/#disqus_thread</comments>
       
     </item>
     
