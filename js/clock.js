@@ -20,7 +20,8 @@
         clock.usaqi = data.data.current.pollution.aqius;
         clock.humidityimg = 'https://zfe.space/images/weather/hu.png';
         clock.city = data.data.city;
-		clock.clockshow  = 'true'
+		clock.clockshow  = 'true';
+		updateTime();
       }
     });
   });
@@ -38,11 +39,12 @@
       daylight: '',
 	  clockshow:'false'
     },
+	
   });
 
   const week = ['SUN', 'MON', 'TUE', 'WED','THU' ,'FRI', 'SAT'];
   let timerID = setInterval(updateTime, 1000);
-  updateTime();
+  
   function updateTime() {
     let cd = new Date();
     clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
