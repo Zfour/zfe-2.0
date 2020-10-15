@@ -14,14 +14,15 @@
       },
       //请求成功后要执行的函数，拼接html
       success: function(data){
+		updateTime();
         clock.weatherimg = 'https://zfe.space/images/weather/' +  data.data.current.weather.ic + '.png';
         clock.temperature = data.data.current.weather.tp;
         clock.humidity = data.data.current.weather.hu;
         clock.usaqi = data.data.current.pollution.aqius;
         clock.humidityimg = 'https://zfe.space/images/weather/hu.png';
         clock.city = data.data.city;
-		clock.clockshow  = 'true';
-		updateTime();
+		clock.clockshow  = true;
+		
       }
     });
   });
