@@ -32,8 +32,4 @@ const catalogMagnet = new Vue({
   
 catalogMagnet.link = $(".categoryMagnetitem").children().children().children("a");
 catalogMagnet.postnum = $(".categoryMagnetitem").children().children().children("span");
-　window.onload = function(){
-　　　if (window.screen.width <= 1024) {//1024及以下分辨率
-                $(".gallery-group").css({"width":"48%" ,"margin":"0.3rem 1%"})
-            } 
-　　}
+
