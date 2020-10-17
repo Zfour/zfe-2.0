@@ -2464,6 +2464,9 @@ blockquote footer cite:before {
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .fa-angle-right {
   margin: 0 0.2rem;
 }
+#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap time {
+  display: none;
+}
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap a {
   color: #858585;
 }
@@ -3175,6 +3178,9 @@ blockquote footer cite:before {
 #post-info #post-meta a:hover {
   color: #b30070;
   text-decoration: underline;
+}
+#post-info #post-meta time {
+  display: none;
 }
 #post > #post-info {
   margin-bottom: 1.5rem;
@@ -4249,17 +4255,19 @@ mjx-container[jax='CHTML'][display='true'] {
 #article-container .aplayer {
   margin: 0 0 1rem;
 }
-#color-card {
-  width: 32%;
-  height: 180px;
-}
 #requests-card {
   height: 260px;
 }
+.color-card {
+  width: 24% !important;
+  height: 180px !important;
+  margin: 0.3rem 0.5% !important;
+}
 @media screen and (max-width: 650px) {
-  #color-card {
-    width: 47%;
-    height: 150px;
+  .color-card {
+    width: 48% !important;
+    height: 150px !important;
+    margin: 0.3rem 1% !important;
   }
   #requests-card {
     height: 300px;
@@ -5141,7 +5149,7 @@ blockquote.pullquote.right {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: transparent;
   content: '';
 }
 [data-theme='dark'] #article-container code {
@@ -5155,7 +5163,7 @@ blockquote.pullquote.right {
 }
 [data-theme='dark'] #page-header > #nav.fixed,
 [data-theme='dark'] #page-header.no-top-img #nav {
-  background: rgba(18,18,18,0.8);
+  background: transparent;
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
 }
