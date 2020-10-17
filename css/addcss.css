@@ -12,5 +12,11 @@
 .category-list-item {list-style-type:none;}
 .pgc-img {width:50%;margin: 0 auto}
 .tagbackground {background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.4) 25%,rgba(16,16,16,0) 100%);
-#color-card {width:32%;height: 180px;}
+#color-card {width:25% !important;height: 180px!important;}
 .history-date {float:left}
+
+#color-card.gallery-group {
+
+    margin: 0.3rem 0.5%!important;
+
+}
