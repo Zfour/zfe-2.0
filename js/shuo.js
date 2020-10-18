@@ -13,6 +13,3 @@ function shuovisualchange(){
     }
  
 }
-window.onload =function() { 
-$(".power").css({"display":"none"});
-};
