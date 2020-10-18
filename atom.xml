@@ -6,7 +6,7 @@
   <link href="http://zfe.space/atom.xml" rel="self"/>
   
   <link href="http://zfe.space/"/>
-  <updated>2020-10-17T18:15:49.242Z</updated>
+  <updated>2020-10-18T11:42:38.540Z</updated>
   <id>http://zfe.space/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>教程：基于Butterfly主题的分类磁铁2.0</title>
+    <link href="http://zfe.space/2020/10/18/2020-10-18/"/>
+    <id>http://zfe.space/2020/10/18/2020-10-18/</id>
+    <published>2020-10-18T10:42:00.000Z</published>
+    <updated>2020-10-18T11:42:38.540Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;序言：效果展示&quot;&gt;&lt;a href=&quot;#序言：效果展示&quot; class=&quot;headerlink&quot; title=&quot;序言：效果展示&quot;&gt;&lt;/a&gt;序言：效果展示&lt;/h2&gt;&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="http://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="http://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="DIY" scheme="http://zfe.space/tags/DIY/"/>
+    
+    <category term="Butterfly主题" scheme="http://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>教程：基于Butterfly主题的模拟电子钟侧边栏小部件3.0版</title>
@@ -534,35 +563,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.09.17.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/tags/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    <category term="经济" scheme="http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/"/>
-    
-    <category term="民生" scheme="http://zfe.space/tags/%E6%B0%91%E7%94%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NHK おはよう　日本 9月16日</title>
-    <link href="http://zfe.space/2020/09/16/2020-09-16/"/>
-    <id>http://zfe.space/2020/09/16/2020-09-16/</id>
-    <published>2020-09-16T08:32:00.000Z</published>
-    <updated>2020-09-20T16:19:15.717Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.09.16.png&quot;</summary>
         
       
     
