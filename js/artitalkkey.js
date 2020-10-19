@@ -1,6 +1,6 @@
 new Artitalk({
-    appId: '14vXx1qgCU3UarkOgkXfTQnd-MdYXbMMI',
-    appKey: 'h4qlLGHlHsyHCWOxT1JqpBV3',
+    appId: 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+    appKey: 'r72Soi69hGmPdfKcGubbCWAn',
 	pageSize: 1,
 	color1: "#b30070",
 	color2: "rgb(229, 91, 178)",
