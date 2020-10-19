@@ -6,14 +6,14 @@ const catalogMagnet = new Vue({
 		postnum:[],
 		//这里是磁贴背景图片
 		img:[
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b1.JPG",
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b2.JPG",
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b3.JPG",
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b4.JPG",
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b5.JPG",
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b6.JPG",
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b7.JPG",
-			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b8.JPG",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b1.jpg",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b2.jpg",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b3.jpg",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b4.jpg",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b5.jpg",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b6.jpg",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b7.jpg",
+			"https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.12/images/cataimage/b8.jpg",
 		],
 		//这里是磁贴描述信息
 		describe:[
