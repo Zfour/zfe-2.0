@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>しゅふがく</title>
+  <title>小冰博客</title>
   <icon>http://zfe.space/icon.png</icon>
   <subtitle>做个有梦想的人！</subtitle>
   <link href="http://zfe.space/atom.xml" rel="self"/>
