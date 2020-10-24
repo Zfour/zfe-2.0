@@ -28,7 +28,7 @@ $(document).ready(function() {
         e = !0
     },
     20);
-    var i = "小红",
+    var i = "游客",
     o = 5,
     n = {
         name: "皮卡丘",
@@ -45,7 +45,7 @@ $(document).ready(function() {
     $("#move0").html("撞击"),
     $("#move1").html("摇尾巴"),
     $("#move2").html("电光一闪");
-    var m = "小蓝",
+    var m = "冰卡诺",
     c = {
         name: "伊布",
         hp: 40,
@@ -89,7 +89,7 @@ $(document).ready(function() {
             y(),
             window.setTimeout(function() {
                 $(".foe .stats").hide(),
-                $(".text1").text("得到￥" + Math.floor(2.5 * o) + "元"),
+                $(".text1").text("得到" + Math.floor(2.5 * o) + "元"),
                 $(".text2").text("获胜！"),
                 y(),
                 window.setTimeout(function() {
@@ -97,8 +97,8 @@ $(document).ready(function() {
                     $(".text2").text("相信！"),
                     y(),
                     window.setTimeout(function() {
-                        $(".text1").text("我竟然选择了！"),
-                        $(".text2").text("错的宝可梦！"),
+                        $(".text1").text("你竟然拥有"),
+                        $(".text2").text("这么厉害的宝可梦！"),
                         y()
                     },
                     2e3)
