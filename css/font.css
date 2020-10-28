@@ -1,0 +1,32 @@
+.calendar {
+    font-family: SourceHanSans-Medium;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    min-height: 120px;
+    text-align: center;
+    margin: 0 auto;
+	border-width:0px;
+	width:100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items:center;
+	flex-wrap:wrap;
+}
+.article-title{
+	font-weight:600;
+}
+.article-meta-wrap{
+	margin-top: 0.2rem;
+
+}
+.item-headline{
+	font-weight:600;
+}
+#recent-posts > .parent > .recent-post-item >.recent-post-info {
+    margin-top: 1em;
+    width: 100%;
+}
+#aside_content .card-info .author-info__name {
+    font-weight: 600;
+}

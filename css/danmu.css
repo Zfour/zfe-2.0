@@ -1,0 +1,30 @@
+#vcomments-damu{}
+.vcards.test{display:none}
+.vcount.test{display:none}
+.vpower.test{display:none}
+.vcol.vcol-60.status-bar.test{display:none}
+.vcol.vcol-40.vctrl.text-right.test{display:none}
+.vcount.test {display:none!important}
+.vwrap.test {margin-bottom: 0px!important;border: 0px!important }
+.vheader.item3.test{display:none!important }
+.vcol.vcol-30.test{display:none!important }
+.vpage.txt-center.test{display:none!important }
+	.dm .d_screen .d_mask{width:100%;height:100%;position:absolute;top:0;left:0;opacity:0.5;
+						  filter:alpha(opacity=50) ;z-index:1;}
+	.dm .d_screen .d_show{position: relative;z-index:1;overflow:hidden;height:250px}
+.dm .d_screen .d_show div{font-weight:500;color:#fff;position:absolute;left:0;top:0;}
+
+	#showmeg p{
+		font-weight:bold;
+		text-align:center;
+	}
+	.d_show div{
+		width:auto;
+		height:10px;				
+	}
+	.d_show p{
+		heigth:10px;
+		text-overflow:ellipsis	;
+	}
+
+.swiper-container{width:100%}
