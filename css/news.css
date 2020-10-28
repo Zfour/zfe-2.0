@@ -2,16 +2,16 @@
 	  display:none;
       background-color: #fff;
       position: fixed;
-      width: 80%;
+      width: 60%;
       height: auto;
       top: 40%;
-      left: 10%;
+      left: 20%;
       z-index: 3;
       margin-top: -150px;
       margin-left: 0;
 	  margin-right: 0;
       box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,0.07);
-      opacity: 0.95;
+      opacity: 1;
       border: 0;
 	  padding:50px;
 	  max-height:600px;
@@ -20,7 +20,7 @@
 .modalclose{
 	
 	margin-right:30px;
-	right:10%;
+	right:20%;
 	font-size:1em;
 	font-weight:600;
 	top: 25%;
@@ -40,4 +40,7 @@
 .listtypeon{
 	color:#b30070;
 	    border-bottom: 1px solid #b30070;
+}
+.blackscreen{
+	display:none
 }
