@@ -1,5 +1,5 @@
 
-let url = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id=pqzcrjmnjjidsgn8&app_secret=c1ZwakloSzZpNWJXOG5BeGhnS1FkZz09"
+let url = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id=dvkisvrrpzyhkdfr&app_secret=ZmwwM3daOURFQWsrREw2dTQwRjhOQT09"
   $(function () {
     $.ajax({
       //请求方式
@@ -40,7 +40,7 @@ let url = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id=pqzcrjmn
 	methods:{
 		changetype(index){
 			let changeurl = "https://www.mxnzp.com/api/news/list?typeId=" + 
-			this.listcode[index] + "&page=1&app_id=pqzcrjmnjjidsgn8&app_secret=c1ZwakloSzZpNWJXOG5BeGhnS1FkZz09";
+			this.listcode[index] + "&page=1&app_id=dvkisvrrpzyhkdfr&app_secret=ZmwwM3daOURFQWsrREw2dTQwRjhOQT09";
 			    $.ajax({
       //请求方式
       type: "GET",
@@ -83,7 +83,7 @@ let url = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id=pqzcrjmn
 			console.log('hahaha' + index); 
 			 let posturl = "https://www.mxnzp.com/api/news/details?newsId=" +
             this.newsvue[index].newsId +
-        "&app_id=pqzcrjmnjjidsgn8&app_secret=c1ZwakloSzZpNWJXOG5BeGhnS1FkZz09";
+        "&app_id=dvkisvrrpzyhkdfr&app_secret=ZmwwM3daOURFQWsrREw2dTQwRjhOQT09";
 		console.log(posturl); 
 		$.ajax({
       //请求方式
