@@ -1201,20 +1201,6 @@
   </url>
   
   <url>
-    <loc>http://zfe.space/tags/ICT/</loc>
-    <lastmod>2020-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/tags/%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E/</loc>
-    <lastmod>2020-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zfe.space/tags/%E9%9A%9C%E5%AE%B3%E8%80%85/</loc>
     <lastmod>2020-10-30</lastmod>
     <changefreq>daily</changefreq>
@@ -1223,6 +1209,20 @@
   
   <url>
     <loc>http://zfe.space/tags/%E5%96%B6%E6%A5%AD%E6%99%82%E9%96%93/</loc>
+    <lastmod>2020-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zfe.space/tags/ICT/</loc>
+    <lastmod>2020-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zfe.space/tags/%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E/</loc>
     <lastmod>2020-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

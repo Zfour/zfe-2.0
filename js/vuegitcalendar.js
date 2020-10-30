@@ -2,6 +2,7 @@
 const calendar = new Vue({
         el: '#calendar',
         data: {
+			user:'Zfour',
 		    fixed:'fixed',
 			px:'px',
 			x:'',
