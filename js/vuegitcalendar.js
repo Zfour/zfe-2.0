@@ -1,7 +1,8 @@
 const calendar = new Vue({
         el: '#calendar',
         data: {
-			
+			month:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+            monthchange:[],
             oneyearbeforeday:'',
             thisday:'',
             amonthago:'',
@@ -54,14 +55,14 @@ const calendar = new Vue({
         }
     })
 
-    let url = "https://githubapi.ryanchristian.dev/user/Zfour"
+    let githubapiurl = "https://githubapi.ryanchristian.dev/user/Zfour"
 
     $(function () {
         $.ajax({
             //请求方式
             type: "GET",
             //文件位置
-            url: url,
+            url: githubapiurl,
             //返回数据格式为json,也可以是其他格式如
             dataType: "json",
             beforeSend: function (XMLHttpRequest) {
