@@ -982,14 +982,14 @@
   </url>
   
   <url>
-    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/README.html</loc>
+    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/LICENSE.html</loc>
     
     <lastmod>2018-09-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/LICENSE.html</loc>
+    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/README.html</loc>
     
     <lastmod>2018-09-24</lastmod>
     
@@ -1061,6 +1061,13 @@
   </url>
   
   <url>
+    <loc>http://zfe.space/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/</loc>
+    <lastmod>2020-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zfe.space/tags/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/</loc>
     <lastmod>2020-10-30</lastmod>
     <changefreq>daily</changefreq>
@@ -1075,7 +1082,7 @@
   </url>
   
   <url>
-    <loc>http://zfe.space/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/</loc>
+    <loc>http://zfe.space/tags/%E5%86%9C%E4%B8%9A/</loc>
     <lastmod>2020-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1083,13 +1090,6 @@
   
   <url>
     <loc>http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/</loc>
-    <lastmod>2020-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/tags/%E5%86%9C%E4%B8%9A/</loc>
     <lastmod>2020-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1315,14 +1315,14 @@
   </url>
   
   <url>
-    <loc>http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/</loc>
+    <loc>http://zfe.space/categories/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/</loc>
     <lastmod>2020-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://zfe.space/categories/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/</loc>
+    <loc>http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/</loc>
     <lastmod>2020-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

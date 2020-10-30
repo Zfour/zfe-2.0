@@ -1,6 +1,13 @@
+
 const calendar = new Vue({
         el: '#calendar',
         data: {
+		    fixed:'fixed',
+			px:'px',
+			x:'',
+            y:'',
+            span1:'',
+            span2:'',
 			month:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
             monthchange:[],
             oneyearbeforeday:'',
@@ -11,8 +18,6 @@ const calendar = new Vue({
             datacore: 0,
             total:0,
             datadate: '',
-            x: '',
-            y: '',
             data: [],
             firstweek:[],
             lastweek:[],
@@ -35,6 +40,18 @@ const calendar = new Vue({
                 '#30021f',]
         },
         methods:{
+			selectStyle(data,event){
+                $('.angle-wrapper').show();
+                this.span1 = data.date;
+                this.span2 = data.count;
+                this.x = event.clientX -100;
+                this.y = event.clientY -60;
+                console.log(event);
+            },
+            outStyle(){
+                $('.angle-wrapper').hide();
+                console.log();
+            },
             thiscolor(x){
                 if(x===0){
                     let i = parseInt(x/2);
