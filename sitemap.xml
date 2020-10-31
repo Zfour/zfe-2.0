@@ -1082,6 +1082,13 @@
   </url>
   
   <url>
+    <loc>http://zfe.space/tags/%E6%97%A5%E6%9C%AC%E6%95%99%E8%82%B2/</loc>
+    <lastmod>2020-10-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zfe.space/tags/%E5%86%9C%E4%B8%9A/</loc>
     <lastmod>2020-10-31</lastmod>
     <changefreq>daily</changefreq>
@@ -1090,13 +1097,6 @@
   
   <url>
     <loc>http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/</loc>
-    <lastmod>2020-10-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/tags/%E6%97%A5%E6%9C%AC%E6%95%99%E8%82%B2/</loc>
     <lastmod>2020-10-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1131,14 +1131,14 @@
   </url>
   
   <url>
-    <loc>http://zfe.space/tags/%E4%B8%96%E8%AB%96%E8%AA%BF%E6%9F%BB/</loc>
+    <loc>http://zfe.space/tags/%E5%9B%BD%E5%A4%96%E6%94%BF%E4%BA%8B/</loc>
     <lastmod>2020-10-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://zfe.space/tags/%E5%9B%BD%E5%A4%96%E6%94%BF%E4%BA%8B/</loc>
+    <loc>http://zfe.space/tags/%E4%B8%96%E8%AB%96%E8%AA%BF%E6%9F%BB/</loc>
     <lastmod>2020-10-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
