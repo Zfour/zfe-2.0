@@ -1,6 +1,6 @@
 const newskey ={
-	id:'qcmoi7gisvlhjlrv',
-	key:'ZW9oRi9Yc0lSbXpwRVlXT1JvbkZydz09' 
+	id:'rprsenfgvvmqknmv',
+	key:'ZEtCK0txL3RqeXoxUklnTmV1WFdrUT09' 
 	}
 let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ newskey.id + "&app_secret=" + newskey.key
   $(function () {
@@ -18,10 +18,10 @@ let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ n
       },
       //请求成功后要执行的函数，拼接html
       success: function (data) {
-        console.log("success");
+        //console.log("success");
         gamenews.newsvue = data.data;
 		gamenews.newsvue = gamenews.newsvue.slice(0,5);
-        console.log(gamenews.newsvue);
+        //console.log(gamenews.newsvue);
       }
     });
   });
@@ -58,10 +58,10 @@ let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ n
       },
       //请求成功后要执行的函数，拼接html
       success: function (data) {
-        console.log("success");
+        //console.log("success");
         gamenews.newsvue = data.data;
 		gamenews.newsvue = gamenews.newsvue.slice(0,5);
-        console.log(gamenews.newsvue);
+        //console.log(gamenews.newsvue);
       }
     });
 	
@@ -83,11 +83,11 @@ let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ n
 		 getnewsdata(index){
 			 $("#newsmodal").show();
 			 $(".blackscreen").show();
-			console.log('hahaha' + index); 
+			//console.log('hahaha' + index); 
 			 let posturl = "https://www.mxnzp.com/api/news/details?newsId=" +
             this.newsvue[index].newsId +
         "&app_id=" + newskey.id + "&app_secret=" + newskey.key;
-		console.log(posturl); 
+		//console.log(posturl); 
 		$.ajax({
       //请求方式
       type: "GET",
@@ -102,10 +102,10 @@ let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ n
       },
       //请求成功后要执行的函数，拼接html
       success: function (data) {
-        console.log("success2");
+        //console.log("success2");
         gamenews.newpostvue = data.data;
 		gamenews.replace();
-        console.log(gamenews.newpostvue.content);
+        //console.log(gamenews.newpostvue.content);
       }
     });
 		 },
