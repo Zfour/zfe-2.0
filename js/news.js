@@ -1,11 +1,14 @@
-
-let url = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id=yewktetoshn3tgmq&app_secret=YkU3QVEwWE40THFud1ovN2Y5ZnA4dz09"
+const newskey ={
+	id:'qcmoi7gisvlhjlrv',
+	key:'ZW9oRi9Yc0lSbXpwRVlXT1JvbkZydz09' 
+	}
+let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ newskey.id + "&app_secret=" + newskey.key
   $(function () {
     $.ajax({
       //请求方式
       type: "GET",
       //文件位置
-      url: url,
+      url: newsurl,
       //返回数据格式为json,也可以是其他格式如
       dataType: "json",
       beforeSend: function (XMLHttpRequest) {
@@ -40,7 +43,7 @@ let url = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id=yewkteto
 	methods:{
 		changetype(index){
 			let changeurl = "https://www.mxnzp.com/api/news/list?typeId=" + 
-			this.listcode[index] + "&page=1&app_id=yewktetoshn3tgmq&app_secret=YkU3QVEwWE40THFud1ovN2Y5ZnA4dz09";
+			this.listcode[index] + "&page=1&app_id="+ newskey.id+"yewktetoshn3tgmq&app_secret="+newskey.key;
 			    $.ajax({
       //请求方式
       type: "GET",
@@ -83,7 +86,7 @@ let url = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id=yewkteto
 			console.log('hahaha' + index); 
 			 let posturl = "https://www.mxnzp.com/api/news/details?newsId=" +
             this.newsvue[index].newsId +
-        "&app_id=yewktetoshn3tgmq&app_secret=YkU3QVEwWE40THFud1ovN2Y5ZnA4dz09";
+        "&app_id=" + newskey.id + "&app_secret=" + newskey.key;
 		console.log(posturl); 
 		$.ajax({
       //请求方式
