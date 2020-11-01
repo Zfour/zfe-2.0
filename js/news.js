@@ -43,7 +43,7 @@ let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ n
 	methods:{
 		changetype(index){
 			let changeurl = "https://www.mxnzp.com/api/news/list?typeId=" + 
-			this.listcode[index] + "&page=1&app_id="+ newskey.id+"yewktetoshn3tgmq&app_secret="+newskey.key;
+			this.listcode[index] + "&page=1&app_id="+ newskey.id+"&app_secret="+newskey.key;
 			    $.ajax({
       //请求方式
       type: "GET",
