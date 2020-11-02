@@ -44,3 +44,37 @@
 .blackscreen{
 	display:none
 }
+.newsimage{
+	margin:5%;
+	object-fit:cover;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	height:auto!important;
+    min-height:500px;
+	max-width: 100%;
+	width:auto;
+}
+
+@media screen and (max-width: 650px){
+	.newsimage{
+	min-height: 200px;}
+#newsmodal {
+    width: 100%;
+    height: 100%;
+    top: 30%;
+left: 0%;}
+.modalclose {
+    margin-right: 0;
+    right: 40%;
+    font-size: 1em;
+    font-weight: 600;
+    top: 90%;
+    position: fixed;
+	background:white;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+}
+	}

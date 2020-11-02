@@ -73,7 +73,7 @@ let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ n
 		replace(){
 			for(let i=0;i<gamenews.newpostvue.images.length;i++){	
 			let errorlink = '/img/404.jpg'
-			gamenews.newpostvue.content = gamenews.newpostvue.content.replace(gamenews.newpostvue.images[i].position,'<div  style="margin:5%;object-fit:cover;height:500px;width:auto;background:url('+ gamenews.newpostvue.images[i].imgSrc + ')no-repeat center center;"></div>') 
+			gamenews.newpostvue.content = gamenews.newpostvue.content.replace(gamenews.newpostvue.images[i].position,'<div class="newsimage" style="background:url('+ gamenews.newpostvue.images[i].imgSrc + ')no-repeat ;background-size:100% auto;-moz-background-size:100% auto;"></div>') 
 			}
 		},
 		hidemodle(){
