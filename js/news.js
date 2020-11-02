@@ -1,7 +1,4 @@
-const newskey ={
-	id:'rprsenfgvvmqknmv',
-	key:'ZEtCK0txL3RqeXoxUklnTmV1WFdrUT09' 
-	}
+
 let newsurl = "https://www.mxnzp.com/api/news/list?typeId=515&page=1&app_id="+ newskey.id + "&app_secret=" + newskey.key
   $(function () {
     $.ajax({

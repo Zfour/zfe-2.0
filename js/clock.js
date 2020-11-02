@@ -1,4 +1,4 @@
-  let clockurl = "https://api.airvisual.com/v2/nearest_city?key=123312fc-84e9-49c4-8592-66f018e912ad"
+  let clockurl = "https://api.airvisual.com/v2/nearest_city?key=" + newskey.weather
   $(function(){
     $.ajax({
       //请求方式
