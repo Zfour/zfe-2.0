@@ -1,15 +1,1 @@
-function shuovisualchange(){
-  let obt=document.getElementById("shuovisualchange");
-  let odiv= $(".power").css("display");
-
-  
-    if(odiv == "none"){
-       $(".power").css({"display":"inline"});
-      obt.innerHTML="隐藏";
-    }
-    else{
-     $(".power").css({"display":"none"});
-      obt.innerHTML="编辑";
-    }
- 
-}
+function shuovisualchange(){let n=document.getElementById("shuovisualchange");"none"==$(".power").css("display")?($(".power").css({display:"inline"}),n.innerHTML="隐藏"):($(".power").css({display:"none"}),n.innerHTML="编辑")}

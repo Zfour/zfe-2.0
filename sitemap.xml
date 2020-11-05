@@ -163,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http://zfe.space/images/pokemon-js-master/pokemon-js-master/index.html</loc>
-    
-    <lastmod>2020-10-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zfe.space/2020/08/24/2020-08-24-2/</loc>
     
     <lastmod>2020-10-22</lastmod>
@@ -185,13 +178,6 @@
   
   <url>
     <loc>http://zfe.space/2020/08/31/2020-08-31-1/</loc>
-    
-    <lastmod>2020-10-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/src/index.html</loc>
     
     <lastmod>2020-10-22</lastmod>
     
@@ -988,55 +974,6 @@
     
   </url>
   
-  <url>
-    <loc>http://zfe.space/images/pokemon-js-master/pokemon-js-master/README.html</loc>
-    
-    <lastmod>2020-06-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/LICENSE.html</loc>
-    
-    <lastmod>2018-09-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/README.html</loc>
-    
-    <lastmod>2018-09-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/package.json</loc>
-    
-    <lastmod>2018-09-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/images/Isolde-1.1.6/Isolde-1.1.6/docs/OPTIONS.html</loc>
-    
-    <lastmod>2018-09-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/images/201808011428/index.html</loc>
-    
-    <lastmod>2018-08-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/images/201808011428/readme.html</loc>
-    
-    <lastmod>2014-10-10</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>http://zfe.space/</loc>
@@ -1089,14 +1026,14 @@
   </url>
   
   <url>
-    <loc>http://zfe.space/tags/%E6%97%A5%E6%9C%AC%E6%95%99%E8%82%B2/</loc>
+    <loc>http://zfe.space/tags/%E5%86%9C%E4%B8%9A/</loc>
     <lastmod>2020-11-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://zfe.space/tags/%E5%86%9C%E4%B8%9A/</loc>
+    <loc>http://zfe.space/tags/%E6%97%A5%E6%9C%AC%E6%95%99%E8%82%B2/</loc>
     <lastmod>2020-11-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1229,6 +1166,13 @@
   </url>
   
   <url>
+    <loc>http://zfe.space/tags/%E5%A4%96%E5%9B%BD%E6%94%BF%E4%BA%8B/</loc>
+    <lastmod>2020-11-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zfe.space/tags/%E9%9A%9C%E5%AE%B3%E8%80%85/</loc>
     <lastmod>2020-11-05</lastmod>
     <changefreq>daily</changefreq>
@@ -1237,13 +1181,6 @@
   
   <url>
     <loc>http://zfe.space/tags/%E5%96%B6%E6%A5%AD%E6%99%82%E9%96%93/</loc>
-    <lastmod>2020-11-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zfe.space/tags/%E5%A4%96%E5%9B%BD%E6%94%BF%E4%BA%8B/</loc>
     <lastmod>2020-11-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

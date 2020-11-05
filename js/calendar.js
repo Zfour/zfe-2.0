@@ -1,3 +1,1 @@
-  GitHubCalendar(".calendar", "Zfour");
-    // or enable responsive functionality
-    GitHubCalendar(".calendar", "Zfour", { responsive: true });
+GitHubCalendar(".calendar","Zfour"),GitHubCalendar(".calendar","Zfour",{responsive:!0});

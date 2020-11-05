@@ -1,8 +1,1 @@
- body {
-		cursor:url("https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.10/cursor/[Stat] [ML] Normal Select v4.1.cur"),default;
-		
-		cursor:url("https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.10/cursor/[Stat] [ML] Normal Select v4.1.cur"),auto;
- }
- a:hover {
-	 cursor:url("https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.10/cursor/[Stat] [ML] Link Select v4.1.cur"),pointer;
- }
+body{cursor:url("https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.10/cursor/[Stat] [ML] Normal Select v4.1.cur"),default;cursor:url("https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.10/cursor/[Stat] [ML] Normal Select v4.1.cur"),auto}a:hover{cursor:url("https://cdn.jsdelivr.net/gh/Zfour/zfe-2.0@1.10/cursor/[Stat] [ML] Link Select v4.1.cur"),pointer}

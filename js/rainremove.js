@@ -1,3 +1,1 @@
-    if (screen.width < 768){
-        $('canvas').remove();
-    }
+screen.width<768&&$("canvas").remove();
