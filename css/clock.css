@@ -55,10 +55,3 @@
     .city {width:10%;font-family: 'UnidreamLED';padding-left:20px; padding-right:1px;color: #000000;}
     .clock th{padding: 0;border: 0;}
 	.clock td{padding: 0;border: 0;}
-	    @font-face {
-      font-family: 'SourceHanSans-Medium'; /*a name to be used later*/
-      src: url('/fonts/SourceHanSans-Medium.ttc'); /*URL to font*/
-    }
-	body{
-		font-family: SourceHanSans-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-	}

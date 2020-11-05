@@ -1,3 +1,10 @@
+	    @font-face {
+      font-family: 'SourceHanSans-Medium'; /*a name to be used later*/
+      src: url('https://cdn.jsdelivr.net/npm/notosans-fontface@1.2.2/fonts/NotoSans-Regular.ttf'); /*URL to font*/
+    }
+	body{
+		font-family: SourceHanSans-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+	}
 .calendar {
     font-family: SourceHanSans-Medium;
     border: 1px solid #DDDDDD;
