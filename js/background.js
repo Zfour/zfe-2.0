@@ -1,1 +1,0 @@
-var full_page=document.getElementsByClassName("full_page");0!=full_page.length&&(full_page[0].style.background="transparent");

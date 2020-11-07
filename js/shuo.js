@@ -1,1 +1,0 @@
-function shuovisualchange(){let n=document.getElementById("shuovisualchange");"none"==$(".power").css("display")?($(".power").css({display:"inline"}),n.innerHTML="隐藏"):($(".power").css({display:"none"}),n.innerHTML="编辑")}

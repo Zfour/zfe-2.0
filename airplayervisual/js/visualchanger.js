@@ -1,1 +1,0 @@
-function musicvisualchange(){var e=document.getElementById("musicvisualchange"),n=document.getElementById("container");"none"==n.style.display?(n.style.display="flex",e.innerHTML="<i class='fa fa-eye-slash'></i>&nbspHIDE"):(n.style.display="none",e.innerHTML="<i class='fa fa-eye'></i>&nbspSHOW")}

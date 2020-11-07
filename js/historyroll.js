@@ -1,1 +1,0 @@
-$((function(){var n,i=$("#history-news");i.hover((function(){clearInterval(n)}),(function(){n=setInterval((function(){var n,e;n=i.find("ul"),e=n.find("li:first").height(),n.animate({marginTop:-e+"px"},200,(function(){n.css({marginTop:10}).find("li:first").appendTo(n)}))}),4e3)})).trigger("mouseleave")}));

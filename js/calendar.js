@@ -1,1 +1,0 @@
-GitHubCalendar(".calendar","Zfour"),GitHubCalendar(".calendar","Zfour",{responsive:!0});
