@@ -6,7 +6,7 @@
   <link href="http://zfe.space/atom.xml" rel="self"/>
   
   <link href="http://zfe.space/"/>
-  <updated>2020-11-10T12:16:23.560Z</updated>
+  <updated>2020-11-11T10:54:52.693Z</updated>
   <id>http://zfe.space/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue3.0学习 Day11</title>
+    <link href="http://zfe.space/2020/11/11/2020-11-11/"/>
+    <id>http://zfe.space/2020/11/11/2020-11-11/</id>
+    <published>2020-11-11T10:32:00.000Z</published>
+    <updated>2020-11-11T10:54:52.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在webpack中配置vue的过程？&quot;&gt;&lt;a href=&quot;#在webpack中配置vue的过程？&quot; class=&quot;headerlink&quot; title=&quot;在webpack中配置vue的过程？&quot;&gt;&lt;/a&gt;在webpack中配置vue的过程？&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
+    
+  </entry>
   
   <entry>
     <title>webpack从零到精通</title>
@@ -545,35 +572,6 @@
     <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NHK おはよう　日本 9月28日</title>
-    <link href="http://zfe.space/2020/09/28/2020-09-28-2/"/>
-    <id>http://zfe.space/2020/09/28/2020-09-28-2/</id>
-    <published>2020-09-28T09:32:00.000Z</published>
-    <updated>2020-11-09T13:11:43.559Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.09.28.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/tags/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    <category term="经济" scheme="http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/"/>
-    
-    <category term="民生" scheme="http://zfe.space/tags/%E6%B0%91%E7%94%9F/"/>
     
   </entry>
   

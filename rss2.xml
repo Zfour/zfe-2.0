@@ -15,8 +15,37 @@
     <atom:link href="http://zfe.space/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>做个有梦想的人！</description>
-    <pubDate>Tue, 10 Nov 2020 12:16:23 GMT</pubDate>
+    <pubDate>Wed, 11 Nov 2020 10:54:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>vue3.0学习 Day11</title>
+      <link>http://zfe.space/2020/11/11/2020-11-11/</link>
+      <guid>http://zfe.space/2020/11/11/2020-11-11/</guid>
+      <pubDate>Wed, 11 Nov 2020 10:32:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;在webpack中配置vue的过程？&quot;&gt;&lt;a href=&quot;#在webpack中配置vue的过程？&quot; class=&quot;headerlink&quot; title=&quot;在webpack中配置vue的过程？&quot;&gt;&lt;/a&gt;在webpack中配置vue的过程？&lt;/h1&gt;&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://zfe.space/categories/vue/">vue</category>
+      
+      
+      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
+      
+      
+      <comments>http://zfe.space/2020/11/11/2020-11-11/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>webpack从零到精通</title>
@@ -585,37 +614,6 @@
       
       
       <comments>http://zfe.space/2020/09/29/2020-09-29/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>NHK おはよう　日本 9月28日</title>
-      <link>http://zfe.space/2020/09/28/2020-09-28-2/</link>
-      <guid>http://zfe.space/2020/09/28/2020-09-28-2/</guid>
-      <pubDate>Mon, 28 Sep 2020 09:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.09.28.png&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/">NHK听力练习</category>
-      
-      
-      <category domain="http://zfe.space/tags/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/">NHK听力练习</category>
-      
-      <category domain="http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/">经济</category>
-      
-      <category domain="http://zfe.space/tags/%E6%B0%91%E7%94%9F/">民生</category>
-      
-      
-      <comments>http://zfe.space/2020/09/28/2020-09-28-2/#disqus_thread</comments>
       
     </item>
     
