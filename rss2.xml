@@ -15,8 +15,66 @@
     <atom:link href="http://zfe.space/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>做个有梦想的人！</description>
-    <pubDate>Wed, 11 Nov 2020 10:54:52 GMT</pubDate>
+    <pubDate>Sun, 15 Nov 2020 16:12:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>vue3.0学习 Day13</title>
+      <link>http://zfe.space/2020/11/15/2020-11-15/</link>
+      <guid>http://zfe.space/2020/11/15/2020-11-15/</guid>
+      <pubDate>Sun, 15 Nov 2020 10:32:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;路由传递参数的方式？&quot;&gt;&lt;a href=&quot;#路由传递参数的方式？&quot; class=&quot;headerlink&quot; title=&quot;路由传递参数的方式？&quot;&gt;&lt;/a&gt;路由传递参数的方式？&lt;/h1&gt;&lt;h2 id=&quot;🎉params的类型？&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://zfe.space/categories/vue/">vue</category>
+      
+      
+      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
+      
+      
+      <comments>http://zfe.space/2020/11/15/2020-11-15/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>vue3.0学习 Day12</title>
+      <link>http://zfe.space/2020/11/14/2020-11-14/</link>
+      <guid>http://zfe.space/2020/11/14/2020-11-14/</guid>
+      <pubDate>Sat, 14 Nov 2020 10:32:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;Runtime-Compiler-和-Runtime-only的区别？&quot;&gt;&lt;a href=&quot;#Runtime-Compiler-和-Runtime-only的区别？&quot; class=&quot;headerlink&quot; title=&quot;Runtime-Compiler 和</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://zfe.space/categories/vue/">vue</category>
+      
+      
+      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
+      
+      
+      <comments>http://zfe.space/2020/11/14/2020-11-14/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>vue3.0学习 Day11</title>
@@ -554,66 +612,6 @@
       
       
       <comments>http://zfe.space/2020/10/04/2020-10-04/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>庐山游记</title>
-      <link>http://zfe.space/2020/10/03/2020-10-03/</link>
-      <guid>http://zfe.space/2020/10/03/2020-10-03/</guid>
-      <pubDate>Fri, 02 Oct 2020 17:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;div class=&quot;justified-gallery&quot;&gt;&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/meilu/1.jpg&quot; alt=&quot;如情湖畔·惬&quot;&gt;&lt;br&gt;&lt;img src=</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://zfe.space/categories/%E7%94%9F%E6%B4%BB%E8%B6%A3%E9%97%BB/">生活趣闻</category>
-      
-      
-      <category domain="http://zfe.space/tags/%E7%94%9F%E6%B4%BB%E8%B6%A3%E9%97%BB/">生活趣闻</category>
-      
-      <category domain="http://zfe.space/tags/%E6%B8%B8%E8%AE%B0/">游记</category>
-      
-      <category domain="http://zfe.space/tags/%E5%BA%90%E5%B1%B1/">庐山</category>
-      
-      
-      <comments>http://zfe.space/2020/10/03/2020-10-03/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>vue3.0学习 Day2</title>
-      <link>http://zfe.space/2020/09/29/2020-09-29/</link>
-      <guid>http://zfe.space/2020/09/29/2020-09-29/</guid>
-      <pubDate>Mon, 28 Sep 2020 18:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;Vue入门-Vue的列表展示&quot;&gt;&lt;a href=&quot;#Vue入门-Vue的列表展示&quot; class=&quot;headerlink&quot; title=&quot;Vue入门-Vue的列表展示&quot;&gt;&lt;/a&gt;Vue入门-Vue的列表展示&lt;/h1&gt;&lt;h3 id=&quot;🎉vue如何展示列表？&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://zfe.space/categories/vue/">vue</category>
-      
-      
-      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
-      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
-      
-      
-      <comments>http://zfe.space/2020/09/29/2020-09-29/#disqus_thread</comments>
       
     </item>
     

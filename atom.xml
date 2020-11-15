@@ -6,7 +6,7 @@
   <link href="http://zfe.space/atom.xml" rel="self"/>
   
   <link href="http://zfe.space/"/>
-  <updated>2020-11-11T10:54:52.693Z</updated>
+  <updated>2020-11-15T16:12:26.227Z</updated>
   <id>http://zfe.space/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue3.0学习 Day13</title>
+    <link href="http://zfe.space/2020/11/15/2020-11-15/"/>
+    <id>http://zfe.space/2020/11/15/2020-11-15/</id>
+    <published>2020-11-15T10:32:00.000Z</published>
+    <updated>2020-11-15T16:12:26.227Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;路由传递参数的方式？&quot;&gt;&lt;a href=&quot;#路由传递参数的方式？&quot; class=&quot;headerlink&quot; title=&quot;路由传递参数的方式？&quot;&gt;&lt;/a&gt;路由传递参数的方式？&lt;/h1&gt;&lt;h2 id=&quot;🎉params的类型？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue3.0学习 Day12</title>
+    <link href="http://zfe.space/2020/11/14/2020-11-14/"/>
+    <id>http://zfe.space/2020/11/14/2020-11-14/</id>
+    <published>2020-11-14T10:32:00.000Z</published>
+    <updated>2020-11-15T16:12:08.315Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Runtime-Compiler-和-Runtime-only的区别？&quot;&gt;&lt;a href=&quot;#Runtime-Compiler-和-Runtime-only的区别？&quot; class=&quot;headerlink&quot; title=&quot;Runtime-Compiler 和</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
+    
+  </entry>
   
   <entry>
     <title>vue3.0学习 Day11</title>
@@ -505,62 +559,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Vue入门-Vue的生命周期函数种类&quot;&gt;&lt;a href=&quot;#Vue入门-Vue的生命周期函数种类&quot; class=&quot;headerlink&quot; title=&quot;Vue入门-Vue的生命周期函数种类&quot;&gt;&lt;/a&gt;Vue入门-Vue的生命周期函数种类&lt;/h1&gt;&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
-    
-    
-    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>庐山游记</title>
-    <link href="http://zfe.space/2020/10/03/2020-10-03/"/>
-    <id>http://zfe.space/2020/10/03/2020-10-03/</id>
-    <published>2020-10-02T17:32:00.000Z</published>
-    <updated>2020-11-09T13:10:09.733Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;div class=&quot;justified-gallery&quot;&gt;&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/meilu/1.jpg&quot; alt=&quot;如情湖畔·惬&quot;&gt;&lt;br&gt;&lt;img src=</summary>
-        
-      
-    
-    
-    
-    <category term="生活趣闻" scheme="http://zfe.space/categories/%E7%94%9F%E6%B4%BB%E8%B6%A3%E9%97%BB/"/>
-    
-    
-    <category term="生活趣闻" scheme="http://zfe.space/tags/%E7%94%9F%E6%B4%BB%E8%B6%A3%E9%97%BB/"/>
-    
-    <category term="游记" scheme="http://zfe.space/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
-    <category term="庐山" scheme="http://zfe.space/tags/%E5%BA%90%E5%B1%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3.0学习 Day2</title>
-    <link href="http://zfe.space/2020/09/29/2020-09-29/"/>
-    <id>http://zfe.space/2020/09/29/2020-09-29/</id>
-    <published>2020-09-28T18:32:00.000Z</published>
-    <updated>2020-11-09T13:10:52.498Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Vue入门-Vue的列表展示&quot;&gt;&lt;a href=&quot;#Vue入门-Vue的列表展示&quot; class=&quot;headerlink&quot; title=&quot;Vue入门-Vue的列表展示&quot;&gt;&lt;/a&gt;Vue入门-Vue的列表展示&lt;/h1&gt;&lt;h3 id=&quot;🎉vue如何展示列表？&quot;&gt;&lt;a</summary>
         
       
     
