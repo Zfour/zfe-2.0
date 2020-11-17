@@ -6,7 +6,7 @@
   <link href="http://zfe.space/atom.xml" rel="self"/>
   
   <link href="http://zfe.space/"/>
-  <updated>2020-11-15T16:24:30.245Z</updated>
+  <updated>2020-11-17T13:36:47.957Z</updated>
   <id>http://zfe.space/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>教程：基于Butterfly主题的轮播手动置顶文章</title>
+    <link href="http://zfe.space/2020/11/17/2020-11-17/"/>
+    <id>http://zfe.space/2020/11/17/2020-11-17/</id>
+    <published>2020-11-17T10:42:00.000Z</published>
+    <updated>2020-11-17T13:36:47.957Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;序言：效果展示&quot;&gt;&lt;a href=&quot;#序言：效果展示&quot; class=&quot;headerlink&quot; title=&quot;序言：效果展示&quot;&gt;&lt;/a&gt;序言：效果展示&lt;/h2&gt;&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="http://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="http://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="DIY" scheme="http://zfe.space/tags/DIY/"/>
+    
+    <category term="Butterfly主题" scheme="http://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>vue3.0学习 Day13</title>
@@ -158,7 +187,7 @@
     <link href="http://zfe.space/2020/11/05/2020-11-05/"/>
     <id>http://zfe.space/2020/11/05/2020-11-05/</id>
     <published>2020-11-05T05:42:00.000Z</published>
-    <updated>2020-11-05T08:50:43.926Z</updated>
+    <updated>2020-11-17T13:38:01.244Z</updated>
     
     
       
@@ -187,7 +216,7 @@
     <link href="http://zfe.space/2020/10/30/2020-10-26/"/>
     <id>http://zfe.space/2020/10/30/2020-10-26/</id>
     <published>2020-10-29T18:13:00.000Z</published>
-    <updated>2020-10-29T18:23:38.417Z</updated>
+    <updated>2020-11-17T13:38:29.423Z</updated>
     
     
       
@@ -216,7 +245,7 @@
     <link href="http://zfe.space/2020/10/28/2020-10-31/"/>
     <id>http://zfe.space/2020/10/28/2020-10-31/</id>
     <published>2020-10-28T10:42:00.000Z</published>
-    <updated>2020-11-14T06:28:57.158Z</updated>
+    <updated>2020-11-17T13:38:50.206Z</updated>
     
     
       
@@ -301,7 +330,7 @@
     <link href="http://zfe.space/2020/10/18/2020-10-18/"/>
     <id>http://zfe.space/2020/10/18/2020-10-18/</id>
     <published>2020-10-18T10:42:00.000Z</published>
-    <updated>2020-11-15T15:17:13.914Z</updated>
+    <updated>2020-11-17T13:39:06.878Z</updated>
     
     
       
@@ -330,7 +359,7 @@
     <link href="http://zfe.space/2020/10/16/2020-10-16-1/"/>
     <id>http://zfe.space/2020/10/16/2020-10-16-1/</id>
     <published>2020-10-16T14:13:00.000Z</published>
-    <updated>2020-11-08T15:29:37.418Z</updated>
+    <updated>2020-11-17T13:39:27.781Z</updated>
     
     
       
@@ -543,33 +572,6 @@
     <category term="经济" scheme="http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/"/>
     
     <category term="民生" scheme="http://zfe.space/tags/%E6%B0%91%E7%94%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3.0学习 Day3</title>
-    <link href="http://zfe.space/2020/10/04/2020-10-04/"/>
-    <id>http://zfe.space/2020/10/04/2020-10-04/</id>
-    <published>2020-10-03T18:32:00.000Z</published>
-    <updated>2020-10-26T19:49:55.908Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Vue入门-Vue的生命周期函数种类&quot;&gt;&lt;a href=&quot;#Vue入门-Vue的生命周期函数种类&quot; class=&quot;headerlink&quot; title=&quot;Vue入门-Vue的生命周期函数种类&quot;&gt;&lt;/a&gt;Vue入门-Vue的生命周期函数种类&lt;/h1&gt;&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
-    
-    
-    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
     
   </entry>
   

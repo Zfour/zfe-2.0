@@ -15,8 +15,39 @@
     <atom:link href="http://zfe.space/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>做个有梦想的人！</description>
-    <pubDate>Sun, 15 Nov 2020 16:24:30 GMT</pubDate>
+    <pubDate>Tue, 17 Nov 2020 13:36:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>教程：基于Butterfly主题的轮播手动置顶文章</title>
+      <link>http://zfe.space/2020/11/17/2020-11-17/</link>
+      <guid>http://zfe.space/2020/11/17/2020-11-17/</guid>
+      <pubDate>Tue, 17 Nov 2020 10:42:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;序言：效果展示&quot;&gt;&lt;a href=&quot;#序言：效果展示&quot; class=&quot;headerlink&quot; title=&quot;序言：效果展示&quot;&gt;&lt;/a&gt;序言：效果展示&lt;/h2&gt;&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://zfe.space/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      
+      
+      <category domain="http://zfe.space/tags/%E6%95%99%E7%A8%8B/">教程</category>
+      
+      <category domain="http://zfe.space/tags/DIY/">DIY</category>
+      
+      <category domain="http://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/">Butterfly主题</category>
+      
+      
+      <comments>http://zfe.space/2020/11/17/2020-11-17/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>vue3.0学习 Day13</title>
@@ -583,35 +614,6 @@
       
       
       <comments>http://zfe.space/2020/10/09/2020-10-09/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>vue3.0学习 Day3</title>
-      <link>http://zfe.space/2020/10/04/2020-10-04/</link>
-      <guid>http://zfe.space/2020/10/04/2020-10-04/</guid>
-      <pubDate>Sat, 03 Oct 2020 18:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;Vue入门-Vue的生命周期函数种类&quot;&gt;&lt;a href=&quot;#Vue入门-Vue的生命周期函数种类&quot; class=&quot;headerlink&quot; title=&quot;Vue入门-Vue的生命周期函数种类&quot;&gt;&lt;/a&gt;Vue入门-Vue的生命周期函数种类&lt;/h1&gt;&lt;h3</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://zfe.space/categories/vue/">vue</category>
-      
-      
-      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
-      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
-      
-      
-      <comments>http://zfe.space/2020/10/04/2020-10-04/#disqus_thread</comments>
       
     </item>
     
