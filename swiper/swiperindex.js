@@ -1,1 +1,1 @@
-let swiper=new Swiper(".blog-slider",{spaceBetween:30,effect:"fade",loop:!0,autoplay:{disableOnInteraction:!0,delay:3e3},mousewheel:{invert:!1},pagination:{el:".blog-slider__pagination",clickable:!0}});
+let swiper=new Swiper(".blog-slider",{spaceBetween:30,effect:"fade",loop:!0,autoplay:{disableOnInteraction:!0,delay:3e3},mousewheel:{invert:!1},pagination:{el:".blog-slider__pagination",clickable:!0}}),comtainer=document.getElementById("swiper_container");comtainer.onmouseenter=function(){swiper.autoplay.stop()},comtainer.onmouseleave=function(){swiper.autoplay.start()};
