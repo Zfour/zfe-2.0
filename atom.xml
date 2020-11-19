@@ -6,7 +6,7 @@
   <link href="http://zfe.space/atom.xml" rel="self"/>
   
   <link href="http://zfe.space/"/>
-  <updated>2020-11-17T13:48:10.576Z</updated>
+  <updated>2020-11-19T07:45:29.664Z</updated>
   <id>http://zfe.space/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue3.0学习 Day15</title>
+    <link href="http://zfe.space/2020/11/19/2020-11-19/"/>
+    <id>http://zfe.space/2020/11/19/2020-11-19/</id>
+    <published>2020-11-19T04:32:00.000Z</published>
+    <updated>2020-11-19T07:45:29.664Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;网络模块封装&quot;&gt;&lt;a href=&quot;#网络模块封装&quot; class=&quot;headerlink&quot; title=&quot;网络模块封装&quot;&gt;&lt;/a&gt;网络模块封装&lt;/h1&gt;&lt;h2 id=&quot;🎉选择什么样的网络模块？&quot;&gt;&lt;a href=&quot;#🎉选择什么样的网络模块？&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue3.0学习 Day14</title>
+    <link href="http://zfe.space/2020/11/18/2020-11-18/"/>
+    <id>http://zfe.space/2020/11/18/2020-11-18/</id>
+    <published>2020-11-18T10:32:00.000Z</published>
+    <updated>2020-11-19T07:45:03.759Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是Promise呢？&quot;&gt;&lt;a href=&quot;#什么是Promise呢？&quot; class=&quot;headerlink&quot; title=&quot;什么是Promise呢？&quot;&gt;&lt;/a&gt;什么是Promise呢？&lt;/h1&gt;&lt;h2 id=&quot;🎉Promise到底是做什么的呢？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
+    
+  </entry>
   
   <entry>
     <title>教程：基于Butterfly主题的轮播手动置顶文章</title>
@@ -516,62 +570,6 @@
     <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3.0学习 Day4</title>
-    <link href="http://zfe.space/2020/10/10/2020-10-10/"/>
-    <id>http://zfe.space/2020/10/10/2020-10-10/</id>
-    <published>2020-10-09T18:32:00.000Z</published>
-    <updated>2020-10-26T19:49:14.213Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Vue语法-Vue的动态绑定style相关操作&quot;&gt;&lt;a href=&quot;#Vue语法-Vue的动态绑定style相关操作&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="vue" scheme="http://zfe.space/categories/vue/"/>
-    
-    
-    <category term="学习" scheme="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="vuejs" scheme="http://zfe.space/tags/vuejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NHK おはよう　日本 10月09日</title>
-    <link href="http://zfe.space/2020/10/09/2020-10-09/"/>
-    <id>http://zfe.space/2020/10/09/2020-10-09/</id>
-    <published>2020-10-09T09:32:00.000Z</published>
-    <updated>2020-10-26T19:49:37.271Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.10.09.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    
-    <category term="NHK听力练习" scheme="http://zfe.space/tags/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/"/>
-    
-    <category term="经济" scheme="http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/"/>
-    
-    <category term="民生" scheme="http://zfe.space/tags/%E6%B0%91%E7%94%9F/"/>
     
   </entry>
   

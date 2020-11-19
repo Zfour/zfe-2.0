@@ -15,8 +15,66 @@
     <atom:link href="http://zfe.space/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>做个有梦想的人！</description>
-    <pubDate>Tue, 17 Nov 2020 13:48:10 GMT</pubDate>
+    <pubDate>Thu, 19 Nov 2020 07:45:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>vue3.0学习 Day15</title>
+      <link>http://zfe.space/2020/11/19/2020-11-19/</link>
+      <guid>http://zfe.space/2020/11/19/2020-11-19/</guid>
+      <pubDate>Thu, 19 Nov 2020 04:32:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;网络模块封装&quot;&gt;&lt;a href=&quot;#网络模块封装&quot; class=&quot;headerlink&quot; title=&quot;网络模块封装&quot;&gt;&lt;/a&gt;网络模块封装&lt;/h1&gt;&lt;h2 id=&quot;🎉选择什么样的网络模块？&quot;&gt;&lt;a href=&quot;#🎉选择什么样的网络模块？&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://zfe.space/categories/vue/">vue</category>
+      
+      
+      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
+      
+      
+      <comments>http://zfe.space/2020/11/19/2020-11-19/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>vue3.0学习 Day14</title>
+      <link>http://zfe.space/2020/11/18/2020-11-18/</link>
+      <guid>http://zfe.space/2020/11/18/2020-11-18/</guid>
+      <pubDate>Wed, 18 Nov 2020 10:32:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;什么是Promise呢？&quot;&gt;&lt;a href=&quot;#什么是Promise呢？&quot; class=&quot;headerlink&quot; title=&quot;什么是Promise呢？&quot;&gt;&lt;/a&gt;什么是Promise呢？&lt;/h1&gt;&lt;h2 id=&quot;🎉Promise到底是做什么的呢？&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://zfe.space/categories/vue/">vue</category>
+      
+      
+      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
+      
+      
+      <comments>http://zfe.space/2020/11/18/2020-11-18/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>教程：基于Butterfly主题的轮播手动置顶文章</title>
@@ -554,66 +612,6 @@
       
       
       <comments>http://zfe.space/2020/10/11/2020-10-11/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>vue3.0学习 Day4</title>
-      <link>http://zfe.space/2020/10/10/2020-10-10/</link>
-      <guid>http://zfe.space/2020/10/10/2020-10-10/</guid>
-      <pubDate>Fri, 09 Oct 2020 18:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;Vue语法-Vue的动态绑定style相关操作&quot;&gt;&lt;a href=&quot;#Vue语法-Vue的动态绑定style相关操作&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://zfe.space/categories/vue/">vue</category>
-      
-      
-      <category domain="http://zfe.space/tags/%E5%AD%A6%E4%B9%A0/">学习</category>
-      
-      <category domain="http://zfe.space/tags/vuejs/">vuejs</category>
-      
-      
-      <comments>http://zfe.space/2020/10/10/2020-10-10/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>NHK おはよう　日本 10月09日</title>
-      <link>http://zfe.space/2020/10/09/2020-10-09/</link>
-      <guid>http://zfe.space/2020/10/09/2020-10-09/</guid>
-      <pubDate>Fri, 09 Oct 2020 09:32:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-lazy-src=&quot;/images/nhkimage/2020.10.09.png&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="http://zfe.space/categories/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/">NHK听力练习</category>
-      
-      
-      <category domain="http://zfe.space/tags/NHK%E5%90%AC%E5%8A%9B%E7%BB%83%E4%B9%A0/">NHK听力练习</category>
-      
-      <category domain="http://zfe.space/tags/%E7%BB%8F%E6%B5%8E/">经济</category>
-      
-      <category domain="http://zfe.space/tags/%E6%B0%91%E7%94%9F/">民生</category>
-      
-      
-      <comments>http://zfe.space/2020/10/09/2020-10-09/#disqus_thread</comments>
       
     </item>
     
