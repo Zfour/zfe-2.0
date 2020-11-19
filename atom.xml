@@ -6,7 +6,7 @@
   <link href="http://zfe.space/atom.xml" rel="self"/>
   
   <link href="http://zfe.space/"/>
-  <updated>2020-11-19T07:45:29.664Z</updated>
+  <updated>2020-11-19T08:34:09.444Z</updated>
   <id>http://zfe.space/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vue3.0学习 Day15</title>
+    <title>十六、vue中的网络模块封装</title>
     <link href="http://zfe.space/2020/11/19/2020-11-19/"/>
     <id>http://zfe.space/2020/11/19/2020-11-19/</id>
     <published>2020-11-19T04:32:00.000Z</published>
-    <updated>2020-11-19T07:45:29.664Z</updated>
+    <updated>2020-11-19T08:34:09.444Z</updated>
     
     
       
@@ -44,11 +44,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day14</title>
+    <title>十五、vue中的promise语法和vuex</title>
     <link href="http://zfe.space/2020/11/18/2020-11-18/"/>
     <id>http://zfe.space/2020/11/18/2020-11-18/</id>
     <published>2020-11-18T10:32:00.000Z</published>
-    <updated>2020-11-19T07:45:03.759Z</updated>
+    <updated>2020-11-19T08:36:06.118Z</updated>
     
     
       
@@ -100,11 +100,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day13</title>
+    <title>十四、vue中的路由进阶</title>
     <link href="http://zfe.space/2020/11/15/2020-11-15/"/>
     <id>http://zfe.space/2020/11/15/2020-11-15/</id>
     <published>2020-11-15T10:32:00.000Z</published>
-    <updated>2020-11-15T16:24:30.245Z</updated>
+    <updated>2020-11-19T08:32:36.094Z</updated>
     
     
       
@@ -127,11 +127,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day12</title>
+    <title>十三、vue中的脚手架v3和路由基础</title>
     <link href="http://zfe.space/2020/11/14/2020-11-14/"/>
     <id>http://zfe.space/2020/11/14/2020-11-14/</id>
     <published>2020-11-14T10:32:00.000Z</published>
-    <updated>2020-11-15T16:20:38.270Z</updated>
+    <updated>2020-11-19T08:32:30.890Z</updated>
     
     
       
@@ -154,11 +154,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day11</title>
+    <title>十二、vue中的webpack配置和脚手架v2</title>
     <link href="http://zfe.space/2020/11/11/2020-11-11/"/>
     <id>http://zfe.space/2020/11/11/2020-11-11/</id>
     <published>2020-11-11T10:32:00.000Z</published>
-    <updated>2020-11-11T10:54:52.693Z</updated>
+    <updated>2020-11-19T08:32:25.957Z</updated>
     
     
       
@@ -181,11 +181,11 @@
   </entry>
   
   <entry>
-    <title>webpack从零到精通</title>
+    <title>十一、webpack：从零到精通</title>
     <link href="http://zfe.space/2020/11/10/2020-11-10/"/>
     <id>http://zfe.space/2020/11/10/2020-11-10/</id>
     <published>2020-11-09T18:32:00.000Z</published>
-    <updated>2020-11-10T12:16:23.560Z</updated>
+    <updated>2020-11-19T08:26:50.339Z</updated>
     
     
       
@@ -210,11 +210,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day10</title>
+    <title>十、vue中的组件间的数据访问和插槽</title>
     <link href="http://zfe.space/2020/11/09/2020-11-09/"/>
     <id>http://zfe.space/2020/11/09/2020-11-09/</id>
     <published>2020-11-08T18:32:00.000Z</published>
-    <updated>2020-11-10T12:12:01.940Z</updated>
+    <updated>2020-11-19T08:25:50.063Z</updated>
     
     
       
@@ -353,11 +353,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day9</title>
+    <title>九、vue中的父子通信</title>
     <link href="http://zfe.space/2020/10/20/2020-10-21/"/>
     <id>http://zfe.space/2020/10/20/2020-10-21/</id>
     <published>2020-10-19T18:32:00.000Z</published>
-    <updated>2020-10-26T19:46:11.161Z</updated>
+    <updated>2020-11-19T08:21:41.646Z</updated>
     
     
       
@@ -438,18 +438,18 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day8</title>
+    <title>八、vue中的组件化开发</title>
     <link href="http://zfe.space/2020/10/15/2020-10-16-2/"/>
     <id>http://zfe.space/2020/10/15/2020-10-16-2/</id>
     <published>2020-10-14T18:32:00.000Z</published>
-    <updated>2020-10-26T19:47:24.999Z</updated>
+    <updated>2020-11-19T08:24:38.590Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Vue语法-Vue中v-mode的修饰符？&quot;&gt;&lt;a href=&quot;#Vue语法-Vue中v-mode的修饰符？&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Vue组件化-什么是组件化？&quot;&gt;&lt;a href=&quot;#Vue组件化-什么是组件化？&quot; class=&quot;headerlink&quot; title=&quot;Vue组件化-什么是组件化？&quot;&gt;&lt;/a&gt;Vue组件化-什么是组件化？&lt;/h1&gt;&lt;h3</summary>
         
       
     
@@ -465,11 +465,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day7</title>
+    <title>七、vue中的高阶函数和表单绑定</title>
     <link href="http://zfe.space/2020/10/14/2020-10-14/"/>
     <id>http://zfe.space/2020/10/14/2020-10-14/</id>
     <published>2020-10-13T18:32:00.000Z</published>
-    <updated>2020-10-26T19:47:42.111Z</updated>
+    <updated>2020-11-19T08:24:28.515Z</updated>
     
     
       
@@ -520,11 +520,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day6</title>
+    <title>六、vue中的遍历操作和过滤器</title>
     <link href="http://zfe.space/2020/10/12/2020-10-12/"/>
     <id>http://zfe.space/2020/10/12/2020-10-12/</id>
     <published>2020-10-11T18:32:00.000Z</published>
-    <updated>2020-10-26T19:48:36.723Z</updated>
+    <updated>2020-11-19T08:18:22.853Z</updated>
     
     
       
@@ -547,11 +547,11 @@
   </entry>
   
   <entry>
-    <title>vue3.0学习 Day5</title>
+    <title>五、vue中的事件监听和条件判断</title>
     <link href="http://zfe.space/2020/10/11/2020-10-11/"/>
     <id>http://zfe.space/2020/10/11/2020-10-11/</id>
     <published>2020-10-10T18:32:00.000Z</published>
-    <updated>2020-10-26T19:48:48.398Z</updated>
+    <updated>2020-11-19T08:18:16.338Z</updated>
     
     
       

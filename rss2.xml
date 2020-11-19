@@ -15,11 +15,11 @@
     <atom:link href="http://zfe.space/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>做个有梦想的人！</description>
-    <pubDate>Thu, 19 Nov 2020 07:45:29 GMT</pubDate>
+    <pubDate>Thu, 19 Nov 2020 08:34:09 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>vue3.0学习 Day15</title>
+      <title>十六、vue中的网络模块封装</title>
       <link>http://zfe.space/2020/11/19/2020-11-19/</link>
       <guid>http://zfe.space/2020/11/19/2020-11-19/</guid>
       <pubDate>Thu, 19 Nov 2020 04:32:00 GMT</pubDate>
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day14</title>
+      <title>十五、vue中的promise语法和vuex</title>
       <link>http://zfe.space/2020/11/18/2020-11-18/</link>
       <guid>http://zfe.space/2020/11/18/2020-11-18/</guid>
       <pubDate>Wed, 18 Nov 2020 10:32:00 GMT</pubDate>
@@ -108,7 +108,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day13</title>
+      <title>十四、vue中的路由进阶</title>
       <link>http://zfe.space/2020/11/15/2020-11-15/</link>
       <guid>http://zfe.space/2020/11/15/2020-11-15/</guid>
       <pubDate>Sun, 15 Nov 2020 10:32:00 GMT</pubDate>
@@ -137,7 +137,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day12</title>
+      <title>十三、vue中的脚手架v3和路由基础</title>
       <link>http://zfe.space/2020/11/14/2020-11-14/</link>
       <guid>http://zfe.space/2020/11/14/2020-11-14/</guid>
       <pubDate>Sat, 14 Nov 2020 10:32:00 GMT</pubDate>
@@ -166,7 +166,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day11</title>
+      <title>十二、vue中的webpack配置和脚手架v2</title>
       <link>http://zfe.space/2020/11/11/2020-11-11/</link>
       <guid>http://zfe.space/2020/11/11/2020-11-11/</guid>
       <pubDate>Wed, 11 Nov 2020 10:32:00 GMT</pubDate>
@@ -195,7 +195,7 @@
     </item>
     
     <item>
-      <title>webpack从零到精通</title>
+      <title>十一、webpack：从零到精通</title>
       <link>http://zfe.space/2020/11/10/2020-11-10/</link>
       <guid>http://zfe.space/2020/11/10/2020-11-10/</guid>
       <pubDate>Mon, 09 Nov 2020 18:32:00 GMT</pubDate>
@@ -226,7 +226,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day10</title>
+      <title>十、vue中的组件间的数据访问和插槽</title>
       <link>http://zfe.space/2020/11/09/2020-11-09/</link>
       <guid>http://zfe.space/2020/11/09/2020-11-09/</guid>
       <pubDate>Sun, 08 Nov 2020 18:32:00 GMT</pubDate>
@@ -379,7 +379,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day9</title>
+      <title>九、vue中的父子通信</title>
       <link>http://zfe.space/2020/10/20/2020-10-21/</link>
       <guid>http://zfe.space/2020/10/20/2020-10-21/</guid>
       <pubDate>Mon, 19 Oct 2020 18:32:00 GMT</pubDate>
@@ -470,7 +470,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day8</title>
+      <title>八、vue中的组件化开发</title>
       <link>http://zfe.space/2020/10/15/2020-10-16-2/</link>
       <guid>http://zfe.space/2020/10/15/2020-10-16-2/</guid>
       <pubDate>Wed, 14 Oct 2020 18:32:00 GMT</pubDate>
@@ -479,7 +479,7 @@
         
           
           
-      <description>&lt;h1 id=&quot;Vue语法-Vue中v-mode的修饰符？&quot;&gt;&lt;a href=&quot;#Vue语法-Vue中v-mode的修饰符？&quot; class=&quot;headerlink&quot;</description>
+      <description>&lt;h1 id=&quot;Vue组件化-什么是组件化？&quot;&gt;&lt;a href=&quot;#Vue组件化-什么是组件化？&quot; class=&quot;headerlink&quot; title=&quot;Vue组件化-什么是组件化？&quot;&gt;&lt;/a&gt;Vue组件化-什么是组件化？&lt;/h1&gt;&lt;h3</description>
           
         
       
@@ -499,7 +499,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day7</title>
+      <title>七、vue中的高阶函数和表单绑定</title>
       <link>http://zfe.space/2020/10/14/2020-10-14/</link>
       <guid>http://zfe.space/2020/10/14/2020-10-14/</guid>
       <pubDate>Tue, 13 Oct 2020 18:32:00 GMT</pubDate>
@@ -558,7 +558,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day6</title>
+      <title>六、vue中的遍历操作和过滤器</title>
       <link>http://zfe.space/2020/10/12/2020-10-12/</link>
       <guid>http://zfe.space/2020/10/12/2020-10-12/</guid>
       <pubDate>Sun, 11 Oct 2020 18:32:00 GMT</pubDate>
@@ -587,7 +587,7 @@
     </item>
     
     <item>
-      <title>vue3.0学习 Day5</title>
+      <title>五、vue中的事件监听和条件判断</title>
       <link>http://zfe.space/2020/10/11/2020-10-11/</link>
       <guid>http://zfe.space/2020/10/11/2020-10-11/</guid>
       <pubDate>Sat, 10 Oct 2020 18:32:00 GMT</pubDate>
