@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小冰博客</title>
+  <icon>https://zfe.space/icon.png</icon>
+  <subtitle>做个有梦想的人！</subtitle>
+  <link href="https://zfe.space/atom.xml" rel="self"/>
+  
+  <link href="https://zfe.space/"/>
+  <updated>2021-03-04T17:04:08.159Z</updated>
+  <id>https://zfe.space/</id>
+  
+  <author>
+    <name>しゅふがく</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>教程：github/gitee issues的友链信息自动生成json及api调用</title>
+    <link href="https://zfe.space/post/python-issues-api.html"/>
+    <id>https://zfe.space/post/python-issues-api.html</id>
+    <published>2021-03-02T01:17:00.000Z</published>
+    <updated>2021-03-04T17:04:08.159Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;说句闲话&quot;&gt;&lt;a href=&quot;#说句闲话&quot; class=&quot;headerlink&quot; title=&quot;说句闲话&quot;&gt;&lt;/a&gt;说句闲话&lt;/h1&gt;&lt;p&gt;最近一直都在写朋友圈，本着安利朋友圈加了 Volantis 的群。然后在群主大佬的启发下写了这个项目，这个项目是利用</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="python" scheme="https://zfe.space/tags/python/"/>
+    
+    <category term="github action" scheme="https://zfe.space/tags/github-action/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于hexo的友链朋友圈 Beta1.5</title>
+    <link href="https://zfe.space/post/friend-link-circle.html"/>
+    <id>https://zfe.space/post/friend-link-circle.html</id>
+    <published>2021-03-01T00:12:00.000Z</published>
+    <updated>2021-03-04T17:04:07.899Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是友链朋友圈？&quot;&gt;&lt;a href=&quot;#什么是友链朋友圈？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="https://zfe.space/tags/hexo/"/>
+    
+    <category term="朋友圈" scheme="https://zfe.space/tags/%E6%9C%8B%E5%8F%8B%E5%9C%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游我推荐：《尼尔》手游简评，牢笼中绽放希望之花</title>
+    <link href="https://zfe.space/post/20210220.html"/>
+    <id>https://zfe.space/post/20210220.html</id>
+    <published>2021-02-20T21:42:00.000Z</published>
+    <updated>2021-03-04T17:04:07.691Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;文：冰卡诺&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h1&gt;&lt;p&gt;2017</summary>
+        
+      
+    
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/categories/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021.2.18 日記</title>
+    <link href="https://zfe.space/post/niki-2021-2-18.html"/>
+    <id>https://zfe.space/post/niki-2021-2-18.html</id>
+    <published>2021-02-18T10:17:00.000Z</published>
+    <updated>2021-03-04T17:04:07.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;新しい 1 年になりました。まずは「よいお年を」という言葉を挨拶します。以前の新年でコンピュータゲームに夢中すると違いますが、今年の新年は意味がある 2 つことをしました。&lt;br&gt;1</summary>
+        
+      
+    
+    
+    
+    <category term="生活趣闻" scheme="https://zfe.space/categories/%E7%94%9F%E6%B4%BB%E8%B6%A3%E9%97%BB/"/>
+    
+    
+    <category term="日记" scheme="https://zfe.space/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用的python指令整理（一）</title>
+    <link href="https://zfe.space/post/python-learning.html"/>
+    <id>https://zfe.space/post/python-learning.html</id>
+    <published>2021-02-17T12:17:00.000Z</published>
+    <updated>2021-03-04T17:04:07.755Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近一直在写 python，但有些指令总是忘，这里简单整理一下。&lt;/p&gt;
+&lt;h3 id=&quot;1-声明中文编码&quot;&gt;&lt;a href=&quot;#1-声明中文编码&quot; class=&quot;headerlink&quot; title=&quot;1.声明中文编码&quot;&gt;&lt;/a&gt;1.声明中文编码&lt;/h3&gt;&lt;p&gt;在 3.0</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://zfe.space/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="python" scheme="https://zfe.space/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于butterfly主题的历史上的今天 2.0重置版</title>
+    <link href="https://zfe.space/post/history-card.html"/>
+    <id>https://zfe.space/post/history-card.html</id>
+    <published>2021-02-13T20:17:00.000Z</published>
+    <updated>2021-03-04T17:04:07.783Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是历史上的今天？&quot;&gt;&lt;a href=&quot;#什么是历史上的今天？&quot; class=&quot;headerlink&quot; title=&quot;什么是历史上的今天？&quot;&gt;&lt;/a&gt;什么是历史上的今天？&lt;/h1&gt;&lt;p&gt;这个要从我还是一个小白说起，当时刚开始写博客，只会 jquery</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="butterfly" scheme="https://zfe.space/tags/butterfly/"/>
+    
+    <category term="插件" scheme="https://zfe.space/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>print(&#39;大家新年快乐！&#39;)</title>
+    <link href="https://zfe.space/post/happy-new-year-2021.html"/>
+    <id>https://zfe.space/post/happy-new-year-2021.html</id>
+    <published>2021-02-11T20:42:00.000Z</published>
+    <updated>2021-03-04T17:04:07.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;AS:Alert.show(“祝大家新年快乐！”);&lt;br&gt;Asp : Response.Write “祝大家新年快乐”&lt;br&gt;C：printf(“祝大家新年快乐”);&lt;br&gt;C++ :</summary>
+        
+      
+    
+    
+    
+    <category term="生活趣闻" scheme="https://zfe.space/categories/%E7%94%9F%E6%B4%BB%E8%B6%A3%E9%97%BB/"/>
+    
+    
+    <category term="新年" scheme="https://zfe.space/tags/%E6%96%B0%E5%B9%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游我推荐：经典IP能否再创佳绩？仙剑7试玩版简评</title>
+    <link href="https://zfe.space/post/20200123.html"/>
+    <id>https://zfe.space/post/20200123.html</id>
+    <published>2021-01-23T11:42:00.000Z</published>
+    <updated>2021-03-04T17:04:08.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;在开始评测之前，先来侃一侃《仙剑奇侠传》这一经典 IP 的发展。谈起《仙剑奇侠传》（后简称《仙剑》），作为拥有 25</summary>
+        
+      
+    
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/categories/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游我推荐：《怪物猎人：崛起》三种全新体验带来无限可能</title>
+    <link href="https://zfe.space/post/20200122.html"/>
+    <id>https://zfe.space/post/20200122.html</id>
+    <published>2021-01-22T11:42:00.000Z</published>
+    <updated>2021-03-04T17:04:08.099Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h1&gt;&lt;p&gt;预定在 3 月 26 日于 NS 平台发售的《怪物猎人·崛起》（Monster Hunter</summary>
+        
+      
+    
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/categories/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python数据分析入门——bili数据抓取到数据分析网站的实战记录</title>
+    <link href="https://zfe.space/post/python_bili.html"/>
+    <id>https://zfe.space/post/python_bili.html</id>
+    <published>2021-01-21T11:42:00.000Z</published>
+    <updated>2021-03-04T17:03:57.115Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;先说两句废话&quot;&gt;&lt;a href=&quot;#先说两句废话&quot; class=&quot;headerlink&quot; title=&quot;先说两句废话&quot;&gt;&lt;/a&gt;先说两句废话&lt;/h1&gt;&lt;p&gt;最近，很多人都问我是不是摸鱼不更新博客了。&lt;br&gt;其实是我是点新技能去了，差不多用了 10</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="python" scheme="https://zfe.space/tags/python/"/>
+    
+    <category term="flask" scheme="https://zfe.space/tags/flask/"/>
+    
+    <category term="Echarts" scheme="https://zfe.space/tags/Echarts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教程：基于Butterfly主题（去jquery）的gitcalendar3.0</title>
+    <link href="https://zfe.space/post/6948.html"/>
+    <id>https://zfe.space/post/6948.html</id>
+    <published>2021-01-11T18:42:00.000Z</published>
+    <updated>2021-03-04T17:03:58.951Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;如果您尚未使用过-gitcalendar-及相关魔改配置，&quot;&gt;&lt;a href=&quot;#如果您尚未使用过-gitcalendar-及相关魔改配置，&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="DIY" scheme="https://zfe.space/tags/DIY/"/>
+    
+    <category term="Butterfly主题" scheme="https://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教程：hexo×语雀 实现云端富文本写作</title>
+    <link href="https://zfe.space/post/554e.html"/>
+    <id>https://zfe.space/post/554e.html</id>
+    <published>2020-12-16T11:42:00.000Z</published>
+    <updated>2021-03-04T17:03:57.639Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文章通过语雀编写&lt;br&gt;教程参考自 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="DIY" scheme="https://zfe.space/tags/DIY/"/>
+    
+    <category term="Butterfly主题" scheme="https://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《赛博朋克2077》：小白萌新避坑指南</title>
+    <link href="https://zfe.space/post/20201213.html"/>
+    <id>https://zfe.space/post/20201213.html</id>
+    <published>2020-12-13T11:42:00.000Z</published>
+    <updated>2021-03-04T17:03:57.375Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot; 序&quot;&gt;&lt;/a&gt;&lt;img src= &quot;/img/loading.gif&quot; referrerpolicy=&quot;no-referrer&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/categories/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>硬核到去农业局官网找攻略的种稻模拟器？——《天穗之咲稻姬》简评</title>
+    <link href="https://zfe.space/post/20201210.html"/>
+    <id>https://zfe.space/post/20201210.html</id>
+    <published>2020-12-10T11:42:00.000Z</published>
+    <updated>2021-03-04T17:03:57.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot; 序&quot;&gt;&lt;/a&gt;&lt;img src= &quot;/img/loading.gif&quot; referrerpolicy=&quot;no-referrer&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/categories/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+    
+    <category term="游戏评测" scheme="https://zfe.space/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教程：基于Butterfly主题的文章点赞（LeanCloud）</title>
+    <link href="https://zfe.space/post/40483.html"/>
+    <id>https://zfe.space/post/40483.html</id>
+    <published>2020-11-25T18:42:00.000Z</published>
+    <updated>2021-03-04T17:03:57.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;序言：效果展示&quot;&gt;&lt;a href=&quot;#序言：效果展示&quot; class=&quot;headerlink&quot; title=&quot;序言：效果展示&quot;&gt;&lt;/a&gt;序言：效果展示&lt;/h2&gt;&lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="DIY" scheme="https://zfe.space/tags/DIY/"/>
+    
+    <category term="Butterfly主题" scheme="https://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十六、vue中的网络模块封装</title>
+    <link href="https://zfe.space/post/5338.html"/>
+    <id>https://zfe.space/post/5338.html</id>
+    <published>2020-11-19T12:32:00.000Z</published>
+    <updated>2021-03-04T17:03:57.807Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;网络模块封装&quot;&gt;&lt;a href=&quot;#网络模块封装&quot; class=&quot;headerlink&quot; title=&quot;网络模块封装&quot;&gt;&lt;/a&gt;网络模块封装&lt;/h1&gt;&lt;h2 id=&quot;🎉-选择什么样的网络模块？&quot;&gt;&lt;a href=&quot;#🎉-选择什么样的网络模块？&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="https://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="https://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="https://zfe.space/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十五、vue中的promise语法和vuex</title>
+    <link href="https://zfe.space/post/23556.html"/>
+    <id>https://zfe.space/post/23556.html</id>
+    <published>2020-11-18T18:32:00.000Z</published>
+    <updated>2021-03-04T17:03:58.043Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是-Promise-呢？&quot;&gt;&lt;a href=&quot;#什么是-Promise-呢？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Promise 呢？&quot;&gt;&lt;/a&gt;什么是 Promise 呢？&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="https://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="https://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="https://zfe.space/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教程：基于Butterfly主题的轮播手动置顶文章</title>
+    <link href="https://zfe.space/post/11009.html"/>
+    <id>https://zfe.space/post/11009.html</id>
+    <published>2020-11-17T18:42:00.000Z</published>
+    <updated>2021-03-04T17:03:58.079Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;当前教程已暂停维护&quot;&gt;&lt;a href=&quot;#当前教程已暂停维护&quot; class=&quot;headerlink&quot; title=&quot;当前教程已暂停维护&quot;&gt;&lt;/a&gt;当前教程已暂停维护&lt;/h2&gt;&lt;p&gt;最新教程，请参考最新教程&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://zfe.space/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://zfe.space/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="DIY" scheme="https://zfe.space/tags/DIY/"/>
+    
+    <category term="Butterfly主题" scheme="https://zfe.space/tags/Butterfly%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十四、vue中的路由进阶</title>
+    <link href="https://zfe.space/post/62419.html"/>
+    <id>https://zfe.space/post/62419.html</id>
+    <published>2020-11-15T18:32:00.000Z</published>
+    <updated>2021-03-04T17:03:58.135Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;路由传递参数的方式？&quot;&gt;&lt;a href=&quot;#路由传递参数的方式？&quot; class=&quot;headerlink&quot; title=&quot;路由传递参数的方式？&quot;&gt;&lt;/a&gt;路由传递参数的方式？&lt;/h1&gt;&lt;h2 id=&quot;🎉params-的类型？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="https://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="https://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="https://zfe.space/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十三、vue中的脚手架v3和路由基础</title>
+    <link href="https://zfe.space/post/61492.html"/>
+    <id>https://zfe.space/post/61492.html</id>
+    <published>2020-11-14T18:32:00.000Z</published>
+    <updated>2021-03-04T17:03:58.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Runtime-Compiler-和-Runtime-only-的区别？&quot;&gt;&lt;a href=&quot;#Runtime-Compiler-和-Runtime-only-的区别？&quot; class=&quot;headerlink&quot; title=&quot;Runtime-Compiler 和</summary>
+        
+      
+    
+    
+    
+    <category term="vue" scheme="https://zfe.space/categories/vue/"/>
+    
+    
+    <category term="学习" scheme="https://zfe.space/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="vuejs" scheme="https://zfe.space/tags/vuejs/"/>
+    
+  </entry>
+  
+</feed>
