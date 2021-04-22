@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>十六、vue中的网络模块封装 | 小冰博客</title><meta name="keywords" content="学习,vuejs"><meta name="author" content="しゅふがく"><meta name="copyright" content="しゅふがく"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="网络模块封装🎉 选择什么样的网络模块？选择一：传统的 Ajax传统的 Ajax 是基于 XMLHttpRequest(XHR)。 ,配置和调用方式等非常混乱。 编码起来看起来就非常蛋疼。 所以真实开发中很少直接使用, 而是使用 jQuery-Ajax。 选择二：jQuery-Ajax首先, 我们先明确一点: 在 Vue 的整个开发中都是不需要使用 jQuery 了。 那么, 就意味着为了方便我们"><meta property="og:type" content="article"><meta property="og:title" content="十六、vue中的网络模块封装"><meta property="og:url" content="https://zfe.space/post/5338.html"><meta property="og:site_name" content="小冰博客"><meta property="og:description" content="网络模块封装🎉 选择什么样的网络模块？选择一：传统的 Ajax传统的 Ajax 是基于 XMLHttpRequest(XHR)。 ,配置和调用方式等非常混乱。 编码起来看起来就非常蛋疼。 所以真实开发中很少直接使用, 而是使用 jQuery-Ajax。 选择二：jQuery-Ajax首先, 我们先明确一点: 在 Vue 的整个开发中都是不需要使用 jQuery 了。 那么, 就意味着为了方便我们"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zfe.space/images/letter/v.png"><meta property="article:published_time" content="2020-11-19T12:32:00.000Z"><meta property="article:modified_time" content="2020-11-19T12:32:00.000Z"><meta property="article:author" content="しゅふがく"><meta property="article:tag" content="学习"><meta property="article:tag" content="vuejs"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://zfe.space/images/letter/v.png"><link rel="shortcut icon" href="/img/siteicon/favicon.ico"><link rel="canonical" href="https://zfe.space/post/5338"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="baidu-site-verification" content="LNYL1UdbCpN6wro5"><meta name="360-site-verification" content="d182b3f28525f2db83acfaaf6e696dba"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js" defer="defer"></script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?1738c17b1ff542e386d62634d8501cf4";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"7V16DAJ0SV","apiKey":"288186e0537ee02bcdc55246b5e32621","indexName":"search","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2020-11-19 12:32:00"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><style>#footer:before,[data-theme=dark] #footer:before{background-color:rgba(0,0,0,0)}@keyframes realImg{0%{filter:blur(15px)}100%{filter:blur(0)}}.post_bg{filter:blur(15px)}.post_bg.entered.loaded{filter:blur(0);will-change:opacity;animation:realImg .5s linear}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"><style>#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags:before{content:"\A";white-space:pre}#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags>.article-meta__separator{display:none}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.css"><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="小冰博客" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="小冰博客" type="application/rss+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/images/headimage.png" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">152</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小冰博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i> <span>搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">十六、vue中的网络模块封装</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-19T12:32:00.000Z" title="发表于 2020-11-19 12:32:00">2020-11-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-19T12:32:00.000Z" title="更新于 2020-11-19 12:32:00">2020-11-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/vue/">vue</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="十六、vue中的网络模块封装"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/post/5338.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/post/5338.html" itemprop="commentCount"></span></a></span></div></div></div><article class="post-content" id="article-container"><h1 id="网络模块封装"><a href="#网络模块封装" class="headerlink" title="网络模块封装"></a>网络模块封装</h1><h2 id="🎉-选择什么样的网络模块？"><a href="#🎉-选择什么样的网络模块？" class="headerlink" title="🎉 选择什么样的网络模块？"></a>🎉 选择什么样的网络模块？</h2><h4 id="选择一：传统的-Ajax"><a href="#选择一：传统的-Ajax" class="headerlink" title="选择一：传统的 Ajax"></a>选择一：传统的 Ajax</h4><p>传统的 Ajax 是基于 XMLHttpRequest(XHR)。</p><p>,配置和调用方式等非常混乱。</p><p>编码起来看起来就非常蛋疼。</p><p>所以真实开发中很少直接使用, 而是使用 jQuery-Ajax。</p><h4 id="选择二：jQuery-Ajax"><a href="#选择二：jQuery-Ajax" class="headerlink" title="选择二：jQuery-Ajax"></a>选择二：jQuery-Ajax</h4><p>首先, 我们先明确一点: 在 Vue 的整个开发中都是不需要使用 jQuery 了。</p><p>那么, 就意味着为了方便我们进行一个网络请求, 特意引用一个 jQuery, 你觉得合理吗?</p><p>jQuery 的代码 1w+行.Vue 的代码才 1w+行。</p><p>完全没有必要为了用网络请求就引用这个重量级的框架。</p><h4 id="选择三：Vue-resource"><a href="#选择三：Vue-resource" class="headerlink" title="选择三：Vue-resource"></a><strong>选择三：Vue-resource</strong></h4><p>Vue-resource 的体积相对于 jQuery 小很多.</p><p>另外 Vue-resource 是官方推出的.</p><p>在 Vue2.0 退出后, Vue 作者就在 GitHub 的 Issues 中说明了去掉 vue-resource, 并且以后也不会再更新.那么意味着以后 vue-reource 不再支持新的版本时, 也不会再继续更新和维护.</p><p>对以后的项目开发和维护都存在很大的隐患.</p><h4 id="选择四：axios"><a href="#选择四：axios" class="headerlink" title="选择四：axios"></a><strong>选择四：</strong>axios</h4><p>axios 有非常多的优点, 并且用起来也非常方便.</p><p>稍后, 我们对他详细学习.</p><p>功能特点:</p><p>在浏览器中发送 XMLHttpRequests 请求</p><p>在 node.js 中发送 http 请求</p><p>支持 Promise API</p><p>拦截请求和响应</p><p>转换请求和响应数据</p><p>等等</p><h2 id="🎉axios-请求方式？"><a href="#🎉axios-请求方式？" class="headerlink" title="🎉axios 请求方式？"></a>🎉axios 请求方式？</h2><p>axios(config)</p><p>axios.request(config)</p><p>axios.get(url[, config])</p><p>axios.delete(url[, config])</p><p>axios.head(url[, config])</p><p>axios.post(url[, data[, config]])</p><p>axios.put(url[, data[, config]])</p><p>axios.patch(url[, data[, config]])</p><h2 id="🎉-基本请求方式？"><a href="#🎉-基本请求方式？" class="headerlink" title="🎉 基本请求方式？"></a>🎉 基本请求方式？</h2><p><strong>没有请求参数：</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&quot;http://123.207.32.32:8000/home/data&quot;</span>)</span><br><span class="line">  .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure><p><strong>有请求参数：</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&quot;http://123.207.32.32:8000/home/data&quot;</span>, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">      type: <span class="string">&quot;sell&quot;</span>,</span><br><span class="line">      page: <span class="number">1</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure><p><strong>补充：请求的基本类型</strong></p><p>1 GET 请求指定的页面信息，并返回实体主体。</p><p>2 HEAD 类似于 get 请求，只不过返回的响应中没有具体的内容，用于获取报头</p><p>3 POST 向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST 请求可能会导致新的资源的建立和/或已有资源的修改。</p><p>4 PUT 从客户端向服务器传送的数据取代指定的文档的内容。</p><p>5 DELETE 请求服务器删除指定的页面。</p><p>6 CONNECT HTTP/1.1 协议中预留给能够将连接改为管道方式的代理服务器。</p><p>7 OPTIONS 允许客户端查看服务器的性能。</p><p>8 TRACE 回显服务器收到的请求，主要用于测试或诊断。</p><blockquote><p>读完这一篇 IT 程序员终于明白 post 和 get 的区别<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/92549929">https://zhuanlan.zhihu.com/p/92549929</a></p></blockquote><h2 id="🎉-并发请求方式？"><a href="#🎉-并发请求方式？" class="headerlink" title="🎉 并发请求方式？"></a>🎉 并发请求方式？</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">axios</span><br><span class="line">  .all([axios(), axios()])</span><br><span class="line">  .then(</span><br><span class="line">    axios.spread(<span class="function">(<span class="params">res1, res2</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res1);</span><br><span class="line">      <span class="built_in">console</span>.log(res2);</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//results =&gt; &#123;</span></span><br><span class="line">    <span class="comment">//console.log(results[0]);</span></span><br><span class="line">    <span class="comment">// console.log(results[1])</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">  )</span><br><span class="line">  .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure><h2 id="🎉-全局配置？"><a href="#🎉-全局配置？" class="headerlink" title="🎉 全局配置？"></a>🎉 全局配置？</h2><p>在上面的示例中, 我们的 BaseURL 是固定的</p><p>事实上, 在开发中可能很多参数都是固定的.</p><p>这个时候我们可以进行一些抽取, 也可以利用 axiox 的全局配置</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">axios.defaults.baseURL = ‘<span class="number">123.207</span><span class="number">.32</span><span class="number">.32</span>:<span class="number">8000</span>’;</span><br><span class="line">axios.defaults.headers.post[‘Content-Type’] = ‘application/x-www-form-urlencoded’;</span><br></pre></td></tr></table></figure><h2 id="🎉-常见的配置选项？"><a href="#🎉-常见的配置选项？" class="headerlink" title="🎉 常见的配置选项？"></a>🎉 常见的配置选项？</h2><p><strong>请求地址</strong></p><p>url: ‘/user’,</p><p><strong>请求类型</strong></p><p>method: ‘get’,</p><p><strong>请根路径</strong></p><p>baseURL: ‘<a target="_blank" rel="noopener" href="http://www.mt.com/api">http://www.mt.com/api</a>‘,</p><p><strong>请求前的数据处理</strong></p><p>transformRequest:[function(data){}],</p><p><strong>请求后的数据处理</strong></p><p>transformResponse: [function(data){}],</p><p><strong>自定义的请求头</strong></p><p>headers:{‘x-Requested-With’:’XMLHttpRequest’},</p><p><strong>URL 查询对象</strong></p><p>params:{ id: 12 },</p><p><strong>查询对象序列化函数</strong></p><p>paramsSerializer: function(params){ }</p><p><strong>request body</strong></p><p>data: { key: ‘aa’},</p><p><strong>超时设置 s</strong></p><p>timeout: 1000,</p><p><strong>跨域是否带 Token</strong></p><p>withCredentials: false,</p><p><strong>自定义请求处理</strong></p><p>adapter: function(resolve, reject, config){},</p><p><strong>身份验证信息</strong></p><p>auth: { uname: ‘’, pwd: ‘12’},</p><p><strong>响应的数据格式 json / blob /document /arraybuffer / text / stream</strong></p><p>responseType: ‘json’,</p><h2 id="🎉-创建-axios-实例？"><a href="#🎉-创建-axios-实例？" class="headerlink" title="🎉 创建 axios 实例？"></a>🎉 创建 axios 实例？</h2><p>为什么要创建 axios 的实例呢?</p><p>当我们从 axios 模块中导入对象时, 使用的实例是默认的实例.</p><p>当给该实例设置一些默认配置时, 这些配置就被固定下来了.</p><p>但是后续开发中, 某些配置可能会不太一样.</p><p>比如某些请求需要使用特定的 baseURL 或者 timeout 或者 content-Type 等.</p><p>这个时候, 我们就可以创建新的实例, 并且传入属于该实例的配置信息.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosMain = axios.create(&#123;</span><br><span class="line">    baseURL:<span class="string">&quot;http://123.207.32.32:8000/home/data&quot;</span>,</span><br><span class="line">    timeout:<span class="number">5000</span>,</span><br><span class="line">    headers:&#123;</span><br><span class="line">       <span class="string">&#x27;Content-Type&#x27;</span>:<span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">axiosMain(&#123;...&#125;)</span><br><span class="line">axiosMain(&#123;...&#125;)</span><br></pre></td></tr></table></figure><h2 id="🎉axios-封装？"><a href="#🎉axios-封装？" class="headerlink" title="🎉axios 封装？"></a>🎉axios 封装？</h2><p><strong>axios 封装：</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> OrignAxios <span class="keyword">from</span> <span class="string">&quot;axios&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> instance = OrignAxios.create(&#123;</span><br><span class="line">    <span class="comment">//基础配置</span></span><br><span class="line">    baseURL: <span class="string">&quot;http://123.207.32.32:8000/home/data&quot;</span>,</span><br><span class="line">    timeout: <span class="number">5000</span>,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">//拦截器配置</span></span><br><span class="line">  <span class="comment">//拦截器作用</span></span><br><span class="line">  <span class="comment">//1.添加loading动画</span></span><br><span class="line">  <span class="comment">//2.修改不符合规范的数据,判断是否有token</span></span><br><span class="line">  <span class="comment">//3.数据的序列化</span></span><br><span class="line">  instance.interceptors.request.use(</span><br><span class="line">    (config) =&gt; &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(config);</span><br><span class="line">      <span class="keyword">return</span> config;</span><br><span class="line">    &#125;,</span><br><span class="line">    (error) =&gt; &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(error);</span><br><span class="line">      <span class="keyword">return</span> error;</span><br><span class="line">    &#125;</span><br><span class="line">  );</span><br><span class="line">  instance.interceptors.response.use(</span><br><span class="line">    (response) =&gt; &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(response);</span><br><span class="line">      <span class="keyword">return</span> response.data;</span><br><span class="line">    &#125;,</span><br><span class="line">    (error) =&gt; &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(error);</span><br><span class="line">      <span class="keyword">return</span> error;</span><br><span class="line">    &#125;</span><br><span class="line">  );</span><br><span class="line">  <span class="comment">//返回数据</span></span><br><span class="line">  <span class="keyword">return</span> instance(config);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>axios 调用：</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">&quot;network/request&quot;</span>;</span><br><span class="line">request(&#123;</span><br><span class="line">  url: <span class="string">&quot;&quot;</span>,</span><br><span class="line">&#125;)</span><br><span class="line">  .then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者:</span> <span class="post-copyright-info"><a href="mailto:undefined">しゅふがく</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接:</span> <span class="post-copyright-info"><a href="https://zfe.space/post/5338.html">https://zfe.space/post/5338.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明:</span> <span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zfe.space" target="_blank">小冰博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/vuejs/">vuejs</a></div><div class="post_share"><div class="social-share" data-image="/images/letter/v.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer="defer"></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.JPG" target="_blank"><img class="post-qr-code-img" data-lazy-src="/images/wechat.JPG" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipay.JPG" target="_blank"><img class="post-qr-code-img" data-lazy-src="/images/alipay.JPG" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/40483.html"><img class="prev-cover" data-lazy-src="/images/letter/d.png" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">教程：基于Butterfly主题的文章点赞（LeanCloud）</div></div></a></div><div class="next-post pull-right"><a href="/post/23556.html"><img class="next-cover" data-lazy-src="/images/letter/v.png" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">十五、vue中的promise语法和vuex</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i> <span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/23556.html" title="十五、vue中的promise语法和vuex"><img class="cover" data-lazy-src="/images/letter/v.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-18</div><div class="title">十五、vue中的promise语法和vuex</div></div></a></div><div><a href="/post/62419.html" title="十四、vue中的路由进阶"><img class="cover" data-lazy-src="/images/letter/v.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-15</div><div class="title">十四、vue中的路由进阶</div></div></a></div><div><a href="/post/61492.html" title="十三、vue中的脚手架v3和路由基础"><img class="cover" data-lazy-src="/images/letter/v.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-14</div><div class="title">十三、vue中的脚手架v3和路由基础</div></div></a></div><div><a href="/post/59365.html" title="十二、vue中的webpack配置和脚手架v2"><img class="cover" data-lazy-src="/images/letter/v.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-11</div><div class="title">十二、vue中的webpack配置和脚手架v2</div></div></a></div><div><a href="/post/5919.html" title="十一、webpack：从零到精通"><img class="cover" data-lazy-src="/images/letter/v.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-10</div><div class="title">十一、webpack：从零到精通</div></div></a></div><div><a href="/post/51721.html" title="十、vue中的组件间的数据访问和插槽"><img class="cover" data-lazy-src="/images/letter/v.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-09</div><div class="title">十、vue中的组件间的数据访问和插槽</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i> <span>评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/images/headimage.png" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"><div class="author-info__name">しゅふがく</div><div class="author-info__description">做个有梦想的人！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">152</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" href="JavaScript:AddFavorite('https://zfe.space','小冰博客')"><i class="fas fa-bookmark"></i><span>收藏我的博客</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Zfour" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:499984532@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/xiuji941028" target="_blank" title="weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=499984532&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/1652398/" target="_blank" title="bilibili"><i class="fas fa-video"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是Z_4的3.0版本blog，基于Butterfly3.7主题。已完成魔改npm插件化。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97%E5%B0%81%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">网络模块封装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89-%E9%80%89%E6%8B%A9%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9D%97%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">🎉 选择什么样的网络模块？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%B8%80%EF%BC%9A%E4%BC%A0%E7%BB%9F%E7%9A%84-Ajax"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">选择一：传统的 Ajax</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%BA%8C%EF%BC%9AjQuery-Ajax"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">选择二：jQuery-Ajax</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%B8%89%EF%BC%9AVue-resource"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">选择三：Vue-resource</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%9B%9B%EF%BC%9Aaxios"><span class="toc-number">1.1.0.4.</span> <span class="toc-text">选择四：axios</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89axios-%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">🎉axios 请求方式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89-%E5%9F%BA%E6%9C%AC%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">🎉 基本请求方式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89-%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">🎉 并发请求方式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89-%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%EF%BC%9F"><span class="toc-number">1.5.</span> <span class="toc-text">🎉 全局配置？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89-%E5%B8%B8%E8%A7%81%E7%9A%84%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9%EF%BC%9F"><span class="toc-number">1.6.</span> <span class="toc-text">🎉 常见的配置选项？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89-%E5%88%9B%E5%BB%BA-axios-%E5%AE%9E%E4%BE%8B%EF%BC%9F"><span class="toc-number">1.7.</span> <span class="toc-text">🎉 创建 axios 实例？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%89axios-%E5%B0%81%E8%A3%85%EF%BC%9F"><span class="toc-number">1.8.</span> <span class="toc-text">🎉axios 封装？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/game-play.html" title="小冰的游戏评测"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰的游戏评测"></a><div class="content"><a class="title" href="/post/game-play.html" title="小冰的游戏评测">小冰的游戏评测</a><time datetime="2021-04-22T21:19:00.000Z" title="发表于 2021-04-22 21:19:00">2021-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰插件包 butterfly-orchid 1.0"></a><div class="content"><a class="title" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0">小冰插件包 butterfly-orchid 1.0</a><time datetime="2021-03-25T21:19:00.000Z" title="发表于 2021-03-25 21:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-electric-clock电子时钟插件"></a><div class="content"><a class="title" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件">教程：hexo-electric-clock电子时钟插件</a><time datetime="2021-03-25T18:19:00.000Z" title="发表于 2021-03-25 18:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-history-calendar历史上的今天插件"></a><div class="content"><a class="title" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件">教程：hexo-history-calendar历史上的今天插件</a><time datetime="2021-03-25T18:18:00.000Z" title="发表于 2021-03-25 18:18:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-swiper.html" title="教程：hexo-swiper文章置顶插件"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-swiper文章置顶插件"></a><div class="content"><a class="title" href="/post/hexo-swiper.html" title="教程：hexo-swiper文章置顶插件">教程：hexo-swiper文章置顶插件</a><time datetime="2021-03-25T18:17:00.000Z" title="发表于 2021-03-25 18:17:00">2021-03-25</time></div></div></div></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By しゅふがく</div><div class="framework-info"><span>框架</span> <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题</span> <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+      appKey: 'r72Soi69hGmPdfKcGubbCWAn',
+      placeholder: '都看到这里了，还不留个脚印？',
+      avatar: '404',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=404'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (false) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://VqQJf6gx.api.lncldglobal.com'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+        "X-LC-Key": 'r72Soi69hGmPdfKcGubbCWAn',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script data-pjax>if(document.getElementsByTagName('img')){for (item of document.getElementsByTagName('img')){item.setAttribute('referrerpolicy','no-referrer')}};</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script data-pjax>if(document.getElementById("recent-posts")&&(location.pathname,1)){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/教程/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 小冰の魔改教程 (32)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/游戏评测/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 小冰の游戏评测 (10)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/生活趣闻/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 小冰の生活趣闻 (7)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/vue/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 小冰の编程学习 (16)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/学习/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📒 小冰の读书笔记 (12)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/随想/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💡 小冰の胡思乱想 (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="https://zfe.space/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';console.log("已挂载magnet"),parent.insertAdjacentHTML("afterbegin",child)}</script><style>#catalog_magnet{flex-wrap:wrap;display:flex;width:100%;justify-content:space-between;padding:10px 10px 0 10px;align-content:flex-start}.magnet_item{flex-basis:calc(50% - 5px);background:#f2f2f2;margin-bottom:10px;border-radius:8px;transition:all .2s ease-in-out}.magnet_item:hover{background:#b30070}.magnet_link_more{color:#555}.magnet_link{color:#000}.magnet_link:hover{color:#fff}@media screen and (max-width:600px){.magnet_item{flex-basis:100%}}.magnet_link_context{display:flex;padding:10px;font-size:16px;transition:all .2s ease-in-out}.magnet_link_context:hover{padding:10px 20px}</style><style></style><script data-pjax>if(document.getElementById("recent-posts")&&"/"==location.pathname){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-electric-clock.html">教程：hexo-electric-clock电子时钟插件</a><div class="blog-slider__text">简单好用的电子时钟插件！</div><a class="blog-slider__button" href="post/hexo-electric-clock.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-history-calendar.html">教程：hexo-history-calendar历史上的今天插件</a><div class="blog-slider__text">简单好用的hexo博客历史上的今天插件！</div><a class="blog-slider__button" href="post/hexo-history-calendar.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-swiper.html">教程：hexo-swiper文章置顶插件</a><div class="blog-slider__text">简单好用的hexo博客文章置顶插件！</div><a class="blog-slider__button" href="post/hexo-swiper.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/d.png" alt="/images/letter/d.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-19</span><a class="blog-slider__title" href="post/hexo-butterfly-article-double-row.html">教程：butterfly主题文章双栏布局插件</a><div class="blog-slider__text">简单好用的butterfly主题文章双栏布局插件！</div><a class="blog-slider__button" href="post/hexo-butterfly-article-double-row.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/m.png" alt="/images/letter/m.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-16</span><a class="blog-slider__title" href="post/hexo-magnet.html">教程：hexo-magnet  插件 1.0</a><div class="blog-slider__text">hexo主题适用的hexo-magnet插件！</div><a class="blog-slider__button" href="post/hexo-magnet.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/y.png" alt="/images/letter/y.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2020-12-16</span><a class="blog-slider__title" href="post/554e.html">教程：hexo×语雀 实现云端富文本写作</a><div class="blog-slider__text">通过本教程，你可以将你的文章储存在云端，实现云端写作，摆脱本地机器的限制。</div><a class="blog-slider__button" href="post/554e.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/f.png" alt="/images/letter/f.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-01</span><a class="blog-slider__title" href="post/friend-link-circle.html">基于hexo的友链朋友圈 Beta1.5</a><div class="blog-slider__text">你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点！</div><a class="blog-slider__button" href="post/friend-link-circle.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/g.png" alt="/images/letter/g.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-06</span><a class="blog-slider__title" href="post/hexo-githubcalendar.html">教程：hexo-githubcalendar  插件 1.0</a><div class="blog-slider__text">hexo主题适用的githubcalendar 插件！</div><a class="blog-slider__button" href="post/hexo-githubcalendar.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';console.log("已挂载swiper"),parent.insertAdjacentHTML("afterbegin",child)}</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script><style></style><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script><script data-pjax>function GithubCalendarConfig(){var t=document.getElementById("recent-posts");t&&"/"==location.pathname&&(console.log("已挂载github calendar"),t.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="height:100%;display: flex;align-items: center;justify-content: center;"><svg style="height:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>')),GithubCalendar("https://python-github-calendar-api.vercel.app/api?zfour",["#ebedf0","#fdcdec","#fc9bd9","#fa6ac5","#f838b2","#f5089f","#c4067e","#92055e","#540336","#48022f","#30021f"],"zfour")}document.getElementById("recent-posts")&&GithubCalendarConfig()</script><style>#github_container{min-height:248px}@media screen and (max-width:650px){#github_container{min-height:0}}</style><style></style><script data-pjax>function history_calendar_injector_config(){var i=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载history_calendar"),i.insertAdjacentHTML("afterbegin",'<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&history_calendar_injector_config()</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){var c=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载electric_clock"),c.insertAdjacentHTML("afterbegin",'<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="/images/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&electric_clock_injector_config()</script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.js"></script><script data-pjax>function daodao_swiper_injector_config(){var i=document.getElementById("recent-posts");console.log("已挂载daodao_swiper"),i.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="height: auto;width: 100%"><div class="bbTimeList container" id="bbTimeList"><i class="bber-gotobb fas fa-bullhorn" onclick="location=&#39;/daodao/&#39;" title="叨叨"></i><div class="swiper-container" id="bbtalk"><div class="swiper-wrapper" id="bber-talk" onclick="location=&#39;/daodao/&#39;"></div></div><i class="bber-gotobb fas fa-arrow-circle-right" onclick="location=&quot;/daodao/&quot;" title="查看全文"></i></div></div>')}document.getElementById("recent-posts")&&"/"===location.pathname&&daodao_swiper_injector_config()</script><script>var bbsurl="https://daodao-three.vercel.app/api?q=20",fliter_daodao=["img","iframe"]</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.js"></script></body></html>

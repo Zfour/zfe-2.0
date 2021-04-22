@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教程：基于Butterfly主题（去jquery）的gitcalendar3.0 | 小冰博客</title><meta name="keywords" content="教程,DIY,Butterfly主题"><meta name="author" content="しゅふがく"><meta name="copyright" content="しゅふがく"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="如果您尚未使用过 gitcalendar 及相关魔改配置，  推荐您前往  https:&#x2F;&#x2F;akilar.top&#x2F;posts&#x2F;1f9c68c9&#x2F;  获取更加详细的教程指导。序言：效果展示 因为用之前的 gitcalendar 服务器失效了（最近这个于 2021 年 1 月 18 日出现 502，我打算近期找办法修复替代），于是找 api 自己手写了一个。 旧项目用到了GitHub Contri"><meta property="og:type" content="article"><meta property="og:title" content="教程：基于Butterfly主题（去jquery）的gitcalendar3.0"><meta property="og:url" content="https://zfe.space/post/6948.html"><meta property="og:site_name" content="小冰博客"><meta property="og:description" content="如果您尚未使用过 gitcalendar 及相关魔改配置，  推荐您前往  https:&#x2F;&#x2F;akilar.top&#x2F;posts&#x2F;1f9c68c9&#x2F;  获取更加详细的教程指导。序言：效果展示 因为用之前的 gitcalendar 服务器失效了（最近这个于 2021 年 1 月 18 日出现 502，我打算近期找办法修复替代），于是找 api 自己手写了一个。 旧项目用到了GitHub Contri"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zfe.space/images/letter/g.png"><meta property="article:published_time" content="2021-01-11T18:42:00.000Z"><meta property="article:modified_time" content="2021-01-11T18:42:00.000Z"><meta property="article:author" content="しゅふがく"><meta property="article:tag" content="教程"><meta property="article:tag" content="DIY"><meta property="article:tag" content="Butterfly主题"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://zfe.space/images/letter/g.png"><link rel="shortcut icon" href="/img/siteicon/favicon.ico"><link rel="canonical" href="https://zfe.space/post/6948"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="baidu-site-verification" content="LNYL1UdbCpN6wro5"><meta name="360-site-verification" content="d182b3f28525f2db83acfaaf6e696dba"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js" defer="defer"></script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?1738c17b1ff542e386d62634d8501cf4";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"7V16DAJ0SV","apiKey":"288186e0537ee02bcdc55246b5e32621","indexName":"search","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2021-01-11 18:42:00"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><style>#footer:before,[data-theme=dark] #footer:before{background-color:rgba(0,0,0,0)}@keyframes realImg{0%{filter:blur(15px)}100%{filter:blur(0)}}.post_bg{filter:blur(15px)}.post_bg.entered.loaded{filter:blur(0);will-change:opacity;animation:realImg .5s linear}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"><style>#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags:before{content:"\A";white-space:pre}#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags>.article-meta__separator{display:none}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.css"><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="小冰博客" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="小冰博客" type="application/rss+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/images/headimage.png" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">152</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小冰博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i> <span>搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">教程：基于Butterfly主题（去jquery）的gitcalendar3.0</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-01-11T18:42:00.000Z" title="发表于 2021-01-11 18:42:00">2021-01-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-11T18:42:00.000Z" title="更新于 2021-01-11 18:42:00">2021-01-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="教程：基于Butterfly主题（去jquery）的gitcalendar3.0"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/post/6948.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/post/6948.html" itemprop="commentCount"></span></a></span></div></div></div><article class="post-content" id="article-container"><blockquote></blockquote><h2 id="如果您尚未使用过-gitcalendar-及相关魔改配置，"><a href="#如果您尚未使用过-gitcalendar-及相关魔改配置，" class="headerlink" title="如果您尚未使用过 gitcalendar 及相关魔改配置，"></a>如果您尚未使用过 gitcalendar 及相关魔改配置，</h2><blockquote></blockquote><h2 id="推荐您前往"><a href="#推荐您前往" class="headerlink" title="推荐您前往"></a>推荐您前往</h2><blockquote></blockquote><h2 id="https-akilar-top-posts-1f9c68c9"><a href="#https-akilar-top-posts-1f9c68c9" class="headerlink" title="https://akilar.top/posts/1f9c68c9/"></a><a target="_blank" rel="noopener" href="https://akilar.top/posts/1f9c68c9/">https://akilar.top/posts/1f9c68c9/</a></h2><blockquote></blockquote><h2 id="获取更加详细的教程指导。"><a href="#获取更加详细的教程指导。" class="headerlink" title="获取更加详细的教程指导。"></a>获取更加详细的教程指导。</h2><h2 id="序言：效果展示"><a href="#序言：效果展示" class="headerlink" title="序言：效果展示"></a>序言：效果展示</h2><p><img src="/img/loading.gif" data-lazy-src="/images/gitcalendar2.0.png#alt=example"></p><p>因为用之前的 gitcalendar 服务器失效了<del>（最近这个于 2021 年 1 月 18 日出现 502，我打算近期找办法修复替代）</del>，于是找 api 自己手写了一个。</p><p>旧项目用到了<a target="_blank" rel="noopener" href="https://github.com/rschristian/github-contribution-calendar-api">GitHub Contribution Calendar API</a><br>新项目使用我自己写的<a target="_blank" rel="noopener" href="https://github.com/Zfour/python_github_calendar_api">python_github_calendar_api</a><br>你可以 fork 后使用 vercel 部署，然后修改 app 的链接在后面加上’/api?’<br>避免公共 api 使用过多带来的问题（其实也没啥问题，至少现在没有）</p><p>通过 vuejs 进行编码。</p><p>资源包地址：<a target="_blank" rel="noopener" href="https://github.com/Zfour/Butterfly-gitcalendar">https://github.com/Zfour/Butterfly-gitcalendar</a></p><p><a target="_blank" rel="noopener" href="https://github.com/Zfour/Butterfly-gitcalendar">资源包下载</a></p><p>废话不多说了，开始教学。</p><blockquote><p>更新日志。</p><p>-2021/01/18- 因为 api 出现了稳定性波动,所以我用 Python 自己写了个 api。<br>因为这个 api 是实时获取的 github 的数据会稍许有点卡。但自己写的就不怕他挂就是了。<br>目前默认使用的我自己写的 api，如果想切换为以前的 api 可以打开注释。然后注释掉默认的 api 即可。</p><p>-2021/01/12- 3.0 更新，去 jquery 实现，改变了容器 id 为 gitcalendar，运用 fetch 实现了网络请求。</p><p>-2020/11/28-   新增 simplemode 配置，打开时使用 canvas 绘制 gitcalendar，关闭时使用 svg 绘制 gitcalendar。</p><p>-2020/11/02-   修复月份算法的逻辑错误问题以及月份出现不加载的问题。</p><p>-2020/11/01-   将部分全局声明变量转换为了 vue 实例变量，关闭了 console.log。</p><p>-2020/11/01-   修复了 PUG 中当最新月份为 11 月时，标签显示不完全的问题。</p><p>-2020/11/01-   修复了一周前时间不显示的 bug，请更换 js 文件。</p><p>-2020/10/31-   修复了 PUG 中信息来源无法动态切换的 bug,请更换 pug。</p></blockquote><hr><h2 id="步骤-1：修改-pug-代码"><a href="#步骤-1：修改-pug-代码" class="headerlink" title="步骤 1：修改 pug 代码"></a>步骤 1：修改 pug 代码</h2><blockquote><p>如果你配置过 1.0 版本请先将 inject 中的引入删除。</p></blockquote><h3 id="下载资源包"><a href="#下载资源包" class="headerlink" title="下载资源包"></a>下载资源包</h3><p><a target="_blank" rel="noopener" href="https://github.com/Zfour/Butterfly-gitcalendar">资源包下载</a></p><h3 id="增加、替换代码"><a href="#增加、替换代码" class="headerlink" title="增加、替换代码"></a>增加、替换代码</h3><p>前往”根目录\themes\butterfly\layout”文件夹</p><p>将资源包中的”gitcalendar.pug”复制到文件夹中。</p><p>将”index.pug”复制并重命名为”index-re.pug”作为备份。</p><p>将资源包 pug 文件夹的 Original 中的”index.pug”覆盖进行替换，如果你使用磁贴请使用 Magnet Plus 文件夹的”index.pug”。</p><p>或者打开”index.pug”按照以下代码进行修改。修改的起始点为”#recent-posts.recent-posts”。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">extends includes&#x2F;layout.pug</span><br><span class="line"></span><br><span class="line">block content</span><br><span class="line">  include .&#x2F;includes&#x2F;mixins&#x2F;post-ui.pug</span><br><span class="line">  #recent-posts.recent-posts</span><br><span class="line">    .recent-post-item(style&#x3D;&#39;width:100%&#39;)</span><br><span class="line">       include gitcalendar.pug</span><br><span class="line">    .recent-post-item(style&#x3D;&#39;height:0px;clear:both;margin-top: 0px;&#39;)</span><br><span class="line">    +postUI</span><br><span class="line">    include includes&#x2F;pagination.pug</span><br></pre></td></tr></table></figure><hr><h2 id="步骤-2：添加引入-js、css-代码"><a href="#步骤-2：添加引入-js、css-代码" class="headerlink" title="步骤 2：添加引入 js、css 代码"></a>步骤 2：添加引入 js、css 代码</h2><h3 id="放置资源包"><a href="#放置资源包" class="headerlink" title="放置资源包"></a>放置资源包</h3><p>将下载包中的 gitcalendar 文件夹放入根目录的”source”文件夹下。</p><h3 id="引入-js-和-css"><a href="#引入-js-和-css" class="headerlink" title="引入 js 和 css"></a>引入 js 和 css</h3><p>打开”\themes\butterfly&quot;路径下的”_config.yml”</p><p>搜索到”inject:”设置处</p><p>添加以下代码：</p><p>若已有 vue 引入，请确保 vue 的版本为 2.6 以上。</p><blockquote><p>如果你使用 aplayer 出现不能正常加载。<br>多半是 aplayer 在渲染时给 js 中添加了一些奇怪的东西。<br>方案一：<br>将下载包中的 gitcalendar 文件夹放入放入主题的 source 文件夹。<br>方案二：<br>请在 github 上单独建一个仓库，把 gitcalendar.css 和 gitcalendar.js 存入其中。<br>使用 release 功能发布一个版本。<br>用 cdn 的方式进行引入。引入的链接按照如下格式修改。<br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D/%E6%96%B0%E4%BB%93%E5%BA%93%E5%90%8D@%E7%89%88%E6%9C%AC%E5%8F%B7/gitcalendar.css">https://cdn.jsdelivr.net/gh/用户名/新仓库名@版本号/gitcalendar.css</a><br><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D/%E6%96%B0%E4%BB%93%E5%BA%93%E5%90%8D@%E7%89%88%E6%9C%AC%E5%8F%B7/gitcalendar.js">https://cdn.jsdelivr.net/gh/用户名/新仓库名@版本号/gitcalendar.js</a><br>具体方法参考<br><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/5bbb5a1b4fd62652eaa17958.html">https://jingyan.baidu.com/article/5bbb5a1b4fd62652eaa17958.html</a></p></blockquote><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/gitcalendar/css/gitcalendar.css&quot;/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;https://cdn.jsdelivr.net/npm/vue@2.6.11&quot;&gt;&lt;/script&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/gitcalendar/js/gitcalendar.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure><hr><h2 id="步骤-3：填写自定义属性的-js-配置"><a href="#步骤-3：填写自定义属性的-js-配置" class="headerlink" title="步骤 3：填写自定义属性的 js 配置"></a>步骤 3：填写自定义属性的 js 配置</h2><p>本日历通过 gitcalendar.js 的配置项实现以下自定义属性。</p><h3 id="配置数据源"><a href="#配置数据源" class="headerlink" title="配置数据源"></a>配置数据源</h3><p>因为 api 出现了稳定性波动，所以我用 Python 自己写了个 api。因为这个 api 是实时获取的 github 的数据会稍许有点卡。<br>但自己写的就不怕他挂就是了。<br>目前默认使用的我自己写的 api，如果想切换为以前的 api 可以打开注释。<br>然后注释掉默认的 api 即可。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> githubapiurl =</span><br><span class="line">  <span class="string">&quot;https://python-github-calendar-api.vercel.app/api?&quot;</span> + gitcalendar.user;</span><br><span class="line"><span class="comment">//let githubapiurl = &quot;https://githubapi.ryanchristian.dev/user/&quot; + gitcalendar.user;</span></span><br><span class="line"><span class="comment">//旧的api策略</span></span><br></pre></td></tr></table></figure><h3 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h3><p>填写 github 用户名，配置用户信息。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">        simplemode: <span class="literal">true</span>, <span class="comment">//打开时使用canvas绘制gitcalendar，关闭时使用svg绘制gitcalendar</span></span><br><span class="line">                          <span class="comment">//canvas：dom数少，但图像会发生模糊，自适应一般  svg：dom数多，图像清晰，自适应更佳</span></span><br><span class="line">        user:<span class="string">&#x27;Zfour&#x27;</span>,     <span class="comment">//用户名称</span></span><br><span class="line">        fixed:<span class="string">&#x27;fixed&#x27;</span>,</span><br><span class="line">        px:<span class="string">&#x27;px&#x27;</span>,</span><br><span class="line">        x:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">           y:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">           span1:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">           span2:<span class="string">&#x27;&#x27;</span>,</span><br></pre></td></tr></table></figure><h3 id="配置颜色主题"><a href="#配置颜色主题" class="headerlink" title="配置颜色主题"></a>配置颜色主题</h3><p>修改颜色配置。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">color: [</span><br><span class="line">  <span class="comment">//这里是颜色配置，当前为蓝色，若需更换请对应数组内容进行替换</span></span><br><span class="line">  <span class="string">&quot;#ebedf0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#f1f8ff&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#dbedff&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#c8e1ff&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#79b8ff&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#2188ff&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#0366d6&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#005cc5&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#044289&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#032f62&quot;</span>,</span><br><span class="line">  <span class="string">&quot;#05264c&quot;</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>此时，”hexo g &amp;&amp; hexo s”可发现已加载。</p><p>若有问题请与我邮件联系<a href="mailto:&#x34;&#x39;&#x39;&#x39;&#x38;&#x34;&#x35;&#x33;&#x32;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;">&#x34;&#x39;&#x39;&#x39;&#x38;&#x34;&#x35;&#x33;&#x32;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;</a>。</p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者:</span> <span class="post-copyright-info"><a href="mailto:undefined">しゅふがく</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接:</span> <span class="post-copyright-info"><a href="https://zfe.space/post/6948.html">https://zfe.space/post/6948.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明:</span> <span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zfe.space" target="_blank">小冰博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/DIY/">DIY</a><a class="post-meta__tags" href="/tags/Butterfly%E4%B8%BB%E9%A2%98/">Butterfly主题</a></div><div class="post_share"><div class="social-share" data-image="/images/letter/g.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer="defer"></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.JPG" target="_blank"><img class="post-qr-code-img" data-lazy-src="/images/wechat.JPG" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipay.JPG" target="_blank"><img class="post-qr-code-img" data-lazy-src="/images/alipay.JPG" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/python_bili.html"><img class="prev-cover" data-lazy-src="/images/letter/p.png" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">python数据分析入门——bili数据抓取到数据分析网站的实战记录</div></div></a></div><div class="next-post pull-right"><a href="/post/554e.html"><img class="next-cover" data-lazy-src="/images/letter/y.png" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">教程：hexo×语雀 实现云端富文本写作</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i> <span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/554e.html" title="教程：hexo×语雀 实现云端富文本写作"><img class="cover" data-lazy-src="/images/letter/y.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-16</div><div class="title">教程：hexo×语雀 实现云端富文本写作</div></div></a></div><div><a href="/post/40483.html" title="教程：基于Butterfly主题的文章点赞（LeanCloud）"><img class="cover" data-lazy-src="/images/letter/d.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-25</div><div class="title">教程：基于Butterfly主题的文章点赞（LeanCloud）</div></div></a></div><div><a href="/post/11009.html" title="教程：基于Butterfly主题的轮播手动置顶文章"><img class="cover" data-lazy-src="/images/letter/d.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-17</div><div class="title">教程：基于Butterfly主题的轮播手动置顶文章</div></div></a></div><div><a href="/post/53970.html" title="教程：基于Butterfly主题的新闻资讯侧边栏"><img class="cover" data-lazy-src="/images/letter/v.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-05</div><div class="title">教程：基于Butterfly主题的新闻资讯侧边栏</div></div></a></div><div><a href="/post/26798.html" title="教程：基于Butterfly主题的侧边栏说说"><img class="cover" data-lazy-src="/images/letter/s.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-20</div><div class="title">教程：基于Butterfly主题的侧边栏说说</div></div></a></div><div><a href="/post/43636.html" title="教程：基于Butterfly主题的分类磁贴2.0版"><img class="cover" data-lazy-src="/images/letter/c.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-18</div><div class="title">教程：基于Butterfly主题的分类磁贴2.0版</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i> <span>评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/images/headimage.png" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"><div class="author-info__name">しゅふがく</div><div class="author-info__description">做个有梦想的人！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">152</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" href="JavaScript:AddFavorite('https://zfe.space','小冰博客')"><i class="fas fa-bookmark"></i><span>收藏我的博客</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Zfour" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:499984532@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/xiuji941028" target="_blank" title="weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=499984532&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/1652398/" target="_blank" title="bilibili"><i class="fas fa-video"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是Z_4的3.0版本blog，基于Butterfly3.7主题。已完成魔改npm插件化。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%82%A8%E5%B0%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E8%BF%87-gitcalendar-%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%AD%94%E6%94%B9%E9%85%8D%E7%BD%AE%EF%BC%8C"><span class="toc-number">1.</span> <span class="toc-text">如果您尚未使用过 gitcalendar 及相关魔改配置，</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E6%82%A8%E5%89%8D%E5%BE%80"><span class="toc-number">2.</span> <span class="toc-text">推荐您前往</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#https-akilar-top-posts-1f9c68c9"><span class="toc-number">3.</span> <span class="toc-text">https:&#x2F;&#x2F;akilar.top&#x2F;posts&#x2F;1f9c68c9&#x2F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%9B%B4%E5%8A%A0%E8%AF%A6%E7%BB%86%E7%9A%84%E6%95%99%E7%A8%8B%E6%8C%87%E5%AF%BC%E3%80%82"><span class="toc-number">4.</span> <span class="toc-text">获取更加详细的教程指导。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80%EF%BC%9A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">5.</span> <span class="toc-text">序言：效果展示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E4%BF%AE%E6%94%B9-pug-%E4%BB%A3%E7%A0%81"><span class="toc-number">6.</span> <span class="toc-text">步骤 1：修改 pug 代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E8%B5%84%E6%BA%90%E5%8C%85"><span class="toc-number">6.1.</span> <span class="toc-text">下载资源包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E3%80%81%E6%9B%BF%E6%8D%A2%E4%BB%A3%E7%A0%81"><span class="toc-number">6.2.</span> <span class="toc-text">增加、替换代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E6%B7%BB%E5%8A%A0%E5%BC%95%E5%85%A5-js%E3%80%81css-%E4%BB%A3%E7%A0%81"><span class="toc-number">7.</span> <span class="toc-text">步骤 2：添加引入 js、css 代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BE%E7%BD%AE%E8%B5%84%E6%BA%90%E5%8C%85"><span class="toc-number">7.1.</span> <span class="toc-text">放置资源包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%85%A5-js-%E5%92%8C-css"><span class="toc-number">7.2.</span> <span class="toc-text">引入 js 和 css</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E5%A1%AB%E5%86%99%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E7%9A%84-js-%E9%85%8D%E7%BD%AE"><span class="toc-number">8.</span> <span class="toc-text">步骤 3：填写自定义属性的 js 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-number">8.1.</span> <span class="toc-text">配置数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">8.2.</span> <span class="toc-text">配置用户信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%A2%9C%E8%89%B2%E4%B8%BB%E9%A2%98"><span class="toc-number">8.3.</span> <span class="toc-text">配置颜色主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">9.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/game-play.html" title="小冰的游戏评测"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰的游戏评测"></a><div class="content"><a class="title" href="/post/game-play.html" title="小冰的游戏评测">小冰的游戏评测</a><time datetime="2021-04-22T21:19:00.000Z" title="发表于 2021-04-22 21:19:00">2021-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰插件包 butterfly-orchid 1.0"></a><div class="content"><a class="title" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0">小冰插件包 butterfly-orchid 1.0</a><time datetime="2021-03-25T21:19:00.000Z" title="发表于 2021-03-25 21:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-electric-clock电子时钟插件"></a><div class="content"><a class="title" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件">教程：hexo-electric-clock电子时钟插件</a><time datetime="2021-03-25T18:19:00.000Z" title="发表于 2021-03-25 18:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-history-calendar历史上的今天插件"></a><div class="content"><a class="title" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件">教程：hexo-history-calendar历史上的今天插件</a><time datetime="2021-03-25T18:18:00.000Z" title="发表于 2021-03-25 18:18:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-swiper.html" title="教程：hexo-swiper文章置顶插件"><img data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-swiper文章置顶插件"></a><div class="content"><a class="title" href="/post/hexo-swiper.html" title="教程：hexo-swiper文章置顶插件">教程：hexo-swiper文章置顶插件</a><time datetime="2021-03-25T18:17:00.000Z" title="发表于 2021-03-25 18:17:00">2021-03-25</time></div></div></div></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By しゅふがく</div><div class="framework-info"><span>框架</span> <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题</span> <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+      appKey: 'r72Soi69hGmPdfKcGubbCWAn',
+      placeholder: '都看到这里了，还不留个脚印？',
+      avatar: '404',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=404'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (false) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://VqQJf6gx.api.lncldglobal.com'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+        "X-LC-Key": 'r72Soi69hGmPdfKcGubbCWAn',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script data-pjax>if(document.getElementsByTagName('img')){for (item of document.getElementsByTagName('img')){item.setAttribute('referrerpolicy','no-referrer')}};</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script data-pjax>if(document.getElementById("recent-posts")&&(location.pathname,1)){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/教程/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 小冰の魔改教程 (32)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/游戏评测/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 小冰の游戏评测 (10)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/生活趣闻/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 小冰の生活趣闻 (7)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/vue/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 小冰の编程学习 (16)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/学习/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📒 小冰の读书笔记 (12)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/随想/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💡 小冰の胡思乱想 (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="https://zfe.space/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';console.log("已挂载magnet"),parent.insertAdjacentHTML("afterbegin",child)}</script><style>#catalog_magnet{flex-wrap:wrap;display:flex;width:100%;justify-content:space-between;padding:10px 10px 0 10px;align-content:flex-start}.magnet_item{flex-basis:calc(50% - 5px);background:#f2f2f2;margin-bottom:10px;border-radius:8px;transition:all .2s ease-in-out}.magnet_item:hover{background:#b30070}.magnet_link_more{color:#555}.magnet_link{color:#000}.magnet_link:hover{color:#fff}@media screen and (max-width:600px){.magnet_item{flex-basis:100%}}.magnet_link_context{display:flex;padding:10px;font-size:16px;transition:all .2s ease-in-out}.magnet_link_context:hover{padding:10px 20px}</style><style></style><script data-pjax>if(document.getElementById("recent-posts")&&"/"==location.pathname){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-electric-clock.html">教程：hexo-electric-clock电子时钟插件</a><div class="blog-slider__text">简单好用的电子时钟插件！</div><a class="blog-slider__button" href="post/hexo-electric-clock.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-history-calendar.html">教程：hexo-history-calendar历史上的今天插件</a><div class="blog-slider__text">简单好用的hexo博客历史上的今天插件！</div><a class="blog-slider__button" href="post/hexo-history-calendar.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-swiper.html">教程：hexo-swiper文章置顶插件</a><div class="blog-slider__text">简单好用的hexo博客文章置顶插件！</div><a class="blog-slider__button" href="post/hexo-swiper.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/d.png" alt="/images/letter/d.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-19</span><a class="blog-slider__title" href="post/hexo-butterfly-article-double-row.html">教程：butterfly主题文章双栏布局插件</a><div class="blog-slider__text">简单好用的butterfly主题文章双栏布局插件！</div><a class="blog-slider__button" href="post/hexo-butterfly-article-double-row.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/m.png" alt="/images/letter/m.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-16</span><a class="blog-slider__title" href="post/hexo-magnet.html">教程：hexo-magnet  插件 1.0</a><div class="blog-slider__text">hexo主题适用的hexo-magnet插件！</div><a class="blog-slider__button" href="post/hexo-magnet.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/y.png" alt="/images/letter/y.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2020-12-16</span><a class="blog-slider__title" href="post/554e.html">教程：hexo×语雀 实现云端富文本写作</a><div class="blog-slider__text">通过本教程，你可以将你的文章储存在云端，实现云端写作，摆脱本地机器的限制。</div><a class="blog-slider__button" href="post/554e.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/f.png" alt="/images/letter/f.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-01</span><a class="blog-slider__title" href="post/friend-link-circle.html">基于hexo的友链朋友圈 Beta1.5</a><div class="blog-slider__text">你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点！</div><a class="blog-slider__button" href="post/friend-link-circle.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="/images/letter/g.png" alt="/images/letter/g.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-06</span><a class="blog-slider__title" href="post/hexo-githubcalendar.html">教程：hexo-githubcalendar  插件 1.0</a><div class="blog-slider__text">hexo主题适用的githubcalendar 插件！</div><a class="blog-slider__button" href="post/hexo-githubcalendar.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';console.log("已挂载swiper"),parent.insertAdjacentHTML("afterbegin",child)}</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script><style></style><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script><script data-pjax>function GithubCalendarConfig(){var t=document.getElementById("recent-posts");t&&"/"==location.pathname&&(console.log("已挂载github calendar"),t.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="height:100%;display: flex;align-items: center;justify-content: center;"><svg style="height:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>')),GithubCalendar("https://python-github-calendar-api.vercel.app/api?zfour",["#ebedf0","#fdcdec","#fc9bd9","#fa6ac5","#f838b2","#f5089f","#c4067e","#92055e","#540336","#48022f","#30021f"],"zfour")}document.getElementById("recent-posts")&&GithubCalendarConfig()</script><style>#github_container{min-height:248px}@media screen and (max-width:650px){#github_container{min-height:0}}</style><style></style><script data-pjax>function history_calendar_injector_config(){var i=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载history_calendar"),i.insertAdjacentHTML("afterbegin",'<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&history_calendar_injector_config()</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){var c=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载electric_clock"),c.insertAdjacentHTML("afterbegin",'<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="/images/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&electric_clock_injector_config()</script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.js"></script><script data-pjax>function daodao_swiper_injector_config(){var i=document.getElementById("recent-posts");console.log("已挂载daodao_swiper"),i.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="height: auto;width: 100%"><div class="bbTimeList container" id="bbTimeList"><i class="bber-gotobb fas fa-bullhorn" onclick="location=&#39;/daodao/&#39;" title="叨叨"></i><div class="swiper-container" id="bbtalk"><div class="swiper-wrapper" id="bber-talk" onclick="location=&#39;/daodao/&#39;"></div></div><i class="bber-gotobb fas fa-arrow-circle-right" onclick="location=&quot;/daodao/&quot;" title="查看全文"></i></div></div>')}document.getElementById("recent-posts")&&"/"===location.pathname&&daodao_swiper_injector_config()</script><script>var bbsurl="https://daodao-three.vercel.app/api?q=20",fliter_daodao=["img","iframe"]</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.js"></script></body></html>
