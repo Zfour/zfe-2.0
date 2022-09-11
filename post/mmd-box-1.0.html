@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>制作你的桌面MMD时钟：MMD-BOX Beta1.0 | 小冰博客</title><meta name="keywords" content="python,硬件,MMD-BOX"><meta name="author" content="しゅふがく"><meta name="copyright" content="しゅふがく"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="咕咕咕，大家有没有想我？咕咕咕的小冰老师终于恢复更新了！既然是恢复更新自然是要整些不一样的，放个大招！这次捣鼓的项目是偶然在B站上发现的一个mmd盒子伪全息项目——【伪全息播放盒】会动的手办了解一下，感觉有点意思，成本也才300块，就买来材料进行diy了。因为UP主提供的材料清单很详细，所以硬件部分基本没有踩坑。但当我望着做好的盒子看着mmd里的美烧酒发呆时，却萌生了一个点子。能不能让这个盒子的功"><meta property="og:type" content="article"><meta property="og:title" content="制作你的桌面MMD时钟：MMD-BOX Beta1.0"><meta property="og:url" content="https://zfe.space/post/mmd-box-1.0.html"><meta property="og:site_name" content="小冰博客"><meta property="og:description" content="咕咕咕，大家有没有想我？咕咕咕的小冰老师终于恢复更新了！既然是恢复更新自然是要整些不一样的，放个大招！这次捣鼓的项目是偶然在B站上发现的一个mmd盒子伪全息项目——【伪全息播放盒】会动的手办了解一下，感觉有点意思，成本也才300块，就买来材料进行diy了。因为UP主提供的材料清单很详细，所以硬件部分基本没有踩坑。但当我望着做好的盒子看着mmd里的美烧酒发呆时，却萌生了一个点子。能不能让这个盒子的功"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zfe.space/images/letter/m.png"><meta property="article:published_time" content="2022-08-06T23:19:00.000Z"><meta property="article:modified_time" content="2022-08-06T23:19:00.000Z"><meta property="article:author" content="しゅふがく"><meta property="article:tag" content="python"><meta property="article:tag" content="硬件"><meta property="article:tag" content="MMD-BOX"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://zfe.space/images/letter/m.png"><link rel="shortcut icon" href="/img/siteicon/favicon.ico"><link rel="canonical" href="https://zfe.space/post/mmd-box-1.0"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js" defer="defer"></script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?1738c17b1ff542e386d62634d8501cf4";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"7V16DAJ0SV","apiKey":"288186e0537ee02bcdc55246b5e32621","indexName":"search","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"制作你的桌面MMD时钟：MMD-BOX Beta1.0",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2022-08-06 23:19:00"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><style>#footer:before,[data-theme=dark] #footer:before{background-color:rgba(0,0,0,0)}@keyframes realImg{0%{filter:blur(15px)}100%{filter:blur(0)}}.post_bg{filter:blur(15px)}.post_bg.entered.loaded{filter:blur(0);will-change:opacity;animation:realImg .5s linear}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"><style>#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags:before{content:"\A";white-space:pre}#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags>.article-meta__separator{display:none}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.css"><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="小冰博客" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="小冰博客" type="application/rss+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/headimage.png" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">153</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小冰博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i> <span>搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">制作你的桌面MMD时钟：MMD-BOX Beta1.0</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-06T23:19:00.000Z" title="发表于 2022-08-06 23:19:00">2022-08-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-06T23:19:00.000Z" title="更新于 2022-08-06 23:19:00">2022-08-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="制作你的桌面MMD时钟：MMD-BOX Beta1.0"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/post/mmd-box-1.0.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/post/mmd-box-1.0.html" itemprop="commentCount"></span></a></span></div></div></div><article class="post-content" id="article-container"><p>咕咕咕，大家有没有想我？<br>咕咕咕的小冰老师终于恢复更新了！<br>既然是恢复更新自然是要整些不一样的，放个大招！<br>这次捣鼓的项目是偶然在B站上发现的一个mmd盒子伪全息项目——<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aV411o7N6">【伪全息播放盒】会动的手办了解一下</a>，感觉有点意思，成本也才300块，就买来材料进行diy了。<br>因为UP主提供的材料清单很详细，所以硬件部分基本没有踩坑。<br>但当我望着做好的盒子看着mmd里的美烧酒发呆时，却萌生了一个点子。<br>能不能让这个盒子的功能性得到展现，而不是只是一个普通的视频播放器。<br>于是，就打算复健一下html和python写一个小项目出来。<br>效果如图：<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/gif/8391485/1659797704587-b98e0fef-8182-41be-9d69-e01a20273906.gif#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=500&id=u451ce2f4&margin=%5Bobject%20Object%5D&name=IMG_2362.GIF&originHeight=500&originWidth=282&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2407985&status=done&style=none&taskId=uf68ed8f0-14ac-4497-8c1c-f5c0a9e5c40&title=&width=282" alt="IMG_2362.GIF"><br>项目名称：MMD-BOX<br>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Zfour/mmd-box">https://github.com/Zfour/mmd-box</a><br>项目演示：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1WV4y1x7Ct?spm_id_from=333.999.0.0&vd_source=b62352de68b3b1079f5dc2e052797820">https://www.bilibili.com/video/BV1WV4y1x7Ct</a><br>原理：使用python socketio&amp;flask实现视频的实时控制，将原有的hexo clock插件进行了移植和适配，写入了定时更新方法。<br>接下来，废话就不说了，聊聊制作mmd盒子的注意事项&amp;方法，以及MMD-BOX的开发思路和使用教程。</p><h1 id="MMD-BOX硬件制作流程"><a href="#MMD-BOX硬件制作流程" class="headerlink" title="MMD-BOX硬件制作流程"></a>MMD-BOX硬件制作流程</h1><h2 id="1-购买所需的材料"><a href="#1-购买所需的材料" class="headerlink" title="1.购买所需的材料"></a>1.购买所需的材料</h2><p>在购入材料前建议先看一遍<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aV411o7N6">【伪全息播放盒】会动的手办了解一下</a>，顺便一键三连，了解制作的大致步骤。<br>加入UP主大脸彭的大表哥的粉丝群 <strong>201675690</strong> 里获取所需要的材料购置清单。<br>在原有的购置清单中，个人认为需要增加删减的项，大家可以根据自己的实际情况调整，另外附上一些注意事项。<br>1.买屏幕的时候会送一根短hdmi线，如果你有拔插需求的话，可以在购买长hdmi线的基础上，加上一个<strong>15块的母对母延长转接头</strong>，可以避免频繁拔插mmd盒子的HDMI接口产生不必要的麻烦。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659798446741-7df7de8f-7e38-4c78-8265-76669df3de6a.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=230&id=uffcf05fa&margin=%5Bobject%20Object%5D&name=image.png&originHeight=230&originWidth=431&originalType=binary&ratio=1&rotation=0&showTitle=false&size=37043&status=done&style=none&taskId=u9f832ecb-189a-4ca1-ae65-fb6adfe9d97&title=&width=431" alt="image.png"><br>2.买屏幕的时候店家送的排线比较长有200mm，在盒子里不好塞，可以购买较短的排线更换（或者问问店家有没有短点的）规格是<strong>60p 0.5mm 5cm长的FPC排线</strong>。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659798639285-ca988b8e-bd61-4a99-b5de-cfe75b457b6d.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=226&id=ue95859e6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=226&originWidth=430&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43370&status=done&style=none&taskId=u14a517df-c969-4c45-b9b3-f0feeae6a35&title=&width=430" alt="image.png"><br>3.底板的驱动板不是很好固定，如果贴起来又不方便拆卸调试，建议是给*<em>4根m2</em>18的尼龙螺柱<strong>进行支撑，因为我买的是套装这个大家自己搜就好。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659799012730-f477f22c-16f5-4d38-83eb-9d43c24b2756.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=438&id=ufb8ba917&margin=%5Bobject%20Object%5D&name=image.png&originHeight=438&originWidth=438&originalType=binary&ratio=1&rotation=0&showTitle=false&size=111105&status=done&style=none&taskId=u9b20699d-c7e0-4f5e-9754-28c8ee06f5d&title=&width=438" alt="image.png"><br>4.UP主大脸彭的大表哥视频中提到了led供电和驱动板供电的问题，一开始有想过改供电，但由于盒子相对封闭的条件，走线自然是个坑，于是从源头出发，问题的关键在于减少一根供电线，于是我就采用了套娃方法，利用usb接口的转接和分线，成功省掉了一个供电线。【貌似买多了两根T口usb线，因为买屏幕的时候貌似给了一根，不记得了】<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659799295955-73783603-dbca-4004-85b3-4a5401d4e487.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=502&id=u1e9d5b5c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=502&originWidth=426&originalType=binary&ratio=1&rotation=0&showTitle=false&size=115855&status=done&style=none&taskId=ud83667b4-589d-4422-91b5-9124fbf9f8b&title=&width=426" alt="image.png"><br>5.关于盒子的组装方面：首先灯板别忘了叫老板焊接，定做亚克力，买屏幕的时候记得说从b站大脸彭的大表哥过来的，有优惠。到货后，</strong>建议不使用亚克力商家提供的胶水拼装，而是使用UP主清单中的耐热双面胶进行亚克力的贴合<strong>。一是方便拆卸，二是不会留下非常明显的痕迹还占得牢固。<br>6.关于屏幕的固定方面：屏幕没有着力点，强行贴合也不方便拆卸。建议拿到屏幕后</strong>不要撕掉贴合在屏幕表面的两张保护膜**。利用保护膜的着力点作为固定屏幕的地方，就能保障屏幕不滑落，还方便拆。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659799881964-62f22af7-3c1a-4900-94af-97590e354c4b.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=412&id=ub0c995fa&margin=%5Bobject%20Object%5D&name=image.png&originHeight=412&originWidth=606&originalType=binary&ratio=1&rotation=0&showTitle=false&size=206955&status=done&style=none&taskId=u7908c30b-1acf-44c9-b851-9f9ae5da5bf&title=&width=606" alt="image.png"><br>7.关于长排线的折叠方案，这个千万别暴力塞，压久了会坏。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659800344065-08a562c3-d012-4d8a-87ed-b95d249febe5.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=494&id=ufe560e5d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=494&originWidth=693&originalType=binary&ratio=1&rotation=0&showTitle=false&size=426198&status=done&style=none&taskId=u6e8c189d-173b-4358-bbe5-0ada39ef242&title=&width=693" alt="image.png"><br>8.关于屏幕点亮的问题，在群里潜伏的这几天，有友友反应屏幕点不亮。首先检查自己有没有开背光，然后拔插hdmi与供电线反复尝试。最后更换供电插头（别使用快充头），驱动板应该是5v 2a的供电。最后则是检查一遍排线是否插好，重新连接一下。<br>9.关于屏幕闪烁的问题，有时候屏幕会因为没有成功点亮导致闪频的情况出现，这时候不要慌，开机挂上20分钟1小时。（感谢店家的解答）<br>10.担心led耗电？其实不用担心，一天也就1分钱…<br>11.有闲钱的话还可以加个usb开关啥的。</p><h2 id="2-细节处展示"><a href="#2-细节处展示" class="headerlink" title="2.细节处展示"></a>2.细节处展示</h2><p>1.散热板的摆放<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659800608833-28b4239b-e122-4b61-988f-d88ba977fc78.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=456&id=uc59b9992&margin=%5Bobject%20Object%5D&name=image.png&originHeight=456&originWidth=507&originalType=binary&ratio=1&rotation=0&showTitle=false&size=281033&status=done&style=none&taskId=u2b9265bf-5ce0-40ce-a722-8203ff719f1&title=&width=507" alt="image.png"><br>2.尼龙柱的摆放与排线<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659800708450-ac65681c-9f36-4ff6-bddf-d6f47e730f4f.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=445&id=uc19c16cb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=445&originWidth=531&originalType=binary&ratio=1&rotation=0&showTitle=false&size=330262&status=done&style=none&taskId=uf809a021-62a4-497b-a03a-21753d57101&title=&width=531" alt="image.png"><br>3.供电统一接线<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659800878364-586867f3-528a-4664-9420-9b36ff4ccb0a.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=385&id=uddef01c7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=385&originWidth=526&originalType=binary&ratio=1&rotation=0&showTitle=false&size=302439&status=done&style=none&taskId=u15c51650-687b-4f93-956f-411e424ef25&title=&width=526" alt="image.png"></p><h1 id="MMD-BOX网页开发流程"><a href="#MMD-BOX网页开发流程" class="headerlink" title="MMD-BOX网页开发流程"></a>MMD-BOX网页开发流程</h1><h2 id="1-hexo-clock的移植"><a href="#1-hexo-clock的移植" class="headerlink" title="1.hexo clock的移植"></a>1.hexo clock的移植</h2><p>这个其实没花什么功夫，主要是css的适配问题，用了flex布局稍微调了一下，在背景处加了个video标签放视频。<br>因为是长时间使用，刷新网页的频率不多，所以日期和天气的更新可能会出问题。<br>这里对时间和天气的网络请求进行了定时操作，<strong>每小时整点刷新一次</strong>，保障数据的更新。<br>目前存在的问题：该请求是通过ip进行查询的，因此如果开了梯，就可能地点异常。有时也会找不到地点。后期考虑接入更多可切换天气获取源，支持手动选择模式。</p><h2 id="2-根据目标需求简单实现功能"><a href="#2-根据目标需求简单实现功能" class="headerlink" title="2.根据目标需求简单实现功能"></a>2.根据目标需求简单实现功能</h2><p>作为视频播放盒子，最重要的痛点在于控制视频的播放模式。<br>于是就简单通过socketio实现了网络请求实时响应的方法。<br>可以通过ip4(路由本地地址）+/路由的形式切换视频。<br>这样写的目的一是实现实时操作，二是能够同过局域网实现跨设备操作。<br>例如，使用熟悉的ios快捷指令充当遥控器。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/jpeg/8391485/1659801976032-56e057ee-192d-4b17-b88b-6ca1ca61cf94.jpeg#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=1097&id=u7ddfd3fe&margin=%5Bobject%20Object%5D&name=D70LS565%248TVT~2B%7D%7D%254%7BGS.jpg&originHeight=2436&originWidth=1126&originalType=binary&ratio=1&rotation=0&showTitle=false&size=157846&status=done&style=none&taskId=u507b6e90-d502-4079-8df9-174dadf200d&title=&width=507" alt="D70LS565$8TVT~2B}}%4{GS.jpg"><br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659802076228-15e4124f-94cf-46cd-b8f6-3b75b9821d0d.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=382&id=u2a32d639&margin=%5Bobject%20Object%5D&name=image.png&originHeight=382&originWidth=439&originalType=binary&ratio=1&rotation=0&showTitle=false&size=143895&status=done&style=none&taskId=uc24da494-6da8-4c8e-9375-05e52243c26&title=&width=439" alt="image.png"></p><p>当然，电脑也需要有操作途径，于是使用pyqt5将网络请求封装了一下，制作了一个exe，从而方便小白用户使用。</p><p><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/jpeg/8391485/1659802156854-2f5b8b7b-828c-41ae-99f4-bc782f942f5d.jpeg#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=539&id=u013e9a17&margin=%5Bobject%20Object%5D&name=%40S91Q67%5D~Q~BD~%60TOG5MZ~Y.jpg&originHeight=539&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&size=26309&status=done&style=none&taskId=ud64248a2-d286-4af1-acd5-f8626e7bc2a&title=&width=536" alt="img.jpg"></p><p>目前实现的beta 1.0版本实现了基本的功能，后面的话，会继续优化功能。<br>1.尝试其他可交互指令以及服务端消息推送开发，例如添加代办事项，rss订阅查询推送<br>2.桌宠模式，通过手机控制单一mmd角色实现手机控制，对应mmd动画的响应以及视频制作<br>3.游戏模式，桌面俄罗斯方块、叠叠乐，通过手机手柄进行游戏控制（待定）</p><h2 id="3-编码途中踩坑"><a href="#3-编码途中踩坑" class="headerlink" title="3.编码途中踩坑"></a>3.编码途中踩坑</h2><p>1.socket局域网跑不通的问题：可以尝试重启一下电脑，检查一下是否端口被占用或者防火墙设置。<br>2.ide跑flask记得加入初始参数端口，开启debug模式。<br>3.flask打包会出现找不到templates问题，这时需要在run.py中加入以下代码。</p><p><code>if getattr(sys, &#39;frozen&#39;, False): template_folder = os.path.join(sys.executable, &#39;..&#39;, &#39;templates&#39;) static_folder = os.path.join(sys.executable, &#39;..&#39;, &#39;static&#39;) app = Flask(__name__, template_folder=template_folder, \ static_folder=static_folder)</code></p><p>4.socketio部分隐藏依赖在打包时会取不到导致报错。<br>main.spec加入隐藏依赖。</p><p><code>hiddenimports=[&#39;pymysql&#39;, &#39;gevent&#39;, &#39;geventwebsocket&#39;, &#39;gevent.ssl&#39;, &#39;gevent.builtins&#39;, &#39;engineio.async_drivers.threading&#39;]</code></p><h1 id="MMD-BOX使用教程"><a href="#MMD-BOX使用教程" class="headerlink" title="MMD-BOX使用教程"></a>MMD-BOX使用教程</h1><p>1.打开项目releases地址：<a target="_blank" rel="noopener" href="https://github.com/Zfour/mmd-box/releases/tag/Beta">https://github.com/Zfour/mmd-box/releases/tag/Beta</a><br>下载beta1.0。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659802917274-cafea098-c7df-4958-898a-13a96a7d5a8a.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=454&id=u62cab9c4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=454&originWidth=1126&originalType=binary&ratio=1&rotation=0&showTitle=false&size=35449&status=done&style=none&taskId=uf75b0e31-2233-4108-9ac6-58760c495c4&title=&width=1126" alt="image.png"><br>2.解压压缩包，打开exe。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659802955394-d6835a7d-ecb5-466e-aec3-4000eea83857.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=235&id=u20d83202&margin=%5Bobject%20Object%5D&name=image.png&originHeight=235&originWidth=700&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16656&status=done&style=none&taskId=u4ce2a936-a694-4967-aaad-4feb21f81ff&title=&width=700" alt="image.png"><br>3.点击启动MMD-BOX，这时会挂载本地5050端口socket&amp;flask服务，使用过程中不要关闭这个exe，关闭或点击停止MMD服务都将中断连接。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659803076699-b50f58e5-8542-4160-8953-cc3c0856de9f.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=539&id=ub5200fc9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=539&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14636&status=done&style=none&taskId=udef3f7bb-652a-4491-b586-65715b00f07&title=&width=536" alt="image.png"><br>4.想要播放更多视频，可以打开视频目录，将想要的视频复制进去即可。目录为static\video。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659803146278-4ba09b32-0510-4477-89a8-a883d79ee24c.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=539&id=u9951f8af&margin=%5Bobject%20Object%5D&name=image.png&originHeight=539&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14292&status=done&style=none&taskId=u753b1b13-07d5-41eb-b5ab-d8bdc436714&title=&width=536" alt="image.png"><br>5.切换循环模式，顾名思义，想要让一个视频循环播放，可以点单个循环。想刷列表视频则选择列表循环。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659803283839-846c8314-1b31-4a0a-b096-ad931cfba7e9.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=539&id=uac6f4fd5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=539&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&size=15324&status=done&style=none&taskId=u18c392b4-3a61-41ce-89ba-312916ec83c&title=&width=536" alt="image.png"><br>6.如果你不想看到时间UI，只想欣赏萌妹子的曼妙舞姿，你也可以切换UI显示模式，其实就是简单调了下display属性。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659803369937-6bba6f1a-4fa5-4830-878b-193fe4baf098.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=539&id=u1367838d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=539&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16179&status=done&style=none&taskId=uc4938005-9654-4cbc-8201-c96719c8564&title=&width=536" alt="image.png"><br>7.最后，播放上一个视频和下一个视频，顾名思义。就是切换，会马上响应。<br><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.nlark.com/yuque/0/2022/png/8391485/1659803502846-bf907c5d-4ee9-48b5-b57d-ddeee5f12bdc.png#clientId=ub6806bf5-0083-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=539&id=u0ddf0f12&margin=%5Bobject%20Object%5D&name=image.png&originHeight=539&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16329&status=done&style=none&taskId=uf0c158c3-ce32-48c5-8b0e-2ff10bd1a5e&title=&width=536" alt="image.png"></p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>这时恢复更新的第一帖，接下来会继续优化这个项目，另外也会给朋友圈写点新的插件，做做感兴趣的硬件小玩意之类的，尝试通过python、html、硬件实现一定的交互操作。希望不鸽！<br>有任何问题可以在这个群里找到我——》674527148。<br>就这样了，下次预告，可能是个便携屏。</p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者:</span> <span class="post-copyright-info"><a href="mailto:undefined">しゅふがく</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接:</span> <span class="post-copyright-info"><a href="https://zfe.space/post/mmd-box-1.0.html">https://zfe.space/post/mmd-box-1.0.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明:</span> <span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zfe.space" target="_blank">小冰博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/">python</a><a class="post-meta__tags" href="/tags/%E7%A1%AC%E4%BB%B6/">硬件</a><a class="post-meta__tags" href="/tags/MMD-BOX/">MMD-BOX</a></div><div class="post_share"><div class="social-share" data-image="/images/letter/m.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer="defer"></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.JPG" target="_blank"><img class="post-qr-code-img" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/wechat.JPG" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipay.JPG" target="_blank"><img class="post-qr-code-img" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/alipay.JPG" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/game-play.html"><img class="next-cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">小冰的游戏评测</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/hexo-githubcalendar.html" title="教程：hexo-githubcalendar  插件 1.0"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/g.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-06</div><div class="title">教程：hexo-githubcalendar 插件 1.0</div></div></a></div><div><a href="/post/python-issues-api.html" title="教程：github/gitee issues的友链信息自动生成json及api调用"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-02</div><div class="title">教程：github/gitee issues的友链信息自动生成json及api调用</div></div></a></div><div><a href="/post/python-learning.html" title="常用的python指令整理（一）"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/l.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-17</div><div class="title">常用的python指令整理（一）</div></div></a></div><div><a href="/post/python_bili.html" title="python数据分析入门——bili数据抓取到数据分析网站的实战记录"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-21</div><div class="title">python数据分析入门——bili数据抓取到数据分析网站的实战记录</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i> <span>评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/headimage.png" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">しゅふがく</div><div class="author-info__description">做个有梦想的人！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">153</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" href="JavaScript:AddFavorite('https://zfe.space','小冰博客')"><i class="fas fa-bookmark"></i><span>收藏我的博客</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Zfour" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:499984532@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/xiuji941028" target="_blank" title="weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=499984532&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/1652398/" target="_blank" title="bilibili"><i class="fas fa-video"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是Z_4的3.0版本blog，基于Butterfly3.7主题。已完成魔改npm插件化。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MMD-BOX%E7%A1%AC%E4%BB%B6%E5%88%B6%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">MMD-BOX硬件制作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%B4%AD%E4%B9%B0%E6%89%80%E9%9C%80%E7%9A%84%E6%9D%90%E6%96%99"><span class="toc-number">1.1.</span> <span class="toc-text">1.购买所需的材料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%BB%86%E8%8A%82%E5%A4%84%E5%B1%95%E7%A4%BA"><span class="toc-number">1.2.</span> <span class="toc-text">2.细节处展示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MMD-BOX%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">MMD-BOX网页开发流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-hexo-clock%E7%9A%84%E7%A7%BB%E6%A4%8D"><span class="toc-number">2.1.</span> <span class="toc-text">1.hexo clock的移植</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A0%B9%E6%8D%AE%E7%9B%AE%E6%A0%87%E9%9C%80%E6%B1%82%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-number">2.2.</span> <span class="toc-text">2.根据目标需求简单实现功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BC%96%E7%A0%81%E9%80%94%E4%B8%AD%E8%B8%A9%E5%9D%91"><span class="toc-number">2.3.</span> <span class="toc-text">3.编码途中踩坑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MMD-BOX%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">MMD-BOX使用教程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">4.</span> <span class="toc-text">最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/mmd-box-1.0.html" title="制作你的桌面MMD时钟：MMD-BOX Beta1.0"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/m.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="制作你的桌面MMD时钟：MMD-BOX Beta1.0"></a><div class="content"><a class="title" href="/post/mmd-box-1.0.html" title="制作你的桌面MMD时钟：MMD-BOX Beta1.0">制作你的桌面MMD时钟：MMD-BOX Beta1.0</a><time datetime="2022-08-06T23:19:00.000Z" title="发表于 2022-08-06 23:19:00">2022-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/game-play.html" title="小冰的游戏评测"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰的游戏评测"></a><div class="content"><a class="title" href="/post/game-play.html" title="小冰的游戏评测">小冰的游戏评测</a><time datetime="2021-04-22T21:19:00.000Z" title="发表于 2021-04-22 21:19:00">2021-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰插件包 butterfly-orchid 1.0"></a><div class="content"><a class="title" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0">小冰插件包 butterfly-orchid 1.0</a><time datetime="2021-03-25T21:19:00.000Z" title="发表于 2021-03-25 21:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-electric-clock电子时钟插件"></a><div class="content"><a class="title" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件">教程：hexo-electric-clock电子时钟插件</a><time datetime="2021-03-25T18:19:00.000Z" title="发表于 2021-03-25 18:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-history-calendar历史上的今天插件"></a><div class="content"><a class="title" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件">教程：hexo-history-calendar历史上的今天插件</a><time datetime="2021-03-25T18:18:00.000Z" title="发表于 2021-03-25 18:18:00">2021-03-25</time></div></div></div></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By しゅふがく</div><div class="framework-info"><span>框架</span> <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题</span> <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+      appKey: 'r72Soi69hGmPdfKcGubbCWAn',
+      placeholder: '都看到这里了，还不留个脚印？',
+      avatar: '404',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'https://servertalk.zfe.space',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=404'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (false) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://servertalk.zfe.space'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+        "X-LC-Key": 'r72Soi69hGmPdfKcGubbCWAn',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script data-pjax>if(document.getElementsByTagName('img')){for (item of document.getElementsByTagName('img')){item.setAttribute('referrerpolicy','no-referrer')}};</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script data-pjax>if(document.getElementById("recent-posts")&&(location.pathname,1)){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/教程/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 小冰の魔改教程 (33)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/游戏评测/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 小冰の游戏评测 (10)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/生活趣闻/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 小冰の生活趣闻 (7)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/vue/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 小冰の编程学习 (16)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/学习/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📒 小冰の读书笔记 (12)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/随想/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💡 小冰の胡思乱想 (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="https://zfe.space/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';console.log("已挂载magnet"),parent.insertAdjacentHTML("afterbegin",child)}</script><style>#catalog_magnet{flex-wrap:wrap;display:flex;width:100%;justify-content:space-between;padding:10px 10px 0 10px;align-content:flex-start}.magnet_item{flex-basis:calc(50% - 5px);background:#f2f2f2;margin-bottom:10px;border-radius:8px;transition:all .2s ease-in-out}.magnet_item:hover{background:#b30070}.magnet_link_more{color:#555}.magnet_link{color:#000}.magnet_link:hover{color:#fff}@media screen and (max-width:600px){.magnet_item{flex-basis:100%}}.magnet_link_context{display:flex;padding:10px;font-size:16px;transition:all .2s ease-in-out}.magnet_link_context:hover{padding:10px 20px}</style><style></style><script data-pjax>if(document.getElementById("recent-posts")&&"/"==location.pathname){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-electric-clock.html">教程：hexo-electric-clock电子时钟插件</a><div class="blog-slider__text">简单好用的电子时钟插件！</div><a class="blog-slider__button" href="post/hexo-electric-clock.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-history-calendar.html">教程：hexo-history-calendar历史上的今天插件</a><div class="blog-slider__text">简单好用的hexo博客历史上的今天插件！</div><a class="blog-slider__button" href="post/hexo-history-calendar.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-swiper.html">教程：hexo-swiper文章置顶插件</a><div class="blog-slider__text">简单好用的hexo博客文章置顶插件！</div><a class="blog-slider__button" href="post/hexo-swiper.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/d.png" alt="/images/letter/d.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-19</span><a class="blog-slider__title" href="post/hexo-butterfly-article-double-row.html">教程：butterfly主题文章双栏布局插件</a><div class="blog-slider__text">简单好用的butterfly主题文章双栏布局插件！</div><a class="blog-slider__button" href="post/hexo-butterfly-article-double-row.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/m.png" alt="/images/letter/m.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-16</span><a class="blog-slider__title" href="post/hexo-magnet.html">教程：hexo-magnet  插件 1.0</a><div class="blog-slider__text">hexo主题适用的hexo-magnet插件！</div><a class="blog-slider__button" href="post/hexo-magnet.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/y.png" alt="/images/letter/y.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2020-12-16</span><a class="blog-slider__title" href="post/554e.html">教程：hexo×语雀 实现云端富文本写作</a><div class="blog-slider__text">通过本教程，你可以将你的文章储存在云端，实现云端写作，摆脱本地机器的限制。</div><a class="blog-slider__button" href="post/554e.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/f.png" alt="/images/letter/f.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-01</span><a class="blog-slider__title" href="post/friend-link-circle.html">基于hexo的友链朋友圈 Beta1.5</a><div class="blog-slider__text">你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点！</div><a class="blog-slider__button" href="post/friend-link-circle.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/g.png" alt="/images/letter/g.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-06</span><a class="blog-slider__title" href="post/hexo-githubcalendar.html">教程：hexo-githubcalendar  插件 1.0</a><div class="blog-slider__text">hexo主题适用的githubcalendar 插件！</div><a class="blog-slider__button" href="post/hexo-githubcalendar.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';console.log("已挂载swiper"),parent.insertAdjacentHTML("afterbegin",child)}</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script><style></style><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script><script data-pjax>function GithubCalendarConfig(){var e=document.getElementById("recent-posts");e&&"/"==location.pathname&&(console.log("已挂载github calendar"),e.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="height:100%;display: flex;align-items: center;justify-content: center;"><svg style="height:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>')),GithubCalendar("https://gitcalendar.zfe.space/api?zfour",["#ebedf0","#fdcdec","#fc9bd9","#fa6ac5","#f838b2","#f5089f","#c4067e","#92055e","#540336","#48022f","#30021f"],"zfour")}document.getElementById("recent-posts")&&GithubCalendarConfig()</script><style>#github_container{min-height:248px}@media screen and (max-width:650px){#github_container{min-height:0}}</style><style></style><script data-pjax>function history_calendar_injector_config(){var i=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载history_calendar"),i.insertAdjacentHTML("afterbegin",'<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&history_calendar_injector_config()</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){var c=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载electric_clock"),c.insertAdjacentHTML("afterbegin",'<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&electric_clock_injector_config()</script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.js"></script><script data-pjax>function daodao_swiper_injector_config(){var i=document.getElementById("recent-posts");console.log("已挂载daodao_swiper"),i.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="height: auto;width: 100%"><div class="bbTimeList container" id="bbTimeList"><i class="bber-gotobb fas fa-bullhorn" onclick="location=&#39;/daodao/&#39;" title="叨叨"></i><div class="swiper-container" id="bbtalk"><div class="swiper-wrapper" id="bber-talk" onclick="location=&#39;/daodao/&#39;"></div></div><i class="bber-gotobb fas fa-arrow-circle-right" onclick="location=&quot;/daodao/&quot;" title="查看全文"></i></div></div>')}document.getElementById("recent-posts")&&"/"===location.pathname&&daodao_swiper_injector_config()</script><script>var bbsurl="https://daodao.zfe.space/api?q=20",fliter_daodao=["img","iframe"]</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.js"></script></body></html>

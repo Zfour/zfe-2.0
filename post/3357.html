@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教程：基于Butterfly主题的模拟电子钟侧边栏小部件2.0版 | 小冰博客</title><meta name="keywords" content="学习,教程,DIY"><meta name="author" content="しゅふがく"><meta name="copyright" content="しゅふがく"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="序言：效果展示 2.0 模拟时钟小部件主要包含： 日期（年、月、日、星期）  天气（天气图标、温度）  湿度(百分比）  空气质量（US AQI）  时间（当地时间、AM&#x2F;PM）  地理位置（IP 地址地理位置）  每日访问上限：约 500 次  每月访问上限：10000 次   预览地址：https:&#x2F;&#x2F;zfe.spacePS.最近本人 localhost 调用过猛可能会上限不显示。 相比1.0"><meta property="og:type" content="article"><meta property="og:title" content="教程：基于Butterfly主题的模拟电子钟侧边栏小部件2.0版"><meta property="og:url" content="https://zfe.space/post/3357.html"><meta property="og:site_name" content="小冰博客"><meta property="og:description" content="序言：效果展示 2.0 模拟时钟小部件主要包含： 日期（年、月、日、星期）  天气（天气图标、温度）  湿度(百分比）  空气质量（US AQI）  时间（当地时间、AM&#x2F;PM）  地理位置（IP 地址地理位置）  每日访问上限：约 500 次  每月访问上限：10000 次   预览地址：https:&#x2F;&#x2F;zfe.spacePS.最近本人 localhost 调用过猛可能会上限不显示。 相比1.0"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zfe.space/images/clock2.0.png"><meta property="article:published_time" content="2020-08-31T22:13:00.000Z"><meta property="article:modified_time" content="2020-08-31T22:13:00.000Z"><meta property="article:author" content="しゅふがく"><meta property="article:tag" content="学习"><meta property="article:tag" content="教程"><meta property="article:tag" content="DIY"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://zfe.space/images/clock2.0.png"><link rel="shortcut icon" href="/img/siteicon/favicon.ico"><link rel="canonical" href="https://zfe.space/post/3357"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js" defer="defer"></script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?1738c17b1ff542e386d62634d8501cf4";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"7V16DAJ0SV","apiKey":"288186e0537ee02bcdc55246b5e32621","indexName":"search","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"教程：基于Butterfly主题的模拟电子钟侧边栏小部件2.0版",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2020-08-31 22:13:00"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><style>#footer:before,[data-theme=dark] #footer:before{background-color:rgba(0,0,0,0)}@keyframes realImg{0%{filter:blur(15px)}100%{filter:blur(0)}}.post_bg{filter:blur(15px)}.post_bg.entered.loaded{filter:blur(0);will-change:opacity;animation:realImg .5s linear}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"><style>#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags:before{content:"\A";white-space:pre}#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap>.tags>.article-meta__separator{display:none}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.css"><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="小冰博客" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="小冰博客" type="application/rss+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/headimage.png" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">153</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小冰博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i> <span>搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i> <span>主页</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://rss.zfe.space/"><i class="fa-fw fas fa-rss"></i> <span>RSSHub</span></a></div><div class="menus_item"><a class="site-page" href="/daodao/"><i class="fa-fw fas fa-comment"></i> <span>叨叨点啥</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i> <span>音乐</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://aqi.zfe.space/"><i class="fa-fw fas fa-cloud"></i> <span>空气质量3D地图</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%95%99%E7%A8%8B"><i class="fa-fw fas fa-graduation-cap"></i> <span>教程</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i> <span>友链</span></a></div><div class="menus_item"><a class="site-page" href="/friendcircle/"><i class="fa-fw fas fa-heartbeat"></i> <span>友链朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/reward/"><i class="fa-fw fas fa-thumbs-up"></i> <span>打赏</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-lightbulb"></i> <span>关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">教程：基于Butterfly主题的模拟电子钟侧边栏小部件2.0版</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-31T22:13:00.000Z" title="发表于 2020-08-31 22:13:00">2020-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-31T22:13:00.000Z" title="更新于 2020-08-31 22:13:00">2020-08-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="教程：基于Butterfly主题的模拟电子钟侧边栏小部件2.0版"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/post/3357.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/post/3357.html" itemprop="commentCount"></span></a></span></div></div></div><article class="post-content" id="article-container"><h2 id="序言：效果展示"><a href="#序言：效果展示" class="headerlink" title="序言：效果展示"></a>序言：效果展示</h2><p><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/clock2.0.png#alt=example"></p><h3 id="2-0-模拟时钟小部件主要包含："><a href="#2-0-模拟时钟小部件主要包含：" class="headerlink" title="2.0 模拟时钟小部件主要包含："></a>2.0 模拟时钟小部件主要包含：</h3><ul><li><p>日期（年、月、日、星期）</p></li><li><p>天气（天气图标、温度）</p></li><li><p>湿度(百分比）</p></li><li><p>空气质量（US AQI）</p></li><li><p>时间（当地时间、AM/PM）</p></li><li><p>地理位置（IP 地址地理位置）</p></li><li><p>每日访问上限：约 500 次</p></li><li><p>每月访问上限：10000 次</p></li></ul><h3 id="预览地址：https-zfe-space"><a href="#预览地址：https-zfe-space" class="headerlink" title="预览地址：https://zfe.space"></a>预览地址：<a href="https://zfe.space/">https://zfe.space</a></h3><p>PS.最近本人 localhost 调用过猛可能会上限不显示。</p><p>相比<a href="https://zfe.space/">1.0 版本</a>，加快了访问速度并优化了加载效果。</p><p>但使用 API 后导致每日访问量上限后不会显示。</p><p>因此，有利有弊。</p><hr><h2 id="步骤-1：编写小部件代码"><a href="#步骤-1：编写小部件代码" class="headerlink" title="步骤 1：编写小部件代码"></a>步骤 1：编写小部件代码</h2><p>在”\themes\butterfly\layout\includes\widget”文件下复制某个 PUG，重命名为”card_clock.pug”</p><p>打开该文件，删除原有代码，将以下代码粘贴进去。注意 PUG 的空格敏感。</p><hr><h2 id="步骤-2：将小部件植入侧边栏"><a href="#步骤-2：将小部件植入侧边栏" class="headerlink" title="步骤 2：将小部件植入侧边栏"></a>步骤 2：将小部件植入侧边栏</h2><p>打开”\themes\butterfly\layout\includes\widget”路径下的”index.pug”</p><p>将 card_clock 代码添加至 card_author 代码块后。添加后的代码如下：<br>打开”\themes\butterfly&quot;路径下的”_config.yml”</p><p>搜索到”aside:”设置处</p><p>添加 clock 开关代码：</p><hr><h2 id="步骤-3：编写-CSS-代码"><a href="#步骤-3：编写-CSS-代码" class="headerlink" title="步骤 3：编写 CSS 代码"></a>步骤 3：编写 CSS 代码</h2><p>在 hexo 根目录”source”文件夹下新建”css”文件夹，在”\source\css”路径下新建”clock.css”</p><p>在”clock.css”中添加以下内容：<br>#clock .date {</p><p>font-family: ‘UnidreamLED’;</p><p>font-size: 14px;</p><p>font-weight:normal;</p><p>color: #000000;</p><p>margin-block-start: 0em;</p><p>margin-block-end: 0em;</p><p>line-height: 1;</p><p>}</p><p>#clock .time {</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">font-family: &#39;UnidreamLED&#39;;</span><br><span class="line">font-size: 38px;</span><br><span class="line">font-weight:normal;</span><br><span class="line">color: #000000;</span><br><span class="line">margin-block-start: 0em;</span><br><span class="line">margin-block-end: -0.2em;</span><br><span class="line">line-height: 1.5;</span><br></pre></td></tr></table></figure><p>}</p><p>.card-background {</p><p>height:153px;</p><p>margin:15px;</p><p>border-radius: 8px;</p><p>background-color: rgb(236, 236, 236);</p><p>box-shadow: inset 3px 3px 18px 0px rgba(50,50,50, 0.4);</p><p>z-index: 2;</p><p>}</p><p><a href="/font-face">@font-face</a> {</p><p>font-family: ‘UnidreamLED’; /<em>a name to be used later</em>/</p><p>src: url(‘/fonts/UnidreamLED.ttf’); /<em>URL to font</em>/</p><p>}</p><p>.date {width:50%;}</p><p>.time{width:90%;}</p><p>.daylight{width:12%;float:right;font-family: ‘UnidreamLED’; color:black; }</p><p>#weatherimg {</p><p>-webkit-filter: brightness(0%)!important;</p><p>filter: brightness(0%)!important;</p><p>width: 14px!important;</p><p>height: 14px!important;</p><p>}</p><p>#humidityimg {</p><p>-webkit-filter: brightness(0%)!important;</p><p>filter: brightness(0%)!important;</p><p>width: 14px!important;</p><p>height: 14px!important;</p><p>}</p><p>.weather  {width:10%;font-family: ‘UnidreamLED’;padding-left:10px; padding-right:1px;color: #000000;}</p><p>.temperature  {width:20%;font-family: ‘UnidreamLED’; color: #000000;padding-left: 5px;padding-right:5px; }</p><p>.humidity  {width:20%;font-family: ‘UnidreamLED’;color: #000000;padding-left: 10px;padding-right:0px; }</p><p>.usaqi  {height:30px;width:10%;font-family: ‘UnidreamLED’;color: #000000;}</p><p>.city {width:10%;font-family: ‘UnidreamLED’;padding-left:20px; padding-right:1px;color: #000000;}</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> ## 步骤4：添加自定义字体文件 ##</span><br><span class="line"></span><br><span class="line">&lt;p&gt;在&quot;source&quot;文件夹下新建&quot;fonts&quot;文件夹，将&quot;UnidreamLED&quot;放入文件夹中。&lt;&#x2F;p&gt;</span><br><span class="line">&lt;a href&#x3D;&quot;&#x2F;fonts&#x2F;UnidreamLED.ttf&quot;&gt;UnidreamLED字体下载&lt;&#x2F;a&gt;</span><br><span class="line">&lt;hr&gt;&lt;&#x2F;hr&gt;</span><br><span class="line"></span><br><span class="line"> ## 步骤5：编写JS代码 ##</span><br><span class="line"></span><br><span class="line">&lt;p&gt;在根目录&quot;source&quot;文件夹下新建&quot;js&quot;文件夹，将&quot;vue.min.js&quot;放入文件夹中。&lt;&#x2F;p&gt;</span><br><span class="line">&lt;a href&#x3D;&quot;&#x2F;js&#x2F;vue.min.js&quot;&gt;vue.min.js下载&lt;&#x2F;a&gt;</span><br><span class="line">&lt;p&gt;在js文件夹中，复制&quot;vue.min.js&quot;，重命名为&quot;clock.js&quot;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;打开该文件，删除原有代码，将以下代码粘贴进去。&lt;&#x2F;p&gt;</span><br><span class="line">&#96;&#96;&#96;JavaScript</span><br><span class="line">var clock &#x3D; new Vue(&#123;</span><br><span class="line">    el: &#39;#clock&#39;,</span><br><span class="line">    data: &#123;</span><br><span class="line">        time: &#39;&#39;,</span><br><span class="line">        date: &#39;&#39;,</span><br><span class="line">        daylight: &#39;&#39;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var week &#x3D; [&#39;SUN&#39;, &#39;MON&#39;, &#39;TUE&#39;, &#39;WED&#39;,&#39;THU&#39; ,&#39;FRI&#39;, &#39;SAT&#39;];</span><br><span class="line">var timerID &#x3D; setInterval(updateTime, 1000);</span><br><span class="line">updateTime();</span><br><span class="line">function updateTime() &#123;</span><br><span class="line">    var cd &#x3D; new Date();</span><br><span class="line">    clock.time &#x3D; zeroPadding(cd.getHours(), 2) + &#39;:&#39; + zeroPadding(cd.getMinutes(), 2) + &#39;:&#39; + zeroPadding(cd.getSeconds(), 2);</span><br><span class="line">    clock.date &#x3D; zeroPadding(cd.getFullYear(), 4) + &#39;-&#39; + zeroPadding(cd.getMonth()+1, 2) + &#39;-&#39; + zeroPadding(cd.getDate(), 2) + &#39; &#39; + week[cd.getDay()];</span><br><span class="line">    var hamorpm &#x3D; cd.getHours();</span><br><span class="line"> var str;</span><br><span class="line">   if(hamorpm &gt;12) &#123;</span><br><span class="line">        hamorpm -&#x3D; 12;</span><br><span class="line">        str &#x3D; &quot; PM&quot;;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        str &#x3D; &quot; AM&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    clock.daylight &#x3D; str</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function zeroPadding(num, digit) &#123;</span><br><span class="line">    var zero &#x3D; &#39;&#39;;</span><br><span class="line">    for(var i &#x3D; 0; i &lt; digit; i++) &#123;</span><br><span class="line">        zero +&#x3D; &#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    return (zero + num).slice(-digit);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在 js 文件夹中，复制”vue.min.js”，重命名为”airvisualapi.js”</p><p>打开该文件，删除原有代码，将以下代码粘贴进去。<br>var clockurl = “<a target="_blank" rel="noopener" href="https://api.airvisual.com/v2/nearest_city?key=123312fc-84e9-49c4-8%EF%BC%9F%EF%BC%9F%EF%BC%9F-66f0%EF%BC%9F%EF%BC%9F%EF%BC%9F912%EF%BC%9F%EF%BC%9F&quot;">https://api.airvisual.com/v2/nearest_city?key=123312fc-84e9-49c4-8？？？-66f0？？？912？？&quot;</a></p><p>$(function(){</p><p>$.ajax({</p><p>//请求方式</p><p>type:”GET”,</p><p>//文件位置</p><p>url:clockurl,</p><p>//返回数据格式为 json,也可以是其他格式如</p><p>dataType: “json”,</p><p>beforeSend:function(XMLHttpRequest){</p><p>//alert(‘远程调用开始…’);</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">        &#125;,</span><br><span class="line">        &#x2F;&#x2F;请求成功后要执行的函数，拼接html</span><br><span class="line">        success: function(data)&#123;</span><br><span class="line">            str1&#x3D;data.data.current.weather.ic;</span><br><span class="line">            imagelink&#x3D; &#39;images&#x2F;weather&#x2F;&#39; +  str1 + &#39;.png&#39;</span><br><span class="line">            str2&#x3D;data.data.current.weather.tp;</span><br><span class="line">            str3&#x3D;data.data.current.weather.hu;</span><br><span class="line">            str4&#x3D;data.data.current.pollution.aqius;</span><br><span class="line">            var str&#x3D;&#39;&lt;span class&#x3D;&quot;weather&quot;&gt;&#39;;</span><br><span class="line">            str+&#x3D;&#39;&lt;img id&#x3D;&quot;weatherimg&quot; &gt;&#39;  +  &#39;&lt;&#x2F;span&gt;&#39; + &#39;&lt;span class&#x3D;&quot;temperature&quot;&gt;&#39; + str2 + &#39;*C&#39;+ &#39;&lt;&#x2F;span&gt;&#39;;</span><br><span class="line">            str+&#x3D;&#39;&lt;span class&#x3D;&quot;humidity&quot;&gt;&#39; +  &#39;&lt;img id&#x3D;&quot;humidityimg&quot; &gt;&#39;  + &#39; &#39;  + str3 + &#39;%&#39; + &#39;&lt;&#x2F;span&gt;&#39;;</span><br><span class="line">            var str5&#x3D;&#39;&lt;span class&#x3D;&quot;usaqi&quot;&gt;&#39;;</span><br><span class="line">            str5+&#x3D; str4  +&#39; &#39; + &#39;US&#39;+&#39; &#39; +&#39;AQI&#39; + &#39;&lt;&#x2F;span&gt;&#39;;</span><br><span class="line">            str5+&#x3D; &#39;&lt;span class&#x3D;&quot;city&quot;&gt;&#39; + data.data.city + &#39;&lt;&#x2F;span&gt;&#39;;</span><br><span class="line">            $(str).insertAfter($(&quot;.date&quot;).eq(0));</span><br><span class="line">            $(str5).insertBefore($(&quot;.daylight&quot;).eq(0));</span><br><span class="line">            document.getElementById(&quot;weatherimg&quot;).src &#x3D; imagelink</span><br><span class="line">            document.getElementById(&quot;humidityimg&quot;).src &#x3D; &#39;images&#x2F;weather&#x2F;hu.png&#39;</span><br><span class="line">            console.log(data)</span><br><span class="line"></span><br><span class="line">            document.getElementById(&quot;clock&quot;).style.opacity&#x3D; 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;p&gt;key&#x3D;123312fc-84e9-49c4-8？？？-66f0？？？912？？部分为需要在airvisual官网申请的key。&lt;&#x2F;p&gt;</span><br><span class="line">&lt;hr&gt;&lt;&#x2F;hr&gt;</span><br><span class="line"></span><br><span class="line"> ## 步骤6：接入CSS与JS ##</span><br><span class="line"></span><br><span class="line">&lt;p&gt;打开&quot;\themes\butterfly\&quot;路径下的&quot;_config.yml&quot;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;搜索到&quot;inject:&quot;设置处&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;添加以下代码：&lt;&#x2F;p&gt;</span><br><span class="line">&#96;&#96;&#96;yml</span><br><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">  - &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;&#x2F;css&#x2F;clock.css&quot;&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">  bottom:</span><br><span class="line">  - &lt;script src&#x3D;&quot;&#x2F;js&#x2F;vue.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  - &lt;script src&#x3D;&quot;&#x2F;js&#x2F;clock.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  - &lt;script src&#x3D;&quot;&#x2F;js&#x2F;airvisualapi.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure><p>PS：优化了 1.0 的脚本，通过 ajax 方法获取 api 数据。</p><hr><h2 id="步骤-7：添加天气图片"><a href="#步骤-7：添加天气图片" class="headerlink" title="步骤 7：添加天气图片"></a>步骤 7：添加天气图片</h2><p>在根目录”source”文件夹下新建”images”文件夹，在”images”文件夹里新建”weather”文件夹。</p><p>将以下压缩包下载，解压后将图片保存进文件夹中。</p><p><a href="/images/weather.zip">天气图标</a></p><h2 id="步骤-8：申请-AirVisual-api-key"><a href="#步骤-8：申请-AirVisual-api-key" class="headerlink" title="步骤 8：申请 AirVisual api key"></a>步骤 8：申请 AirVisual api key</h2><p>为了保障自己的 API 不失效，这里介绍下如何申请 AirVisual api key。</p><p>① 打开网站，注册帐号。</p><p><a target="_blank" rel="noopener" href="https://www.iqair.com/auth/login">https://www.iqair.com/auth/login</a><br>② 登录后访问，”<a target="_blank" rel="noopener" href="https://www.iqair.com/dashboard/api&quot;">https://www.iqair.com/dashboard/api&quot;</a></p><p><a target="_blank" rel="noopener" href="https://www.iqair.com/dashboard/api">https://www.iqair.com/dashboard/api</a><br>③ 点击“+ NEW KEY”按钮。选择“Community”得到对应的 key。</p><p><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/apikey.png#alt=example"></p><p>④ 修改”airvisualapi.js”中的 key 对应的字段参数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var clockurl &#x3D; &quot;https:&#x2F;&#x2F;api.airvisual.com&#x2F;v2&#x2F;nearest_city?key&#x3D;123312fc-84e9-49c4-8？？？-66f0？？？912？？&quot;</span><br></pre></td></tr></table></figure><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在本地进行开发时建议关掉”card_clock: enable: true”选项，以免出现多次调用上限的问题。</p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者:</span> <span class="post-copyright-info"><a href="mailto:undefined">しゅふがく</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接:</span> <span class="post-copyright-info"><a href="https://zfe.space/post/3357.html">https://zfe.space/post/3357.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明:</span> <span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zfe.space" target="_blank">小冰博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/DIY/">DIY</a></div><div class="post_share"><div class="social-share" data-image="/images/clock2.0.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer="defer"></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.JPG" target="_blank"><img class="post-qr-code-img" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/wechat.JPG" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipay.JPG" target="_blank"><img class="post-qr-code-img" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/alipay.JPG" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/13564.html"><img class="prev-cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/nhkimage/2020.08.31.PNG" onerror='onerror=null,src="/img/404.jpg"' alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">NHK おはよう　日本　8月31日</div></div></a></div><div class="next-post pull-right"><a href="/post/51453.html"><img class="next-cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/nhkimage/2020.08.30.png" onerror='onerror=null,src="/img/404.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">NHK おはよう　日本　8月30日</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/55585.html" title="卡诺の教程合集索引（2021.03.09）"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/k.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-09</div><div class="title">卡诺の教程合集索引（2021.03.09）</div></div></a></div><div><a href="/post/52914.html" title="教程：基于Butterfly主题的双栏卡片主页文章css样式"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/d.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-30</div><div class="title">教程：基于Butterfly主题的双栏卡片主页文章css样式</div></div></a></div><div><a href="/post/56348.html" title="教程：基于Butterfly主题的模拟电子钟侧边栏小部件3.0版"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/t.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-16</div><div class="title">教程：基于Butterfly主题的模拟电子钟侧边栏小部件3.0版</div></div></a></div><div><a href="/post/63842.html" title="教程：Butterfly主题的宠物养成方法"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-02</div><div class="title">教程：Butterfly主题的宠物养成方法</div></div></a></div><div><a href="/post/65396.html" title="教程：Butterfly主题的一图流和视频流背景修改方法"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/b.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-01</div><div class="title">教程：Butterfly主题的一图流和视频流背景修改方法</div></div></a></div><div><a href="/post/39997.html" title="教程：利用Windows Terminal制作方便快捷的hexo-PowerShell"><img class="cover" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/t.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-23</div><div class="title">教程：利用Windows Terminal制作方便快捷的hexo-PowerShell</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i> <span>评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/headimage.png" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">しゅふがく</div><div class="author-info__description">做个有梦想的人！</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">153</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">50</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" href="JavaScript:AddFavorite('https://zfe.space','小冰博客')"><i class="fas fa-bookmark"></i><span>收藏我的博客</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Zfour" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:499984532@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://weibo.com/xiuji941028" target="_blank" title="weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=499984532&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/1652398/" target="_blank" title="bilibili"><i class="fas fa-video"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是Z_4的3.0版本blog，基于Butterfly3.7主题。已完成魔改npm插件化。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80%EF%BC%9A%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text">序言：效果展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-0-%E6%A8%A1%E6%8B%9F%E6%97%B6%E9%92%9F%E5%B0%8F%E9%83%A8%E4%BB%B6%E4%B8%BB%E8%A6%81%E5%8C%85%E5%90%AB%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">2.0 模拟时钟小部件主要包含：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E8%A7%88%E5%9C%B0%E5%9D%80%EF%BC%9Ahttps-zfe-space"><span class="toc-number">1.2.</span> <span class="toc-text">预览地址：https:&#x2F;&#x2F;zfe.space</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E7%BC%96%E5%86%99%E5%B0%8F%E9%83%A8%E4%BB%B6%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">步骤 1：编写小部件代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E5%B0%86%E5%B0%8F%E9%83%A8%E4%BB%B6%E6%A4%8D%E5%85%A5%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="toc-number">3.</span> <span class="toc-text">步骤 2：将小部件植入侧边栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E7%BC%96%E5%86%99-CSS-%E4%BB%A3%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">步骤 3：编写 CSS 代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-7%EF%BC%9A%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E5%9B%BE%E7%89%87"><span class="toc-number">5.</span> <span class="toc-text">步骤 7：添加天气图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-8%EF%BC%9A%E7%94%B3%E8%AF%B7-AirVisual-api-key"><span class="toc-number">6.</span> <span class="toc-text">步骤 8：申请 AirVisual api key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/mmd-box-1.0.html" title="制作你的桌面MMD时钟：MMD-BOX Beta1.0"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/m.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="制作你的桌面MMD时钟：MMD-BOX Beta1.0"></a><div class="content"><a class="title" href="/post/mmd-box-1.0.html" title="制作你的桌面MMD时钟：MMD-BOX Beta1.0">制作你的桌面MMD时钟：MMD-BOX Beta1.0</a><time datetime="2022-08-06T23:19:00.000Z" title="发表于 2022-08-06 23:19:00">2022-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/game-play.html" title="小冰的游戏评测"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰的游戏评测"></a><div class="content"><a class="title" href="/post/game-play.html" title="小冰的游戏评测">小冰的游戏评测</a><time datetime="2021-04-22T21:19:00.000Z" title="发表于 2021-04-22 21:19:00">2021-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="小冰插件包 butterfly-orchid 1.0"></a><div class="content"><a class="title" href="/post/hexo-butterfly-orchid.html" title="小冰插件包 butterfly-orchid 1.0">小冰插件包 butterfly-orchid 1.0</a><time datetime="2021-03-25T21:19:00.000Z" title="发表于 2021-03-25 21:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-electric-clock电子时钟插件"></a><div class="content"><a class="title" href="/post/hexo-electric-clock.html" title="教程：hexo-electric-clock电子时钟插件">教程：hexo-electric-clock电子时钟插件</a><time datetime="2021-03-25T18:19:00.000Z" title="发表于 2021-03-25 18:19:00">2021-03-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" onerror='this.onerror=null,this.src="/img/404.jpg"' alt="教程：hexo-history-calendar历史上的今天插件"></a><div class="content"><a class="title" href="/post/hexo-history-calendar.html" title="教程：hexo-history-calendar历史上的今天插件">教程：hexo-history-calendar历史上的今天插件</a><time datetime="2021-03-25T18:18:00.000Z" title="发表于 2021-03-25 18:18:00">2021-03-25</time></div></div></div></div></div></div></main><footer id="footer" style="background:0 0"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By しゅふがく</div><div class="framework-info"><span>框架</span> <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题</span> <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+      appKey: 'r72Soi69hGmPdfKcGubbCWAn',
+      placeholder: '都看到这里了，还不留个脚印？',
+      avatar: '404',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'https://servertalk.zfe.space',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=404'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (false) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://servertalk.zfe.space'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": 'VqQJf6gxMeAMKUwwq1bWe5JY-MdYXbMMI',
+        "X-LC-Key": 'r72Soi69hGmPdfKcGubbCWAn',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script data-pjax>if(document.getElementsByTagName('img')){for (item of document.getElementsByTagName('img')){item.setAttribute('referrerpolicy','no-referrer')}};</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script data-pjax>if(document.getElementById("recent-posts")&&(location.pathname,1)){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/教程/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 小冰の魔改教程 (33)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/游戏评测/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 小冰の游戏评测 (10)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/生活趣闻/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 小冰の生活趣闻 (7)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/vue/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 小冰の编程学习 (16)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/学习/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📒 小冰の读书笔记 (12)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://zfe.space/categories/随想/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💡 小冰の胡思乱想 (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="https://zfe.space/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';console.log("已挂载magnet"),parent.insertAdjacentHTML("afterbegin",child)}</script><style>#catalog_magnet{flex-wrap:wrap;display:flex;width:100%;justify-content:space-between;padding:10px 10px 0 10px;align-content:flex-start}.magnet_item{flex-basis:calc(50% - 5px);background:#f2f2f2;margin-bottom:10px;border-radius:8px;transition:all .2s ease-in-out}.magnet_item:hover{background:#b30070}.magnet_link_more{color:#555}.magnet_link{color:#000}.magnet_link:hover{color:#fff}@media screen and (max-width:600px){.magnet_item{flex-basis:100%}}.magnet_link_context{display:flex;padding:10px;font-size:16px;transition:all .2s ease-in-out}.magnet_link_context:hover{padding:10px 20px}</style><style></style><script data-pjax>if(document.getElementById("recent-posts")&&"/"==location.pathname){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-electric-clock.html">教程：hexo-electric-clock电子时钟插件</a><div class="blog-slider__text">简单好用的电子时钟插件！</div><a class="blog-slider__button" href="post/hexo-electric-clock.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-history-calendar.html">教程：hexo-history-calendar历史上的今天插件</a><div class="blog-slider__text">简单好用的hexo博客历史上的今天插件！</div><a class="blog-slider__button" href="post/hexo-history-calendar.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/p.png" alt="/images/letter/p.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-25</span><a class="blog-slider__title" href="post/hexo-swiper.html">教程：hexo-swiper文章置顶插件</a><div class="blog-slider__text">简单好用的hexo博客文章置顶插件！</div><a class="blog-slider__button" href="post/hexo-swiper.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/d.png" alt="/images/letter/d.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-19</span><a class="blog-slider__title" href="post/hexo-butterfly-article-double-row.html">教程：butterfly主题文章双栏布局插件</a><div class="blog-slider__text">简单好用的butterfly主题文章双栏布局插件！</div><a class="blog-slider__button" href="post/hexo-butterfly-article-double-row.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/m.png" alt="/images/letter/m.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-16</span><a class="blog-slider__title" href="post/hexo-magnet.html">教程：hexo-magnet  插件 1.0</a><div class="blog-slider__text">hexo主题适用的hexo-magnet插件！</div><a class="blog-slider__button" href="post/hexo-magnet.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/y.png" alt="/images/letter/y.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2020-12-16</span><a class="blog-slider__title" href="post/554e.html">教程：hexo×语雀 实现云端富文本写作</a><div class="blog-slider__text">通过本教程，你可以将你的文章储存在云端，实现云端写作，摆脱本地机器的限制。</div><a class="blog-slider__button" href="post/554e.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/f.png" alt="/images/letter/f.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-01</span><a class="blog-slider__title" href="post/friend-link-circle.html">基于hexo的友链朋友圈 Beta1.5</a><div class="blog-slider__text">你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点！</div><a class="blog-slider__button" href="post/friend-link-circle.html">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/letter/g.png" alt="/images/letter/g.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2021-03-06</span><a class="blog-slider__title" href="post/hexo-githubcalendar.html">教程：hexo-githubcalendar  插件 1.0</a><div class="blog-slider__text">hexo主题适用的githubcalendar 插件！</div><a class="blog-slider__button" href="post/hexo-githubcalendar.html">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';console.log("已挂载swiper"),parent.insertAdjacentHTML("afterbegin",child)}</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper/swiper/swiper.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-swiper@0.18/swiper/swiperindex.js"></script><style></style><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script><script data-pjax>function GithubCalendarConfig(){var e=document.getElementById("recent-posts");e&&"/"==location.pathname&&(console.log("已挂载github calendar"),e.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="height:100%;display: flex;align-items: center;justify-content: center;"><svg style="height:50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>')),GithubCalendar("https://gitcalendar.zfe.space/api?zfour",["#ebedf0","#fdcdec","#fc9bd9","#fa6ac5","#f838b2","#f5089f","#c4067e","#92055e","#540336","#48022f","#30021f"],"zfour")}document.getElementById("recent-posts")&&GithubCalendarConfig()</script><style>#github_container{min-height:248px}@media screen and (max-width:650px){#github_container{min-height:0}}</style><style></style><script data-pjax>function history_calendar_injector_config(){var i=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载history_calendar"),i.insertAdjacentHTML("afterbegin",'<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&history_calendar_injector_config()</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){var c=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载electric_clock"),c.insertAdjacentHTML("afterbegin",'<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>')}document.getElementsByClassName("sticky_layout")[0]&&(location.pathname,1)&&electric_clock_injector_config()</script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.3/clock.js"></script><script data-pjax>function daodao_swiper_injector_config(){var i=document.getElementById("recent-posts");console.log("已挂载daodao_swiper"),i.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="height: auto;width: 100%"><div class="bbTimeList container" id="bbTimeList"><i class="bber-gotobb fas fa-bullhorn" onclick="location=&#39;/daodao/&#39;" title="叨叨"></i><div class="swiper-container" id="bbtalk"><div class="swiper-wrapper" id="bber-talk" onclick="location=&#39;/daodao/&#39;"></div></div><i class="bber-gotobb fas fa-arrow-circle-right" onclick="location=&quot;/daodao/&quot;" title="查看全文"></i></div></div>')}document.getElementById("recent-posts")&&"/"===location.pathname&&daodao_swiper_injector_config()</script><script>var bbsurl="https://daodao.zfe.space/api?q=20",fliter_daodao=["img","iframe"]</script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-daodao/main.js"></script></body></html>

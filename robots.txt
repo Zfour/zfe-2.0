@@ -1,0 +1,28 @@
+# welcome to : zfe.space
+User-agent: *
+Allow: /
+Allow: /post/
+Allow: /reward/
+Allow: /about/
+
+
+Disallow: /archives/
+Disallow:  /categories/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /baiduhistory/
+Disallow: /cursor/
+Disallow: /friendcircle/
+Disallow: /gitcalendar/
+Disallow: /history/
+Disallow: /images/
+Disallow: /img/
+Disallow: /music/
+Disallow: /page/
+Disallow: /swiper/
+Disallow: /tags/
+Disallow: /video/
+Disallow: /zan/
+
+Sitemap: https://zfe.space/baidusitemap.xml
